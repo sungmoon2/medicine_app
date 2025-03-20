@@ -1,0 +1,235 @@
+<!-- templates/search_results.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과 - 의약품 검색 시스템</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .search-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .card-img-container {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .card-img-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .header-title {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        .result-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .shape-selector, .color-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .shape-item, .color-item {
+            flex-basis: calc(20% - 10px);
+            text-align: center;
+            cursor: pointer;
+            padding: 8px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+        .shape-item:hover, .color-item:hover {
+            background-color: #f1f3f5;
+        }
+        .shape-item.active, .color-item.active {
+            background-color: #e2f2ff;
+            border-color: #0d6efd;
+        }
+        .hidden-field {
+            display: none;
+        }
+        .search-params {
+            background-color: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .search-params p {
+            margin-bottom: 0;
+        }
+        .search-params span {
+            font-weight: bold;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">의약품 검색 시스템</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h1 class="header-title">의약품 검색 결과</h1>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="item_name" class="form-label">의약품 이름</label>
+                            <input type="text" class="form-control" id="item_name" name="item_name" value="{{ params.item_name }}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="print_front" class="form-label">표시(각인)</label>
+                            <input type="text" class="form-control" id="print_front" name="print_front" value="{{ params.print_front }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">모양</label>
+                        <div class="shape-selector">
+                            {% for shape in shapes %}
+                            <div class="shape-item {% if params.drug_shape == shape %}active{% endif %}" data-shape="{{ shape }}">{{ shape }}</div>
+                            {% endfor %}
+                        </div>
+                        <input type="hidden" id="drug_shape" name="drug_shape" value="{{ params.drug_shape }}">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">색상</label>
+                        <div class="color-selector">
+                            {% for color in colors %}
+                            <div class="color-item {% if params.color_class1 == color %}active{% endif %}" data-color="{{ color }}">{{ color }}</div>
+                            {% endfor %}
+                        </div>
+                        <input type="hidden" id="color_class1" name="color_class1" value="{{ params.color_class1 }}">
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary px-4">검색</button>
+                    <a href="/" class="btn btn-outline-secondary px-4 ms-2">초기화</a>
+                </div>
+            </form>
+        </div>
+
+        {% if params.item_name or params.drug_shape or params.color_class1 or params.print_front %}
+        <div class="search-params">
+            <p>검색 조건: 
+                {% if params.item_name %}<span>이름:</span> {{ params.item_name }}{% endif %}
+                {% if params.drug_shape %}<span>모양:</span> {{ params.drug_shape }}{% endif %}
+                {% if params.color_class1 %}<span>색상:</span> {{ params.color_class1 }}{% endif %}
+                {% if params.print_front %}<span>표시:</span> {{ params.print_front }}{% endif %}
+            </p>
+        </div>
+        {% endif %}
+
+        <div class="row">
+            {% if results|length > 0 %}
+                {% for medicine in results %}
+                <div class="col-md-4 mb-4">
+                    <div class="card result-card">
+                        <div class="card-img-container p-3">
+                            {% if medicine.item_image %}
+                            <img src="{{ medicine.item_image }}" alt="{{ medicine.item_name }}" class="img-fluid">
+                            {% else %}
+                            <div class="text-center text-muted">이미지 없음</div>
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ medicine.item_name }}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">{{ medicine.entp_name }}</small>
+                            </p>
+                            <p class="card-text">
+                                {% if medicine.drug_shape %}
+                                <span class="badge bg-secondary me-1">{{ medicine.drug_shape }}</span>
+                                {% endif %}
+                                {% if medicine.color_class1 %}
+                                <span class="badge bg-secondary me-1">{{ medicine.color_class1 }}</span>
+                                {% endif %}
+                            </p>
+                            <a href="/medicine/{{ medicine.id }}" class="btn btn-primary w-100">상세 정보</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="no-results">
+                        <div class="alert alert-info">
+                            <h4 class="alert-heading">검색 결과가 없습니다.</h4>
+                            <p>다른 검색어나 조건으로 다시 시도해 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        // 모양 선택 이벤트
+        const shapeItems = document.querySelectorAll('.shape-item');
+        const drugShapeInput = document.getElementById('drug_shape');
+
+        shapeItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // 이전 선택 제거
+                shapeItems.forEach(el => el.classList.remove('active'));
+                // 현재 선택 표시
+                this.classList.add('active');
+                // 숨겨진 입력 필드에 값 설정
+                drugShapeInput.value = this.getAttribute('data-shape');
+            });
+        });
+
+        // 색상 선택 이벤트
+        const colorItems = document.querySelectorAll('.color-item');
+        const colorInput = document.getElementById('color_class1');
+
+        colorItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // 이전 선택 제거
+                colorItems.forEach(el => el.classList.remove('active'));
+                // 현재 선택 표시
+                this.classList.add('active');
+                // 숨겨진 입력 필드에 값 설정
+                colorInput.value = this.getAttribute('data-color');
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* 기본 스타일 */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+
+/* 헤더 및 네비게이션 스타일 */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* 컨테이너 스타일 */
+.search-container, .detail-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 카드 스타일 */
+.result-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 의약품 이미지 스타일 */
+.medicine-image {
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 섹션 스타일 */
+.section-title {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* 모양 및 색상 선택기 스타일 */
+.shape-selector, .color-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.shape-item, .color-item {
+    flex-basis: calc(20% - 10px);
+    text-align: center;
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.shape-item:hover, .color-item:hover {
+    background-color: #f1f3f5;
+}
+
+.shape-item.active, .color-item.active {
+    background-color: #e2f2ff;
+    border-color: #0d6efd;
+}
+
+/* 의약품 정보 스타일 */
+.pill-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.pill-info-item {
+    padding: 8px 15px;
+    background-color: #f1f3f5;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* 경고 박스 스타일 */
+.warning-box {
+    background-color: #fff4e5;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* 테이블 스타일 */
+.info-table th {
+    width: 200px;
+    background-color: #f8f9fa;
+}
+
+/* 탭 네비게이션 스타일 */
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 20px 0;
+}
+
+/* 검색 결과 없음 스타일 */
+.no-results {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* 미디어 쿼리 - 반응형 설계 */
+@media (max-width: 768px) {
+    .shape-selector, .color-selector {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .shape-item, .color-item {
+        flex-basis: calc(33.333% - 10px);
+    }
+    
+    .info-table th {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .shape-selector, .color-selector {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .shape-item, .color-item {
+        flex-basis: calc(50% - 10px);
+    }
+}
