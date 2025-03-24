@@ -1,0 +1,694 @@
+2025-03-25 00:33:52,931 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 00:33:52,931 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 00:33:52,932 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:33:53,656 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:33:53,659 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:33:55,058 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:33:55,059 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-25 00:33:55,060 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:33:55,062 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-25 00:33:55,082 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:55] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-25 00:33:56,205 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:56] "GET / HTTP/1.1" 200 -
+2025-03-25 00:33:59,640 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:33:59,642 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:33:59,643 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:33:59,646 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:33:59,657 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:59] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 00:34:00,422 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 00:34:00,422 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 00:34:00,440 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:34:00] "GET /medicine/1083 HTTP/1.1" 200 -
+2025-03-25 00:34:06,468 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:34:06] "GET / HTTP/1.1" 200 -
+2025-03-25 00:47:01,981 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 00:47:02,056 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:47:02,842 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:47:02,844 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:53:03,871 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 00:53:03,871 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 00:53:03,873 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:53:04,570 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:53:04,572 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:53:06,616 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:06] "GET / HTTP/1.1" 200 -
+2025-03-25 00:53:08,537 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:08] "GET / HTTP/1.1" 200 -
+2025-03-25 00:53:09,817 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:09] "GET / HTTP/1.1" 200 -
+2025-03-25 00:53:17,492 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:53:17,494 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:53:17,494 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:53:17,495 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:53:17,515 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:17] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 00:54:55,900 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 00:54:55,940 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:54:56,730 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:54:56,733 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:55:30,847 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 00:55:30,892 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:57:04,772 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 00:57:04,772 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 00:57:04,773 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:57:05,558 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:57:05,561 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:57:25,383 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:57:25,384 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:57:25,385 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:57:25,386 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:57:25,405 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:25] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 00:57:26,878 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:26] "GET / HTTP/1.1" 200 -
+2025-03-25 00:57:31,320 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:57:31,321 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:57:31,321 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:57:31,323 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:57:31,331 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:31] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 00:58:25,176 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 00:58:25,176 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 00:58:25,177 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 00:58:25,899 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 00:58:25,901 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 00:58:27,717 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:58:27,719 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:58:27,719 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:58:27,720 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:58:27,740 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:27] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 00:58:29,135 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:29] "GET / HTTP/1.1" 200 -
+2025-03-25 00:58:32,630 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 00:58:32,631 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:58:32,632 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 00:58:32,634 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 00:58:32,642 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:32] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 01:00:15,430 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "[35m[1mGET /advanced/advanced-search HTTP/1.1[0m" 500 -
+2025-03-25 01:00:15,489 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-25 01:00:15,646 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-25 01:00:15,989 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=console.png&s=GCt2YuOfdPADkRI7AUdq HTTP/1.1" 200 -
+2025-03-25 01:00:16,237 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:16] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-25 01:00:49,526 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /advanced/advanced-search HTTP/1.1" 200 -
+2025-03-25 01:00:49,831 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /static/css/advanced_search.css HTTP/1.1" 200 -
+2025-03-25 01:00:49,858 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:00:49,860 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-25 01:01:04,062 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:01:04] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=&color=³ë¶û&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:01:17,047 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:01:17] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ·¹³î&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:04:33,499 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:04:33,499 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:04:33,500 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:04:34,221 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:04:34,224 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:04:36,491 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:36] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ·¹³î&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:04:40,066 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:40] "GET / HTTP/1.1" 200 -
+2025-03-25 01:04:47,472 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:47] "GET /advanced/advanced-search HTTP/1.1" 200 -
+2025-03-25 01:04:47,802 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:04:52,151 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:52] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:07:32,579 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:07:32] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:08:14,947 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:08:15,001 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:08:55,848 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:08:55,848 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:08:55,850 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:08:56,567 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:08:56,570 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:09:03,755 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:03] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&color=¿¬µÎ&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:09:10,536 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:10] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:09:14,259 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:14] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:10:33,848 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:10:33,880 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:10:34,651 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:10:34,654 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:11:26,808 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\search_controller.py', reloading
+2025-03-25 01:11:26,842 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:11:27,602 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:11:27,604 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:11:36,334 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:11:36,334 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:11:36,335 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:11:37,132 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:11:37,135 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:11:47,281 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:11:47] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 01:12:50,353 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:12:50,395 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:14:52,167 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:14:52,167 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:14:52,168 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:14:52,895 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:14:52,898 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:14:57,014 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:14:57] "[33mGET /advanced/advanced-search HTTP/1.1[0m" 404 -
+2025-03-25 01:14:59,221 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:14:59] "GET / HTTP/1.1" 200 -
+2025-03-25 01:15:03,729 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 01:15:03,730 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 01:15:03,731 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 01:15:03,732 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 01:15:03,751 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:15:03] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 01:17:12,305 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\config.py', reloading
+2025-03-25 01:17:12,340 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:17:13,080 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:17:13,083 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:18:00,241 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:18:00,282 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:18:01,038 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:18:01,040 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:18:12,078 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:18:12,126 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:18:12,890 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:18:12,893 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:18:21,748 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:18:21,748 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:18:21,750 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:18:22,492 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:18:22,495 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:18:25,973 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:25] "GET / HTTP/1.1" 200 -
+2025-03-25 01:18:29,900 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 01:18:29,901 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 01:18:29,902 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 01:18:29,903 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-25 01:18:29,920 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:29] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-25 01:18:36,604 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:36] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-25 01:18:36,915 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:36] "GET / HTTP/1.1" 200 -
+2025-03-25 01:19:07,224 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 01:19:07,226 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%°ÇÆ®¶ó¼Â%', '°ÇÆ®¶ó¼Â%']
+2025-03-25 01:19:07,226 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 01:19:07,229 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%°ÇÆ®¶ó¼Â%', '°ÇÆ®¶ó¼Â%']
+2025-03-25 01:19:07,236 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:07] "GET /search?product_name=°ÇÆ®¶ó¼Â HTTP/1.1" 200 -
+2025-03-25 01:19:11,341 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:11] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-25 01:19:11,662 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:11] "GET / HTTP/1.1" 200 -
+2025-03-25 01:19:20,555 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 01:19:20,557 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
+2025-03-25 01:19:20,557 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 01:19:20,559 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
+2025-03-25 01:19:20,567 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:20] "GET /search?product_name=ÀÌ HTTP/1.1" 200 -
+2025-03-25 01:19:26,909 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-25 01:19:26,911 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
+2025-03-25 01:19:26,911 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-25 01:19:26,912 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
+2025-03-25 01:19:26,923 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:26] "GET /search?product_name=ÀÌ&page=2 HTTP/1.1" 200 -
+2025-03-25 01:20:58,993 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:20:59,044 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:20:59,866 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:20:59,868 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:21:01,554 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-25 01:21:01,662 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-25 01:21:01,778 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-25 01:21:01,880 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=tPCSKgJQBbNzkChIBxKS HTTP/1.1" 200 -
+2025-03-25 01:21:02,114 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-25 01:21:09,908 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:21:09,940 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:21:10,701 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:21:10,703 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:21:11,359 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 01:21:11,362 - app - INFO - Accessing advanced search index
+2025-03-25 01:21:11,390 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:21:11,644 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:21:11,709 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:21:11,710 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:21:14,560 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
+2025-03-25 01:21:14,561 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:14] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=³ë¶û&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:21:50,701 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:21:50,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:21:50,702 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:21:51,451 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:21:51,453 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:21:58,130 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
+2025-03-25 01:21:58,131 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:58] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:23:58,318 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:23:58,318 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:23:58,319 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:23:59,053 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:23:59,056 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:24:06,051 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 01:24:06,054 - app - INFO - Accessing advanced search index
+2025-03-25 01:24:06,064 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:24:06,356 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:24:06,395 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:24:06,395 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:24:10,285 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
+2025-03-25 01:24:10,286 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:10] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:25:00,261 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:25:00,303 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:25:01,089 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:25:01,091 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:26:25,329 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:26:25,360 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:26:26,127 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:26:26,129 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:26:31,703 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:26:31,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:26:31,705 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:26:32,434 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:26:32,436 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:26:35,815 - app - INFO - Accessing advanced search index
+2025-03-25 01:26:35,825 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:35] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:26:35,871 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:26:36,080 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:36] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:26:36,149 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:26:38,969 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: name 'mysql' is not defined
+2025-03-25 01:26:38,970 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:38] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=»¡°­&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:27:08,561 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:27:08,617 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:27:09,382 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:27:09,385 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:27:13,403 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:27:13,453 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:27:14,204 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:27:14,206 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:29:01,522 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:29:01,553 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:29:02,320 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:29:02,322 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:29:10,979 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:29:10,979 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:29:10,981 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:29:11,717 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:29:11,719 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:29:18,154 - app - INFO - Accessing advanced search index
+2025-03-25 01:29:18,163 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:29:18,217 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:29:18,426 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:29:18,499 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:29:23,615 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:29:23,630 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "GET /advanced/search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-25 01:29:23,875 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "GET /advanced/search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-25 01:29:24,206 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:24] "GET /advanced/search?__debugger__=yes&cmd=resource&f=console.png&s=DzKxKym2J6we7f2viicR HTTP/1.1" 200 -
+2025-03-25 01:29:24,474 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:24] "GET /advanced/search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-25 01:37:50,321 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:37:50,362 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:37:51,157 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:37:51,160 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:37:59,936 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:37:59,936 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:37:59,937 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:38:00,651 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:38:00,653 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:38:02,431 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
+2025-03-25 01:38:02,432 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:02] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:38:12,669 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:38:12,723 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:38:12,995 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:38:12,995 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:38:15,967 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
+2025-03-25 01:38:15,969 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:15] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=»ï°¢Çü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:39:08,848 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:39:08,883 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:39:09,661 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:39:09,663 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:39:35,802 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:39:35,802 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:39:35,803 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:39:36,601 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:39:36,603 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:39:41,433 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:39:41,483 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:39:41,692 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:39:41,754 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:39:44,764 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: Connection.__init__() got an unexpected keyword argument 'auth_plugin'. Did you mean 'auth_plugin_map'?
+2025-03-25 01:39:44,765 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:44] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:40:07,573 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: Connection.__init__() got an unexpected keyword argument 'auth_plugin'. Did you mean 'auth_plugin_map'?
+2025-03-25 01:40:07,574 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:40:07] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:40:30,747 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:40:30,781 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:40:31,541 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:40:31,544 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:40:33,797 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+2025-03-25 01:40:33,798 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:40:33] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 01:41:06,655 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:41:06,689 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:41:07,499 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:41:07,501 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:41:08,370 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 01:41:08,414 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:41:08,583 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:41:08,691 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:47:50,661 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:47:50] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
+2025-03-25 01:49:30,979 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:49:31,017 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:49:31,797 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:49:31,799 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:49:32,323 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:32] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
+2025-03-25 01:49:42,844 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-25 01:49:42,893 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:49:43,656 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:49:43,658 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:49:44,670 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:44] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
+2025-03-25 01:49:45,380 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:45] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
+2025-03-25 01:49:46,436 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:46] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
+2025-03-25 01:50:23,794 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 01:50:23,794 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 01:50:23,814 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:23] "GET /advanced/medicine_detail/123 HTTP/1.1" 200 -
+2025-03-25 01:50:28,833 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 01:50:29,151 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:50:29,519 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:50:29,541 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:50:29,543 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:50:31,557 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=»¡°­&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 01:50:31,831 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:50:31,893 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:50:31,894 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:50:33,602 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:33] "[33mGET /advanced/medicine-detail/5857 HTTP/1.1[0m" 404 -
+2025-03-25 01:50:37,966 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 01:50:37,967 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 01:50:37,968 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:37] "GET /advanced/medicine_detail/123 HTTP/1.1" 200 -
+2025-03-25 01:51:40,775 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:51:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:51:41,082 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:51:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:52:38,205 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:52:38] "[33mGET /advanced/medicine-detail/5857 HTTP/1.1[0m" 404 -
+2025-03-25 01:55:47,704 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
+2025-03-25 01:55:47,758 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:55:48,550 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:55:48,553 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:56:18,629 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:56:18,691 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:56:18,883 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:56:18,961 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:56:54,374 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:56:54,374 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:56:54,375 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:56:55,095 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:56:55,098 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:56:58,823 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:58] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 01:56:58,875 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:56:59,058 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:59] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:56:59,143 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:57:00,033 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:57:00] "[33mGET /advanced/medicine-detail/12453 HTTP/1.1[0m" 404 -
+2025-03-25 01:58:33,350 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 01:58:33,350 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 01:58:33,351 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 01:58:34,104 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 01:58:34,106 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 01:58:37,040 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 01:58:37,097 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-25 01:58:37,293 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:58:37,400 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-25 01:58:39,808 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:39] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 01:58:39,828 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 01:58:40,045 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 01:58:40,139 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 01:58:40,974 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[33mGET /advanced/medicine-detail/3313 HTTP/1.1[0m" 404 -
+2025-03-25 02:00:33,577 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 02:00:33,577 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 02:00:33,578 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 02:00:34,340 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 02:00:34,343 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 02:00:34,773 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:34] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 02:00:34,784 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:34] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 02:00:35,057 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:35,111 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:35,112 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 02:00:38,167 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:00:38,180 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:38,406 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:38,484 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 02:00:41,355 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:00:41,372 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:41,579 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:41,687 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 02:00:45,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=»ï°¢Çü&color=ÁÖÈ²&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:00:45,487 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:45,669 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 02:00:45,791 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 02:00:51,592 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:51] "[33mGET /advanced/medicine-detail/12338 HTTP/1.1[0m" 404 -

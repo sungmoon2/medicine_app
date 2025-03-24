@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+
+{% block title %}의약품 고급 검색{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">의약품 고급 검색</h1>
+    
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form action="/advanced/search" method="GET" id="advancedSearchForm">
+                <!-- 검색 옵션 선택 -->
+                <div class="mb-3">
+                    <label class="form-label">식별표시</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="search_type" id="search_type_text" value="text" checked>
+                        <label class="form-check-label" for="search_type_text">문자</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="search_type" id="search_type_image" value="image">
+                        <label class="form-check-label" for="search_type_image">이미지</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="search_type" id="search_type_draw" value="draw">
+                        <label class="form-check-label" for="search_type_draw">사진</label>
+                    </div>
+                </div>
+                
+                <div class="row g-3">
+                    <!-- 제품명 및 제조사 검색 필드 -->
+                    <div class="col-md-6">
+                        <label for="item_name" class="form-label">제품명</label>
+                        <input type="text" class="form-control" id="item_name" name="item_name" placeholder="제품명을 입력하세요">
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="entp_name" class="form-label">제조사</label>
+                        <input type="text" class="form-control" id="entp_name" name="entp_name" placeholder="제조사명을 입력하세요">
+                    </div>
+                </div>
+                
+                <!-- 모양 선택 필드 -->
+                <div class="mt-4">
+                    <h5>제형</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex flex-wrap mb-3">
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_all" value="전체">
+                                    <label class="form-check-label" for="shape_all">전체</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_circle" value="원형">
+                                    <label class="form-check-label" for="shape_circle">원형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_oval" value="타원형">
+                                    <label class="form-check-label" for="shape_oval">타원형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_rect" value="장방형">
+                                    <label class="form-check-label" for="shape_rect">장방형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_triangle" value="삼각형">
+                                    <label class="form-check-label" for="shape_triangle">삼각형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_square" value="사각형">
+                                    <label class="form-check-label" for="shape_square">사각형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_pentagon" value="오각형">
+                                    <label class="form-check-label" for="shape_pentagon">오각형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_hexagon" value="육각형">
+                                    <label class="form-check-label" for="shape_hexagon">육각형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_octagon" value="팔각형">
+                                    <label class="form-check-label" for="shape_octagon">팔각형</label>
+                                </div>
+                                <div class="form-check me-4 mb-2">
+                                    <input class="form-check-input" type="checkbox" name="drug_shape" id="shape_other" value="기타">
+                                    <label class="form-check-label" for="shape_other">기타</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 색상 선택 필드 -->
+                <div class="mt-4">
+                    <h5>색상</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="color-selector d-flex flex-wrap mb-3">
+                                <!-- 색상 박스들 -->
+                                <div class="color-box me-3 mb-3" data-color="하양">
+                                    <input type="checkbox" name="color" id="color_white" value="하양" class="d-none">
+                                    <label for="color_white" class="color-label" style="background-color: white; border: 1px solid #ddd;">
+                                        <span class="color-name">하양</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="노랑">
+                                    <input type="checkbox" name="color" id="color_yellow" value="노랑" class="d-none">
+                                    <label for="color_yellow" class="color-label" style="background-color: yellow;">
+                                        <span class="color-name">노랑</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="주황">
+                                    <input type="checkbox" name="color" id="color_orange" value="주황" class="d-none">
+                                    <label for="color_orange" class="color-label" style="background-color: orange;">
+                                        <span class="color-name">주황</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="분홍">
+                                    <input type="checkbox" name="color" id="color_pink" value="분홍" class="d-none">
+                                    <label for="color_pink" class="color-label" style="background-color: pink;">
+                                        <span class="color-name">분홍</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="빨강">
+                                    <input type="checkbox" name="color" id="color_red" value="빨강" class="d-none">
+                                    <label for="color_red" class="color-label" style="background-color: red;">
+                                        <span class="color-name">빨강</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="갈색">
+                                    <input type="checkbox" name="color" id="color_brown" value="갈색" class="d-none">
+                                    <label for="color_brown" class="color-label" style="background-color: brown;">
+                                        <span class="color-name">갈색</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="연두">
+                                    <input type="checkbox" name="color" id="color_lightgreen" value="연두" class="d-none">
+                                    <label for="color_lightgreen" class="color-label" style="background-color: lightgreen;">
+                                        <span class="color-name">연두</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="초록">
+                                    <input type="checkbox" name="color" id="color_green" value="초록" class="d-none">
+                                    <label for="color_green" class="color-label" style="background-color: green;">
+                                        <span class="color-name">초록</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="청록">
+                                    <input type="checkbox" name="color" id="color_teal" value="청록" class="d-none">
+                                    <label for="color_teal" class="color-label" style="background-color: teal;">
+                                        <span class="color-name">청록</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="파랑">
+                                    <input type="checkbox" name="color" id="color_blue" value="파랑" class="d-none">
+                                    <label for="color_blue" class="color-label" style="background-color: blue;">
+                                        <span class="color-name">파랑</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="남색">
+                                    <input type="checkbox" name="color" id="color_navy" value="남색" class="d-none">
+                                    <label for="color_navy" class="color-label" style="background-color: navy;">
+                                        <span class="color-name">남색</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="자주">
+                                    <input type="checkbox" name="color" id="color_purple" value="자주" class="d-none">
+                                    <label for="color_purple" class="color-label" style="background-color: purple;">
+                                        <span class="color-name">자주</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="보라">
+                                    <input type="checkbox" name="color" id="color_violet" value="보라" class="d-none">
+                                    <label for="color_violet" class="color-label" style="background-color: violet;">
+                                        <span class="color-name">보라</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="회색">
+                                    <input type="checkbox" name="color" id="color_gray" value="회색" class="d-none">
+                                    <label for="color_gray" class="color-label" style="background-color: gray;">
+                                        <span class="color-name">회색</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="검정">
+                                    <input type="checkbox" name="color" id="color_black" value="검정" class="d-none">
+                                    <label for="color_black" class="color-label" style="background-color: black;">
+                                        <span class="color-name">검정</span>
+                                    </label>
+                                </div>
+                                <div class="color-box me-3 mb-3" data-color="투명">
+                                    <input type="checkbox" name="color" id="color_transparent" value="투명" class="d-none">
+                                    <label for="color_transparent" class="color-label" style="background: linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5), linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 75%, #f5f5f5 75%, #f5f5f5); background-size: 10px 10px; background-position: 0 0, 5px 5px; border: 1px solid #ddd;">
+                                        <span class="color-name">투명</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="color_multi" name="color_multi" value="1">
+                                <label class="form-check-label" for="color_multi">2가지 이상 색상</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 분할선 선택 필드 -->
+                <div class="mt-4">
+                    <h5>분할선</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-label">앞</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_front" id="line_front_none" value="" checked>
+                                <label class="form-check-label" for="line_front_none">없음</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_front" id="line_front_minus" value="-">
+                                <label class="form-check-label" for="line_front_minus">'-' (또는 '|') 형</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_front" id="line_front_plus" value="+">
+                                <label class="form-check-label" for="line_front_plus">'+'형</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_front" id="line_front_other" value="기타">
+                                <label class="form-check-label" for="line_front_other">기타</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <label class="form-label">뒤</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_back" id="line_back_none" value="" checked>
+                                <label class="form-check-label" for="line_back_none">없음</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_back" id="line_back_minus" value="-">
+                                <label class="form-check-label" for="line_back_minus">'-' (또는 '|') 형</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_back" id="line_back_plus" value="+">
+                                <label class="form-check-label" for="line_back_plus">'+'형</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="line_back" id="line_back_other" value="기타">
+                                <label class="form-check-label" for="line_back_other">기타</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="print_front" class="form-label">식별 표시(각인/마크)</label>
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="print_front" name="print_front" placeholder="앞면">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="print_back" name="print_back" placeholder="뒷면">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 제형 및 의약품 구분 필드 -->
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="form_code_name" class="form-label">제형</label>
+                            <select class="form-select" id="form_code_name" name="form_code_name">
+                                <option value="">전체</option>
+                                <option value="정제">정제</option>
+                                <option value="나정">나정</option>
+                                <option value="필름코팅정">필름코팅정</option>
+                                <option value="장용성필름코팅정">장용성필름코팅정</option>
+                                <option value="서방형정제">서방형정제</option>
+                                <option value="경질캡슐제">경질캡슐제</option>
+                                <option value="연질캡슐제">연질캡슐제</option>
+                                <option value="현탁상">현탁상</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="etc_otc_name" class="form-label">의약품 구분</label>
+                            <select class="form-select" id="etc_otc_name" name="etc_otc_name">
+                                <option value="">전체</option>
+                                <option value="전문의약품">전문의약품</option>
+                                <option value="일반의약품">일반의약품</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 효능 분류 선택 필드 -->
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="class_name" class="form-label">효능 분류</label>
+                            <select class="form-select" id="class_name" name="class_name">
+                                <option value="">전체</option>
+                                <option value="해열진통소염제">해열진통소염제</option>
+                                <option value="항히스타민제">항히스타민제</option>
+                                <option value="소화성궤양용제">소화성궤양용제</option>
+                                <option value="무기질제제">무기질제제</option>
+                                <option value="기타의 중추신경용약">기타의 중추신경용약</option>
+                                <option value="각종 호르몬제">각종 호르몬제</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="class_no" class="form-label">분류번호</label>
+                            <input type="text" class="form-control" id="class_no" name="class_no" placeholder="분류번호 입력 (예: 01410)">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <button type="submit" class="btn btn-primary px-4">검색</button>
+                    <button type="reset" class="btn btn-outline-secondary px-4 ms-2">초기화</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+.color-selector {
+    position: relative;
+}
+.color-box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.color-label {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.color-name {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+.color-box input[type="checkbox"]:checked + .color-label {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #007bff;
+}
+.color-box input[type="checkbox"]:checked + .color-label::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 2px black;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 모양 선택 로직
+    const shapeAll = document.getElementById('shape_all');
+    const shapeOptions = document.querySelectorAll('input[name="drug_shape"]');
+
+    shapeAll.addEventListener('change', function() {
+        if (this.checked) {
+            // '전체' 선택 시 다른 옵션 해제
+            shapeOptions.forEach(option => {
+                if (option.id !== 'shape_all') {
+                    option.checked = false;
+                }
+            });
+        }
+    });
+
+    // 다른 모양 옵션 선택 시 '전체' 해제
+    shapeOptions.forEach(option => {
+        if (option.id !== 'shape_all') {
+            option.addEventListener('change', function() {
+                if (this.checked) {
+                    shapeAll.checked = false;
+                }
+            });
+        }
+});
+    
+    // 색상 선택 로직
+    const colorBoxes = document.querySelectorAll('.color-box');
+    colorBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+            const checkbox = this.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+        });
+    });
+    
+    // 폼 초기화 버튼 이벤트
+    const resetButton = document.querySelector('button[type="reset"]');
+    resetButton.addEventListener('click', function() {
+        // 색상 선택 초기화
+        document.querySelectorAll('input[name="color"]').forEach(input => {
+            input.checked = false;
+        });
+        
+        // 분할선 선택 초기화
+        document.getElementById('line_front_none').checked = true;
+        document.getElementById('line_back_none').checked = true;
+    });
+});
+</script>
+{% endblock %}
