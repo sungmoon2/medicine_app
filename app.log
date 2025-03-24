@@ -709,3 +709,32 @@
 2025-03-25 03:08:39,114 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:39,181 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:39] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:39,182 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:11:20,476 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 03:11:20,476 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 03:11:20,477 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 03:11:21,253 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 03:11:21,257 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 03:11:22,119 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 03:11:22,192 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 03:11:22,407 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:22,554 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:22,555 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:11:26,162 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:11:26,425 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:26,506 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:26,506 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:11:27,699 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:27,699 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:27] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:32,222 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=ÀüÃ¼&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:11:32,509 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:32,564 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:32,566 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:11:34,870 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:34] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 03:11:34,969 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:35,122 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:35] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:35,204 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:11:37,711 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:37] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:11:38,007 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:38,059 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:11:38,060 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
