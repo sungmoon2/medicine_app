@@ -24,6 +24,8 @@ def register():
     pass
 
 # 의약품 관련 라우트
+
+
 @medicine.route('/search', methods=['GET', 'POST'])
 def search():
     pass

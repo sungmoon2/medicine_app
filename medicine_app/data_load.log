@@ -1,0 +1,3 @@
+2025-03-24 18:16:05,190 - data_load - INFO - 데이터 로드 시작
+2025-03-24 18:16:05,193 - data_load - ERROR - API 요청 예외: No connection adapters were found for "{'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList', 'http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq', 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01', 'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList'}"
+2025-03-24 18:16:05,193 - data_load - ERROR - 데이터 가져오기 실패

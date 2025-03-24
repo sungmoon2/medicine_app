@@ -32,8 +32,13 @@ DB_CONFIG = {
 }
 
 # API URL - 작동이 확인된 URL 사용
-API_URL = 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList'
+API_URL = { 
+    'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
+    'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01',
+    'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList',
+    'http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq'
 
+}
 def db_connection():
     """데이터베이스 연결"""
     try:
