@@ -471,7 +471,11 @@ def search():
         search_params=search_params
     )
 
+<<<<<<< HEAD
 @app.route('/advanced/medicine-detail/<int:medicine_id>') # 언더스코어 X 하이픈 O (어딘가에서 경로지정을 하이픈으로 해서 하이픈을 따라해야함)
+=======
+@app.route('/advanced/medicine_detail/<int:medicine_id>')
+>>>>>>> 77f6da08a94c089abbe25dd1386026ccadbb9871
 def medicine_detail(medicine_id):
     # 의약품 상세 정보 가져오기
     medicine = get_medicine_detail_from_db(medicine_id)
@@ -480,7 +484,11 @@ def medicine_detail(medicine_id):
         flash('의약품 정보를 찾을 수 없습니다.', 'error')
         return redirect(url_for('index'))
     
+<<<<<<< HEAD
     return render_template('medicine_detail.html', medicine=medicine) # 하이픈 X 언더스코어 O (html 파일을 불러오기 때문에 이름이 똑같아야함)
+=======
+    return render_template('medicine_detail.html', medicine=medicine)
+>>>>>>> 77f6da08a94c089abbe25dd1386026ccadbb9871
 
 #---------------------------------------------------
 # 메인 함수

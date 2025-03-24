@@ -85,6 +85,7 @@ def advanced_search():
             query_parts.append("(print_back LIKE %s OR mark_code_back LIKE %s)")
             back_mark = f"%{search_params['print_back']}%"
             params.extend([back_mark, back_mark])
+<<<<<<< HEAD
             
         # 앞면 분할선 검색
         if 'line_front' in request.args and request.args.get('line_front'):
@@ -116,6 +117,8 @@ def advanced_search():
             else:
                 query_parts.append("line_back = %s")
                 params.append(line_back_value)
+=======
+>>>>>>> 77f6da08a94c089abbe25dd1386026ccadbb9871
         
         # 최종 쿼리 구성
         where_clause = " AND ".join(query_parts) if query_parts else "1=1"
