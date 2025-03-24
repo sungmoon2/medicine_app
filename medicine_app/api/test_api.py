@@ -12,12 +12,12 @@ print(f"API 키 존재 여부: {'있음' if API_KEY else '없음'}")
 print(f"API 키 (앞부분만): {API_KEY[:10]}..." if API_KEY else "API 키 없음")
 
 # 여러 가능한 API URL을 시도
-urls = [
-    'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcList',
-    'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
-    'http://apis.data.go.kr/1471000/DrugInfoService/getDrugInfo',
-    'http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList'
-]
+API_URLS = {
+    'drug_easy': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
+    'mdcin_grn': 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01',
+    'major_cmpn': 'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList',
+    'day_max_dosg': 'http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq'
+}
 
 params = {
     'serviceKey': API_KEY,
