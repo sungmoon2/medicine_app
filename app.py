@@ -11,6 +11,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 import time
 from advanced_search_controller import advanced_search_bp  # 고급 검색 블루프린트 import
+from ai_search import ai_search_medicine
 
 # 로그 디렉토리 확인 및 생성
 log_dir = os.path.dirname(os.path.abspath('app.log'))
@@ -481,6 +482,36 @@ def medicine_detail(medicine_id):
         return redirect(url_for('index'))
     
     return render_template('medicine_detail.html', medicine=medicine) # 하이픈 X 언더스코어 O (html 파일을 불러오기 때문에 이름이 똑같아야함)
+
+@app.route('/api/ai-search', methods=['POST'])
+def ai_search():
+    """AI 검색 API"""
+    try:
+        data = request.get_json()
+        query = data.get('query', '')
+        
+        if not query:
+            return jsonify({
+                'success': False,
+                'message': '검색어를 입력해주세요.'
+            }), 400
+        
+        # AI 검색 수행
+        result = ai_search_medicine(query)
+        return jsonify(result)
+    
+    except Exception as e:
+        app.logger.error(f"AI 검색 API 오류: {str(e)}")
+        return jsonify({
+            'success': False,
+            'message': '검색 중 오류가 발생했습니다.',
+            'error': str(e)
+        }), 500
+
+@app.route('/ai-search')
+def ai_search_page():
+    """AI 검색 페이지"""
+    return render_template('ai_search.html')
 
 #---------------------------------------------------
 # 메인 함수
