@@ -1,4 +1,3 @@
-# medicine_app/load_drug_data.py
 import requests
 import xml.etree.ElementTree as ET
 import pymysql
@@ -7,6 +6,10 @@ import logging
 import os
 import sys
 from dotenv import load_dotenv
+import colorama
+from colorama import Fore, Style
+import json
+colorama.init(autoreset=True)  # Windows 콘솔 색상 지원
 
 # 환경 변수 로드
 load_dotenv()
@@ -23,8 +26,17 @@ logger = logging.getLogger('data_load')
 # 콘솔 출력을 위한 핸들러 추가
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+console_handler.setFormatter(logging.Formatter('%(message)s'))
 logger.addHandler(console_handler)
+
+def format_api_log(api_name, page_no, total_pages, item_index, total_items, item_name):
+    """API 데이터 로드 진행 상황을 포맷팅하는 함수"""
+    return (
+        f"{Fore.GREEN}API {Fore.RED}{api_name}{Style.RESET_ALL}, "
+        f"페이지 {Fore.BLUE}{page_no}/{total_pages}{Style.RESET_ALL}, "
+        f"항목 {Fore.BLUE}{item_index}/{total_items}{Style.RESET_ALL} "
+        f"처리 중: {item_name}"
+    )
 
 # API 키 설정
 API_KEY = os.getenv('OPEN_API_KEY')
@@ -44,15 +56,21 @@ DB_CONFIG = {
 
 # API URL을 Dictionary로 변경 (set이 아님)
 API_URLS = {
-    '의약품개요정보': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
+    #'의약품개요정보': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
     '의약품 낱알식별 정보': 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01',
-    '의약품성분약효정보': 'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList',
+    '의약품성분약효정보': 'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList', # 데이터 로드 1개도 안됨.
     '성분별 1일 최대투여량 정보': 'http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq'
+}
+
+# API 별 데이터 테이블 매핑
+API_TABLE_MAPPING = {
+    '의약품 낱알식별 정보': 'drug_identification',
+    '의약품성분약효정보': 'drug_component_efficacy',
+    '성분별 1일 최대투여량 정보': 'drug_component_dosage'
 }
 
 # 체크포인트 파일 경로
 CHECKPOINT_FILE = "data_load_checkpoint.json"
-import json
 
 def save_checkpoint(api_key, page_no, processed_count):
     """진행 상황 저장"""
@@ -185,47 +203,110 @@ def fetch_drug_data(api_key, page_no=1, num_of_rows=100):
     
     logger.error(f"최대 재시도 횟수 초과: API {api_key}, 페이지 {page_no}")
     return None
-
 def ensure_tables_exist():
-    """데이터베이스 테이블 존재 확인 및 생성"""
+    """새로운 데이터베이스 테이블 구조 확인 및 생성"""
     conn = db_connection()
     
     try:
         with conn.cursor() as cursor:
-            # medicines 테이블 확인/생성
+            # 1. 식품의약품안전처_의약품 낱알식별 정보 테이블
             cursor.execute("""
-            CREATE TABLE IF NOT EXISTS medicines (
+            CREATE TABLE IF NOT EXISTS drug_identification (
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                item_seq VARCHAR(20) UNIQUE,
-                item_name VARCHAR(500) NOT NULL,
-                entp_name VARCHAR(200),
-                chart TEXT,
-                class_name VARCHAR(200),
-                etc_otc_name VARCHAR(100),
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+                item_seq VARCHAR(100) COMMENT '품목일련번호',
+                item_name VARCHAR(500) COMMENT '품목명',
+                entp_seq VARCHAR(100) COMMENT '업체일련번호',
+                entp_name VARCHAR(300) COMMENT '업체명',
+                chart TEXT COMMENT '성상',
+                item_image TEXT COMMENT '큰제품이미지',
+                print_front VARCHAR(255) COMMENT '표시(앞)',
+                print_back VARCHAR(255) COMMENT '표시(뒤)',
+                drug_shape VARCHAR(100) COMMENT '의약품모양',
+                color_class1 VARCHAR(100) COMMENT '색깔(앞)',
+                color_class2 VARCHAR(100) COMMENT '색깔(뒤)',
+                line_front VARCHAR(100) COMMENT '분할선(앞)',
+                line_back VARCHAR(100) COMMENT '분할선(뒤)',
+                leng_long VARCHAR(50) COMMENT '크기(장축)',
+                leng_short VARCHAR(50) COMMENT '크기(단축)',
+                thick VARCHAR(50) COMMENT '크기(두께)',
+                img_regist_ts VARCHAR(100) COMMENT '약학정보원 이미지 생성일',
+                class_no VARCHAR(100) COMMENT '분류번호',
+                class_name VARCHAR(300) COMMENT '분류명',
+                etc_otc_name VARCHAR(100) COMMENT '전문/일반',
+                item_permit_date VARCHAR(100) COMMENT '품목허가일자',
+                form_code_name VARCHAR(200) COMMENT '제형코드이름',
+                mark_code_front_anal TEXT COMMENT '마크내용(앞)',
+                mark_code_back_anal TEXT COMMENT '마크내용(뒤)',
+                mark_code_front_img TEXT COMMENT '마크이미지(앞)',
+                mark_code_back_img TEXT COMMENT '마크이미지(뒤)',
+                change_date VARCHAR(100) COMMENT '변경일자',
+                mark_code_front VARCHAR(255) COMMENT '마크코드(앞)',
+                mark_code_back VARCHAR(255) COMMENT '마크코드(뒤)',
+                item_eng_name VARCHAR(500) COMMENT '제품영문명',
+                edi_code VARCHAR(100) COMMENT '보험코드',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '데이터 생성일',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '데이터 수정일',
+                INDEX idx_item_seq (item_seq),
+                INDEX idx_item_name (item_name(255)),
+                INDEX idx_edi_code (edi_code)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='식품의약품안전처_의약품 낱알식별 정보'
             """)
             
-            # medicine_usage 테이블 확인/생성
+            # 2. 식품의약품안전처_의약품성분약효정보 테이블
             cursor.execute("""
-            CREATE TABLE IF NOT EXISTS medicine_usage (
+            CREATE TABLE IF NOT EXISTS drug_component_efficacy (
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                medicine_id INT NOT NULL,
-                efcy_qesitm TEXT,
-                use_method_qesitm TEXT,
-                atpn_warn_qesitm TEXT,
-                atpn_qesitm TEXT,
-                intrc_qesitm TEXT,
-                se_qesitm TEXT,
-                deposit_method_qesitm TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (medicine_id) REFERENCES medicines(id) ON DELETE CASCADE
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+                div_nm VARCHAR(400) COMMENT '분류명',
+                fomn_tp_nm VARCHAR(100) COMMENT '제형구분명',
+                gnl_nm VARCHAR(400) NOT NULL COMMENT '일반명',
+                gnl_nm_cd VARCHAR(9) NOT NULL COMMENT '일반명코드',
+                injc_pth_nm VARCHAR(100) COMMENT '투여경로명',
+                iqty_txt VARCHAR(1000) COMMENT '함량내용',
+                meft_div_no VARCHAR(3) COMMENT '약효분류번호',
+                unit VARCHAR(70) COMMENT '단위',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '데이터 생성일',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '데이터 수정일',
+                INDEX idx_gnl_nm_cd (gnl_nm_cd),
+                INDEX idx_meft_div_no (meft_div_no)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='식품의약품안전처_의약품성분약효정보'
+            """)
+            
+            # 3. 건강보험심사평가원_의약품성분약효정보 테이블
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS drug_component_dosage (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                cpnt_cd VARCHAR(100) NOT NULL COMMENT '성분코드',
+                drug_cpnt_kor_nm VARCHAR(500) NOT NULL COMMENT '성분명(한글)',
+                drug_cpnt_eng_nm VARCHAR(500) COMMENT '성분명(영문)',
+                foml_cd VARCHAR(100) COMMENT '제형코드',
+                foml_nm VARCHAR(300) COMMENT '제형명',
+                dosage_route_code VARCHAR(100) COMMENT '투여경로',
+                day_max_dosg_qy_unit VARCHAR(100) COMMENT '투여단위',
+                day_max_dosg_qy DECIMAL(20,6) COMMENT '1일최대투여량',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '데이터 생성일',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '데이터 수정일',
+                INDEX idx_cpnt_cd (cpnt_cd),
+                INDEX idx_drug_cpnt_kor_nm (drug_cpnt_kor_nm(255))
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='건강보험심사평가원_의약품성분약효정보'
+            """)
+            
+            # 4. 추가적으로 의약품 데이터를 통합적으로 관리하기 위한 관계 테이블
+            cursor.execute("""
+            CREATE TABLE IF NOT EXISTS drug_relation (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                item_seq VARCHAR(100) COMMENT '품목일련번호(drug_identification 참조)',
+                gnl_nm_cd VARCHAR(9) COMMENT '일반명코드(drug_component_efficacy 참조)',
+                cpnt_cd VARCHAR(100) COMMENT '성분코드(drug_component_dosage 참조)',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP COMMENT '데이터 생성일',
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '데이터 수정일',
+                INDEX idx_item_seq (item_seq),
+                INDEX idx_gnl_nm_cd (gnl_nm_cd),
+                INDEX idx_cpnt_cd (cpnt_cd)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='의약품 데이터 관계 테이블'
             """)
             
             conn.commit()
-            logger.info("데이터베이스 테이블 확인/생성 완료")
+            logger.info("새로운 데이터베이스 테이블 확인/생성 완료")
     except Exception as e:
         logger.error(f"테이블 생성 오류: {e}")
         conn.rollback()
@@ -233,190 +314,181 @@ def ensure_tables_exist():
         conn.close()
 
 def insert_drug_data(drug_data, api_key=None):
-    """의약품 데이터 삽입 - API별 응답 필드명 처리"""
+    """새로운 테이블 구조에 맞게 의약품 데이터 삽입"""
     
-    # 각 API별로 가능한 식별자 필드명
-    possible_id_fields = {
-        'drug_easy': ['itemSeq'],  # e약은요 API
-        'mdcin_grn': ['ITEM_SEQ', 'item_seq'],  # 낱알식별 API
-        'major_cmpn': ['gnlNmCd', 'CPNT_CD'],  # 성분약효/1일최대투여량 API
-        'day_max_dosg': ['CPNT_CD']  # 1일최대투여량 API
+    # 재시도 설정
+    max_retries = 3
+    retry_delay = 1
+    
+    # API 응답 필드를 DB 필드로 매핑 (대문자/소문자 모두 고려)
+    field_mappings = {
+        '의약품 낱알식별 정보': {
+            'item_seq': ['ITEM_SEQ', 'itemSeq', 'item_seq'],
+            'item_name': ['ITEM_NAME', 'itemName'],
+            'entp_seq': ['ENTP_SEQ', 'entpSeq'],
+            'entp_name': ['ENTP_NAME', 'entpName'],
+            'chart': ['CHART', 'chart'],
+            'item_image': ['ITEM_IMAGE', 'itemImage'],
+            'print_front': ['PRINT_FRONT', 'printFront'],
+            'print_back': ['PRINT_BACK', 'printBack'],
+            'drug_shape': ['DRUG_SHAPE', 'drugShape'],
+            'color_class1': ['COLOR_CLASS1', 'colorClass1', 'COLOR_CLASS', 'colorClass'],
+            'color_class2': ['COLOR_CLASS2', 'colorClass2'],
+            'line_front': ['LINE_FRONT', 'lineFront'],
+            'line_back': ['LINE_BACK', 'lineBack'],
+            'leng_long': ['LENG_LONG', 'lengLong'],
+            'leng_short': ['LENG_SHORT', 'lengShort'],
+            'thick': ['THICK', 'thick'],
+            'img_regist_ts': ['IMG_REGIST_TS', 'imgRegistTs'],
+            'class_no': ['CLASS_NO', 'classNo'],
+            'class_name': ['CLASS_NAME', 'className'],
+            'etc_otc_name': ['ETC_OTC_NAME', 'etcOtcName'],
+            'item_permit_date': ['ITEM_PERMIT_DATE', 'itemPermitDate'],
+            'form_code_name': ['FORM_CODE_NAME', 'formCodeName'],
+            'mark_code_front_anal': ['MARK_CODE_FRONT_ANAL', 'markCodeFrontAnal'],
+            'mark_code_back_anal': ['MARK_CODE_BACK_ANAL', 'markCodeBackAnal'],
+            'mark_code_front_img': ['MARK_CODE_FRONT_IMG', 'markCodeFrontImg'],
+            'mark_code_back_img': ['MARK_CODE_BACK_IMG', 'markCodeBackImg'],
+            'change_date': ['CHANGE_DATE', 'changeDate'],
+            'mark_code_front': ['MARK_CODE_FRONT', 'markCodeFront'],
+            'mark_code_back': ['MARK_CODE_BACK', 'markCodeBack'],
+            'item_eng_name': ['ITEM_ENG_NAME', 'itemEngName'],
+            'edi_code': ['EDI_CODE', 'ediCode']
+        },
+        '의약품성분약효정보': {
+            'div_nm': ['divNm', 'DIV_NM'],
+            'fomn_tp_nm': ['fomnTpNm', 'FOMN_TP_NM'],
+            'gnl_nm': ['gnlNm', 'GNL_NM'],
+            'gnl_nm_cd': ['gnlNmCd', 'GNL_NM_CD'],
+            'injc_pth_nm': ['injcPthNm', 'INJC_PTH_NM'],
+            'iqty_txt': ['iqtyTxt', 'IQTY_TXT'],
+            'meft_div_no': ['meftDivNo', 'MEFT_DIV_NO'],
+            'unit': ['unit', 'UNIT']
+        },
+        '성분별 1일 최대투여량 정보': {
+            'cpnt_cd': ['CPNT_CD', 'cpntCd'],
+            'drug_cpnt_kor_nm': ['DRUG_CPNT_KOR_NM', 'drugCpntKorNm'],
+            'drug_cpnt_eng_nm': ['DRUG_CPNT_ENG_NM', 'drugCpntEngNm'],
+            'foml_cd': ['FOML_CD', 'fomlCd'],
+            'foml_nm': ['FOML_NM', 'fomlNm'],
+            'dosage_route_code': ['DOSAGE_ROUTE_CODE', 'dosageRouteCode'],
+            'day_max_dosg_qy_unit': ['DAY_MAX_DOSG_QY_UNIT', 'dayMaxDosgQyUnit'],
+            'day_max_dosg_qy': ['DAY_MAX_DOSG_QY', 'dayMaxDosgQy']
+        }
     }
     
-    # 모든 가능한 필드명 목록 생성
-    all_possible_fields = ['itemSeq', 'ITEM_SEQ', 'item_seq', 'gnlNmCd', 'CPNT_CD']
+    # 값 가져오기 함수
+    def get_field_value(data, field_key, api_key):
+        if api_key in field_mappings and field_key in field_mappings[api_key]:
+            for possible_field in field_mappings[api_key][field_key]:
+                if possible_field in data and data[possible_field] is not None:
+                    return data[possible_field]
+        return None
     
-    item_seq = None
-    used_field = None
+    # 식별자 확인
+    primary_identifier = None
+    table_name = API_TABLE_MAPPING.get(api_key)
     
-    # API별 적합한 필드명 먼저 시도
-    if api_key in possible_id_fields:
-        for field in possible_id_fields[api_key]:
-            if field in drug_data and drug_data[field]:
-                item_seq = drug_data[field]
-                used_field = field
-                logger.info(f"API {api_key}: 식별자 필드 '{field}' 사용")
-                break
+    if api_key == '의약품 낱알식별 정보':
+        primary_identifier = get_field_value(drug_data, 'item_seq', api_key)
+        id_field = 'item_seq'
+    elif api_key == '의약품성분약효정보':
+        primary_identifier = get_field_value(drug_data, 'gnl_nm_cd', api_key)
+        id_field = 'gnl_nm_cd'
+    elif api_key == '성분별 1일 최대투여량 정보':
+        primary_identifier = get_field_value(drug_data, 'cpnt_cd', api_key)
+        id_field = 'cpnt_cd'
     
-    # 여전히 식별자를 찾지 못했다면 모든 가능한 필드 시도
-    if not item_seq:
-        for field in all_possible_fields:
-            if field in drug_data and drug_data[field]:
-                item_seq = drug_data[field]
-                used_field = field
-                logger.info(f"API {api_key}: 대체 식별자 필드 '{field}' 사용")
-                break
-    
-    # 여전히 식별자가 없다면 로그에 가용 필드 출력
-    if not item_seq:
-        logger.warning(f"API {api_key}: 식별자 없음. 가용 필드: {list(drug_data.keys())}")
+    if not primary_identifier or not table_name:
+        logger.warning(f"API {api_key}: 식별자 또는 테이블 매핑 없음 - 건너뜀")
+        if api_key and api_key in field_mappings:
+            available_fields = list(drug_data.keys())
+            logger.debug(f"가용 필드: {available_fields}")
         return False
     
-    # 필드명 매핑 추가 (API별 응답 필드를 데이터베이스 필드명으로 변환)
-    field_mappings = {
-        'drug_easy': {  # e약은요 API
-            'name': 'itemName',
-            'company': 'entpName',
-            'effect': 'efcyQesitm',
-            'usage': 'useMethodQesitm'
-        },
-        'mdcin_grn': {  # 낱알식별 API
-            'name': 'ITEM_NAME',
-            'company': 'ENTP_NAME',
-            'chart': 'CHART',
-            'class_name': 'CLASS_NAME'
-        },
-        'major_cmpn': {  # 성분약효 API
-            'name': 'gnlNm',
-            'company': 'gnlNmCd'
-        }
-        # 다른 API들의 매핑도 추가
-    }
+    # 로그 출력
+    logger.debug(f"테이블: {table_name}, 식별자: {id_field}={primary_identifier}")
     
-    # 필드 매핑 적용 함수
-    def get_field_value(data, field_key, api_key):
-        """API별 필드 매핑에 따라 값 가져오기"""
-        if api_key in field_mappings and field_key in field_mappings[api_key]:
-            mapped_field = field_mappings[api_key][field_key]
-            return data.get(mapped_field, '')
-        return ''
-    
-    # DB 삽입 로직은 그대로 두고, 매핑된 값 사용
+    # DB 삽입 로직
     for attempt in range(max_retries):
         conn = db_connection()
         try:
             with conn.cursor() as cursor:
-                # 1. medicines 테이블에 데이터 삽입
-                item_seq = drug_data.get('itemSeq', '')
-                if not item_seq:
-                    logger.warning("품목일련번호(itemSeq)가 없는 항목 - 건너뜀")
-                    return False
-                
-                check_sql = "SELECT id FROM medicines WHERE item_seq = %s"
-                cursor.execute(check_sql, (item_seq,))
+                # 기존 레코드 확인
+                check_sql = f"SELECT id FROM {table_name} WHERE {id_field} = %s"
+                cursor.execute(check_sql, (primary_identifier,))
                 existing = cursor.fetchone()
                 
-                medicine_id = None
+                # 필드와 값 수집
+                fields = []
+                values = []
+                placeholders = []
+                update_parts = []
+                
+                # API에 따라 다른 필드 매핑 사용
+                if api_key in field_mappings:
+                    for db_field, api_fields in field_mappings[api_key].items():
+                        value = get_field_value(drug_data, db_field, api_key)
+                        if value is not None:
+                            fields.append(db_field)
+                            values.append(value)
+                            placeholders.append('%s')
+                            update_parts.append(f"{db_field} = %s")
+                
+                if not fields:
+                    logger.warning(f"API {api_key}: 유효한 필드 없음 - 건너뜀")
+                    return False
                 
                 if existing:
-                    # 이미 존재하면 ID 가져오기
-                    medicine_id = existing['id']
-                    logger.debug(f"기존 의약품 발견: ID={medicine_id}, 품목일련번호={item_seq}")
+                    # 업데이트
+                    id_val = existing['id']
+                    if update_parts:
+                        update_sql = f"UPDATE {table_name} SET {', '.join(update_parts)}, updated_at = CURRENT_TIMESTAMP WHERE id = %s"
+                        cursor.execute(update_sql, values + [id_val])
+                        logger.debug(f"레코드 업데이트: {table_name} id={id_val}")
                 else:
-                    # 새로 삽입
-                    insert_sql = """
-                    INSERT INTO medicines (
-                        item_seq, item_name, entp_name, chart, class_name, etc_otc_name
-                    ) VALUES (%s, %s, %s, %s, %s, %s)
-                    """
-                    cursor.execute(insert_sql, (
-                        item_seq,
-                        get_field_value(drug_data, 'name', api_key),  # 필드 매핑을 통해 이름을 가져옴
-                        get_field_value(drug_data, 'company', api_key),  # 필드 매핑을 통해 업체명을 가져옴
-                        get_field_value(drug_data, 'chart', api_key),  # 필드 매핑을 통해 차트를 가져옴
-                        get_field_value(drug_data, 'class_name', api_key),  # 필드 매핑을 통해 분류명을 가져옴
-                        drug_data.get('etcOtcName', '일반의약품')  # 기본값 설정
-                    ))
+                    # 삽입
+                    insert_sql = f"INSERT INTO {table_name} ({', '.join(fields)}) VALUES ({', '.join(placeholders)})"
+                    cursor.execute(insert_sql, values)
+                    logger.debug(f"새 레코드 삽입: {table_name}")
                     
-                    medicine_id = cursor.lastrowid
-                    logger.debug(f"새 의약품 추가: ID={medicine_id}, 품목일련번호={item_seq}")
-                
-                # 2. medicine_usage 테이블에 데이터 삽입
-                if medicine_id:
-                    check_sql = "SELECT id FROM medicine_usage WHERE medicine_id = %s"
-                    cursor.execute(check_sql, (medicine_id,))
-                    existing = cursor.fetchone()
-                    
-                    if existing:
-                        # 업데이트
-                        update_sql = """
-                        UPDATE medicine_usage SET
-                            efcy_qesitm = %s,
-                            use_method_qesitm = %s,
-                            atpn_warn_qesitm = %s,
-                            atpn_qesitm = %s,
-                            intrc_qesitm = %s,
-                            se_qesitm = %s,
-                            deposit_method_qesitm = %s
-                        WHERE id = %s
-                        """
-                        cursor.execute(update_sql, (
-                            get_field_value(drug_data, 'effect', api_key),  # 필드 매핑을 통해 효과 정보를 가져옴
-                            get_field_value(drug_data, 'usage', api_key),  # 필드 매핑을 통해 사용 방법을 가져옴
-                            drug_data.get('atpnWarnQesitm', ''),
-                            drug_data.get('atpnQesitm', ''),
-                            drug_data.get('intrcQesitm', ''),
-                            drug_data.get('seQesitm', ''),
-                            drug_data.get('depositMethodQesitm', ''),
-                            existing['id']
-                        ))
-                    else:
-                        # 삽입
-                        insert_sql = """
-                        INSERT INTO medicine_usage (
-                            medicine_id, efcy_qesitm, use_method_qesitm, 
-                            atpn_warn_qesitm, atpn_qesitm, intrc_qesitm,
-                            se_qesitm, deposit_method_qesitm
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                        """
-                        cursor.execute(insert_sql, (
-                            medicine_id,
-                            get_field_value(drug_data, 'effect', api_key),  # 필드 매핑을 통해 효과 정보를 가져옴
-                            get_field_value(drug_data, 'usage', api_key),  # 필드 매핑을 통해 사용 방법을 가져옴
-                            drug_data.get('atpnWarnQesitm', ''),
-                            drug_data.get('atpnQesitm', ''),
-                            drug_data.get('intrcQesitm', ''),
-                            drug_data.get('seQesitm', ''),
-                            drug_data.get('depositMethodQesitm', '')
-                        ))
+                    # 성공적으로 삽입한 경우 drug_relation 테이블에도 추가
+                    if cursor.lastrowid:
+                        # 관계 테이블에 연결 정보 저장 (해당하는 경우)
+                        if api_key == '의약품 낱알식별 정보':
+                            relation_sql = "INSERT INTO drug_relation (item_seq) VALUES (%s) ON DUPLICATE KEY UPDATE updated_at = CURRENT_TIMESTAMP"
+                            cursor.execute(relation_sql, (primary_identifier,))
+                        elif api_key == '의약품성분약효정보':
+                            relation_sql = "INSERT INTO drug_relation (gnl_nm_cd) VALUES (%s) ON DUPLICATE KEY UPDATE updated_at = CURRENT_TIMESTAMP"
+                            cursor.execute(relation_sql, (primary_identifier,))
+                        elif api_key == '성분별 1일 최대투여량 정보':
+                            relation_sql = "INSERT INTO drug_relation (cpnt_cd) VALUES (%s) ON DUPLICATE KEY UPDATE updated_at = CURRENT_TIMESTAMP"
+                            cursor.execute(relation_sql, (primary_identifier,))
                 
                 conn.commit()
                 return True
-                
         except Exception as e:
             conn.rollback()
-            logger.error(f"의약품 데이터 삽입 오류 (시도 {attempt+1}/{max_retries}): {e}")
-            logger.debug(f"문제가 발생한 데이터: {drug_data.get('itemName', '알 수 없음')}")
+            logger.error(f"데이터 삽입 오류 (시도 {attempt+1}/{max_retries}): {e}")
             
             if attempt < max_retries - 1:
                 logger.info(f"{retry_delay}초 후 재시도...")
                 time.sleep(retry_delay)
             else:
-                logger.error(f"데이터 삽입 최대 재시도 초과: {drug_data.get('itemName', '알 수 없음')}")
+                logger.error(f"데이터 삽입 최대 재시도 초과: {primary_identifier}")
                 return False
         finally:
             conn.close()
     
     return False
 
-
 def process_all_api_data():
     """모든 API 데이터 처리"""
     # 체크포인트 로드
     checkpoint = load_checkpoint()
     
-    # 처리할 API 목록
-    api_keys = list(API_URLS.keys())
+    # 처리할 API 목록 - 새로운 테이블 구조에 맞는 API만 처리
+    api_keys = list(API_TABLE_MAPPING.keys())
     
     # 체크포인트에서 시작점 결정
     start_api_idx = 0
@@ -462,8 +534,21 @@ def process_all_api_data():
         page_data = first_page_data
         
         for i, item in enumerate(page_data['items']):
-            item_name = item.get('itemName', f"항목 {i+1}")
-            logger.info(f"API {current_api}: 항목 {i+1}/{len(page_data['items'])} 처리 중: {item_name}")
+            item_name = item.get('itemName', '') or item.get('ITEM_NAME', '') or item.get('gnlNm', '') or item.get('DRUG_CPNT_KOR_NM', '') or f"항목 {i+1}"
+            
+            # 기존 로그 출력 유지
+            logger.info(f"항목 {i+1}/{len(page_data['items'])} 처리 중: {item_name}")
+            
+            # 새로운 컬러 로그 추가
+            colored_log = format_api_log(
+                current_api, 
+                current_page, 
+                total_pages, 
+                i+1, 
+                len(page_data['items']), 
+                item_name
+            )
+            logger.info(colored_log)
             
             # 필드 확인 로깅 추가
             if i == 0:  # 각 페이지의 첫 항목에 대해서만
@@ -496,10 +581,21 @@ def process_all_api_data():
             # 페이지 항목 처리
             page_success = 0
             for i, item in enumerate(page_data['items']):
-                item_name = item.get('itemName', f"항목 {i+1}")
+                item_name = item.get('itemName', '') or item.get('ITEM_NAME', '') or item.get('gnlNm', '') or item.get('DRUG_CPNT_KOR_NM', '') or f"항목 {i+1}"
                 logger.info(f"항목 {i+1}/{len(page_data['items'])} 처리 중: {item_name}")
                 
-                if insert_drug_data(item):
+                # 컬러 로그 추가
+                colored_log = format_api_log(
+                    current_api, 
+                    page_no, 
+                    total_pages, 
+                    i+1, 
+                    len(page_data['items']), 
+                    item_name
+                )
+                logger.info(colored_log)
+                
+                if insert_drug_data(item, current_api):
                     page_success += 1
                     api_success_count += 1
                     success_count += 1
@@ -547,4 +643,10 @@ def main():
     logger.info("데이터 로드 완료")
 
 if __name__ == "__main__":
-    main()
+    print("프로그램 시작")
+    try:
+        main()
+        print("프로그램 종료")
+    except Exception as e:
+        print(f"오류 발생: {e}")
+        logger.error(f"오류 발생: {e}", exc_info=True)
