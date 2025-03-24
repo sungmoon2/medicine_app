@@ -1,0 +1,111 @@
+GitHub 프로젝트 설정 및 VS Code 연결 가이드
+
+1. GitHub에서 새 프로젝트 생성
+
+GitHub에 로그인
+
+새 저장소(repository) 생성
+
+저장소 이름: medicine_app
+
+필요 시 README.md, .gitignore, LICENSE 추가
+
+2. VS Code에서 프로젝트 연결 및 Push
+
+(1) 프로젝트 폴더 생성 및 Git 초기화
+
+mkdir Medicine_app
+cd Medicine_app
+git init
+
+오류 해결:
+
+fatal: not a git repository → git init 실행 필요
+
+(2) 원격 저장소 연결
+
+git remote add origin https://github.com/sungmoon2/medicine_app.git
+
+오류 해결:
+
+error: unknown subcommand: <URL> → git remote add origin <URL> 사용
+
+(3) 파일 추가 및 커밋
+
+git add .
+git commit -m "Initial commit"
+
+오류 해결:
+
+fatal: not a git repository → git init 실행 여부 확인
+
+nothing to commit, working tree clean → 변경된 파일 없음
+
+(4) GitHub에 Push
+
+git push -u origin master
+
+오류 해결:
+
+fatal: The current branch master has no upstream branch. → git push --set-upstream origin master 실행
+
+error: failed to push some refs to → git pull origin master --allow-unrelated-histories 실행 후 재시도
+
+3. GitHub에서 클론 및 프로젝트 연결
+
+(1) GitHub에서 프로젝트 클론
+
+git clone https://github.com/sungmoon2/medicine_app.git
+cd medicine_app
+
+(2) 원격 저장소 확인 및 연결
+
+git remote -v
+
+오류 해결:
+
+fatal: not a git repository → git clone 실행 확인
+
+(3) 변경사항 반영 후 Push
+
+git add .
+git commit -m "Update project"
+git push origin master
+
+오류 해결:
+
+error: failed to push some refs → git pull origin master --rebase 후 다시 Push
+
+fatal: refusing to merge unrelated histories → git pull origin master --allow-unrelated-histories
+
+4. Git에서 발생할 수 있는 오류 및 해결 방법
+
+오류 메시지
+
+해결 방법
+
+fatal: not a git repository
+
+git init 실행 후 다시 시도
+
+error: unknown subcommand: <URL>
+
+git remote add origin <URL> 사용
+
+fatal: The current branch master has no upstream branch.
+
+git push --set-upstream origin master 실행
+
+fatal: refusing to merge unrelated histories
+
+git pull origin master --allow-unrelated-histories 실행
+
+error: failed to push some refs to
+
+git pull origin master --rebase 실행 후 다시 Push
+
+nothing to commit, working tree clean
+
+변경 사항이 없거나 git add . 실행 안 했을 가능성
+
+이 가이드를 참고하여 GitHub와 VS Code를 원활하게 연결하세요! 🚀
