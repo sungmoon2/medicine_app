@@ -116,3 +116,80 @@
 2025-03-18 20:39:08,198 - werkzeug - INFO -  * Restarting with stat
 2025-03-18 20:39:08,958 - werkzeug - WARNING -  * Debugger is active!
 2025-03-18 20:39:08,960 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 15:29:04,578 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 15:29:04,578 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 15:29:04,623 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-24 15:29:05,610 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 15:29:05,627 - werkzeug - INFO -  * Debugger PIN: 421-179-313
+2025-03-24 15:55:20,991 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 15:55:20,991 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 15:55:21,038 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-24 15:55:22,173 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 15:55:22,195 - werkzeug - INFO -  * Debugger PIN: 421-179-313
+2025-03-24 16:13:48,219 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 16:13:48,220 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 16:13:48,272 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-24 16:13:49,340 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 16:13:49,368 - werkzeug - INFO -  * Debugger PIN: 421-179-313
+2025-03-24 16:13:51,892 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:13:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-24 16:13:51,920 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:13:51] "GET /login HTTP/1.1" 200 -
+2025-03-24 16:13:52,269 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:13:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-24 16:13:52,283 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:13:52] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-24 16:13:52,637 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:13:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 16:14:02,215 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:14:02] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-03-24 16:14:02,275 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:14:02] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 16:14:02,471 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:14:02] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 16:14:02,902 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:14:02] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 16:14:03,156 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:14:03] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-24 16:19:40,235 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:40] "POST /login HTTP/1.1" 200 -
+2025-03-24 16:19:40,265 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:19:40,485 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:19:41,950 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:41] "GET /register HTTP/1.1" 200 -
+2025-03-24 16:19:42,071 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:19:42,195 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:42] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:19:55,797 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:55] "POST /register HTTP/1.1" 200 -
+2025-03-24 16:19:56,117 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:19:56,117 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:19:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:20:11,013 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:11] "POST /register HTTP/1.1" 200 -
+2025-03-24 16:20:11,338 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:20:11,338 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:20:12,770 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:12] "GET /login HTTP/1.1" 200 -
+2025-03-24 16:20:13,084 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:20:13,115 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:20:16,232 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:16] "POST /login HTTP/1.1" 200 -
+2025-03-24 16:20:16,261 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:20:16,492 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:16] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:20:19,542 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:19] "POST /login HTTP/1.1" 200 -
+2025-03-24 16:20:19,567 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:20:19,791 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:20:57,552 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:57] "GET /register HTTP/1.1" 200 -
+2025-03-24 16:20:57,647 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:20:57,818 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:20:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:21:18,185 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:18] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-24 16:21:18,194 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:18] "GET /login HTTP/1.1" 200 -
+2025-03-24 16:21:18,235 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:21:18,552 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:21:25,515 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-24 16:21:25,534 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "GET / HTTP/1.1" 200 -
+2025-03-24 16:21:25,577 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/round.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,888 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/pentagon.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,892 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/hexagon.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,893 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/octagon.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,894 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/diamond.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,896 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/oval.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:25,900 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:25] "[33mGET /static/img/shapes/rectangle.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:26,215 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:26] "[33mGET /static/img/shapes/semicircle.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:26,216 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:26] "[33mGET /static/img/shapes/triangle.png HTTP/1.1[0m" 404 -
+2025-03-24 16:21:26,216 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:21:26] "[33mGET /static/img/shapes/square.png HTTP/1.1[0m" 404 -
+2025-03-24 16:23:37,426 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:37] "GET /register HTTP/1.1" 200 -
+2025-03-24 16:23:37,569 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:23:37,695 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:23:47,437 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:47] "GET /login HTTP/1.1" 200 -
+2025-03-24 16:23:47,515 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:23:47,702 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 16:23:51,285 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:51] "GET /register HTTP/1.1" 200 -
+2025-03-24 16:23:51,380 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 16:23:51,534 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 16:23:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -

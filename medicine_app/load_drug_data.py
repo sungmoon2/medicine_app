@@ -170,24 +170,56 @@ def main():
     logger.info("데이터 로드 시작")
     
     # 첫 페이지 데이터 가져오기
-    data = fetch_drug_data(page_no=1, num_of_rows=100)
-    if not data:
+    first_page = fetch_drug_data(page_no=1, num_of_rows=100)
+    if not first_page:
         logger.error("데이터 가져오기 실패")
         return
     
-    logger.info(f"총 {data['total_count']}개 의약품 중 첫 100개 가져오기 성공")
+    total_count = first_page['total_count']
+    logger.info(f"API에서 제공하는 총 의약품 수: {total_count}개")
     
-    # 첫 10개만 저장 (테스트용)
+    # 전체 페이지 수 계산 (한 페이지당 100개 항목)
+    total_pages = (total_count + 99) // 100  # 올림 나눗셈
+    logger.info(f"총 {total_pages}개 페이지를 처리합니다.")
+    
+    # 첫 페이지 항목 처리
     success_count = 0
-    for i, item in enumerate(data['items'][:10]):
-        logger.info(f"항목 {i+1}/{10} 처리 중: {item.get('itemName', 'N/A')}")
+    
+    # 첫 페이지 처리
+    logger.info(f"페이지 1/{total_pages} 처리 중...")
+    for i, item in enumerate(first_page['items']):
+        logger.info(f"항목 {i+1}/{len(first_page['items'])} 처리 중: {item.get('itemName', 'N/A')}")
         
         if insert_drug_data(item):
             success_count += 1
-        
-        time.sleep(0.2)  # API 호출 간 지연
     
-    logger.info(f"총 {success_count}/10개 항목 저장 완료")
+    logger.info(f"페이지 1: {success_count}/{len(first_page['items'])} 항목 저장 완료")
+    
+    # 나머지 페이지 처리
+    for page_no in range(2, total_pages + 1):
+        logger.info(f"페이지 {page_no}/{total_pages} 데이터 가져오기 중...")
+        
+        # 페이지 데이터 가져오기
+        page_data = fetch_drug_data(page_no=page_no, num_of_rows=100)
+        if not page_data:
+            logger.error(f"페이지 {page_no} 데이터 가져오기 실패")
+            continue
+        
+        # 페이지 항목 처리
+        page_success = 0
+        for i, item in enumerate(page_data['items']):
+            logger.info(f"페이지 {page_no}, 항목 {i+1}/{len(page_data['items'])} 처리 중: {item.get('itemName', 'N/A')}")
+            
+            if insert_drug_data(item):
+                page_success += 1
+                success_count += 1
+            
+            time.sleep(0.1)  # API 호출 간 지연 (부하 줄이기 위해)
+        
+        logger.info(f"페이지 {page_no}: {page_success}/{len(page_data['items'])} 항목 저장 완료")
+        time.sleep(0.5)  # 페이지 간 지연 (부하 줄이기 위해)
+    
+    logger.info(f"데이터 로드 완료: 총 {success_count}/{total_count}개 항목 저장 성공")
 
 if __name__ == "__main__":
     main()

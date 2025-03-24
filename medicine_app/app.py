@@ -42,11 +42,11 @@ ENCODED_API_KEY = requests.utils.quote(API_KEY) if API_KEY else ''
 
 # API 기본 URL 설정
 API_BASE_URLS = {
-    'drug_info': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList'
-    #'pill_info': 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList',
-    #'medicine_info': 'http://apis.data.go.kr/1471000/DrugInfoService/getDrugInfo',
-    #'component_info': 'http://apis.data.go.kr/1471000/DrugIngrNameService/getIngredientInfoList',
-    #'daily_dose': 'http://apis.data.go.kr/1471000/MedicDayMaxDoseInfoService/getMedicDayMaxDoseInfo'
+    'drug_info': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
+    'pill_info': 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList',
+    'medicine_info': 'http://apis.data.go.kr/1471000/DrugInfoService/getDrugInfo',
+    'component_info': 'http://apis.data.go.kr/1471000/DrugIngrNameService/getIngredientInfoList',
+    'daily_dose': 'http://apis.data.go.kr/1471000/MedicDayMaxDoseInfoService/getMedicDayMaxDoseInfo'
 }
 
 # DUR 관련 API 엔드포인트
