@@ -9,6 +9,11 @@ import requests
 import xml.etree.ElementTree as ET
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
+import time
+
+# 로그 디렉토리 확인 및 생성
+log_dir = os.path.dirname(os.path.abspath('app.log'))
+os.makedirs(log_dir, exist_ok=True)
 
 # 환경 변수 로드
 load_dotenv()
@@ -32,9 +37,17 @@ mysql = MySQL(app)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='app.log'
+    filename='app.log',  # 절대 경로 사용 권장
+    filemode='a'  # append 모드로 설정
 )
+# 콘솔 핸들러 추가
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+console_handler.setFormatter(formatter)
+
 logger = logging.getLogger('app')
+logger.addHandler(console_handler)
 
 # API 키 설정
 API_KEY = os.getenv('OPEN_API_KEY')
@@ -208,101 +221,147 @@ def get_medicine_components(item_seq):
     return []
 
 #---------------------------------------------------
-# 데이터베이스 관련 함수
+# 검색 및 데이터베이스 관련 함수
 #---------------------------------------------------
-def get_medicine_shapes():
-    """의약품 모양 목록 가져오기"""
-    conn = mysql.connection
-    try:
-        with conn.cursor(MySQLdb.cursors.DictCursor) as cursor:
-            query = """
-            SELECT DISTINCT drug_shape 
-            FROM medicine_shapes 
-            WHERE drug_shape IS NOT NULL AND drug_shape != '' 
-            ORDER BY drug_shape
-            """
-            cursor.execute(query)
-            shapes = cursor.fetchall()
-            return [shape['drug_shape'] for shape in shapes] if shapes else []
-    except Exception as e:
-        logger.error(f"의약품 모양 목록 조회 오류: {e}")
-        return []
+def highlight_text(text, search_term):
+    """검색어를 하이라이트 처리"""
+    if not text or not search_term:
+        return text
+    
+    # 대소문자 구분 없이 검색어 찾기
+    pattern = re.compile(re.escape(search_term), re.IGNORECASE)
+    return pattern.sub(lambda m: f'<span class="highlight">{m.group(0)}</span>', text)
 
-def get_medicine_colors():
-    """의약품 색상 목록 가져오기"""
-    conn = mysql.connection
-    try:
-        with conn.cursor(MySQLdb.cursors.DictCursor) as cursor:
-            query = """
-            SELECT DISTINCT color_class1 
-            FROM medicine_shapes 
-            WHERE color_class1 IS NOT NULL AND color_class1 != '' 
-            ORDER BY color_class1
-            """
-            cursor.execute(query)
-            colors = cursor.fetchall()
-            return [color['color_class1'] for color in colors] if colors else []
-    except Exception as e:
-        logger.error(f"의약품 색상 목록 조회 오류: {e}")
-        return []
-
-def search_medicines_in_db(params):
-    """데이터베이스에서 의약품 검색"""
+def search_medicines_in_db(search_params, page=1, per_page=12):
     conn = mysql.connection
     try:
         with conn.cursor(MySQLdb.cursors.DictCursor) as cursor:
             base_query = """
-            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
-                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
-                   mi.item_image
-            FROM medicines m
-            LEFT JOIN medicine_shapes ms ON m.id = ms.medicine_id
-            LEFT JOIN medicine_images mi ON m.id = mi.medicine_id
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
             WHERE 1=1
             """
             
             query_params = []
             
-            # 검색 파라미터 처리
-            if 'item_name' in params and params['item_name']:
-                base_query += " AND m.item_name LIKE %s"
-                query_params.append(f"%{params['item_name']}%")
+            # 제품명 검색 조건
+            product_names = search_params.get('product_names', [])
+            if product_names:
+                product_conditions = []
+                for name in product_names:
+                    product_conditions.append(
+                        "(LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s))"
+                    )
+                    query_params.append(f"%{name}%")  # 포함된 경우
+                    query_params.append(f"{name}%")   # 시작하는 경우
+                
+                base_query += " AND (" + " OR ".join(product_conditions) + ")"
             
-            if 'drug_shape' in params and params['drug_shape']:
-                base_query += " AND ms.drug_shape = %s"
-                query_params.append(params['drug_shape'])
+            # 제조사 검색 조건
+            manufacturers = search_params.get('manufacturers', [])
+            if manufacturers:
+                manufacturer_conditions = []
+                for manufacturer in manufacturers:
+                    manufacturer_conditions.append("LOWER(entp_name) LIKE LOWER(%s)")
+                    query_params.append(f"%{manufacturer}%")
+                if manufacturer_conditions:
+                    base_query += " AND (" + " OR ".join(manufacturer_conditions) + ")"
             
-            if 'color_class1' in params and params['color_class1']:
-                base_query += " AND ms.color_class1 = %s"
-                query_params.append(params['color_class1'])
+            # 부작용 검색 조건
+            side_effects = search_params.get('side_effects', [])
+            if side_effects:
+                side_effect_conditions = []
+                for side_effect in side_effects:
+                    side_effect_conditions.append("LOWER(se_qesitm) LIKE LOWER(%s)")
+                    query_params.append(f"%{side_effect}%")
+                if side_effect_conditions:
+                    base_query += " AND (" + " OR ".join(side_effect_conditions) + ")"
             
-            if 'print_front' in params and params['print_front']:
-                base_query += " AND (ms.print_front LIKE %s OR ms.print_back LIKE %s)"
-                query_params.append(f"%{params['print_front']}%")
-                query_params.append(f"%{params['print_front']}%")
+            logger.info(f"최종 검색 쿼리: {base_query}")
+            logger.info(f"검색 파라미터: {query_params}")
+
+            # 카운트 쿼리 수정
+            count_query = f"""
+            SELECT COUNT(*) as total 
+            FROM (
+                {base_query}
+            ) as count_subquery
+            """
+
+            logger.info(f"카운트 쿼리: {count_query}")
+            logger.info(f"카운트 쿼리 파라미터: {query_params}")
+
+            cursor.execute(count_query, query_params)
+            total_count = cursor.fetchone()['total']
             
-            base_query += " ORDER BY m.item_name LIMIT 100"
+            # 페이지네이션 적용
+            offset = (page - 1) * per_page
+            paginated_query = base_query + " ORDER BY item_name LIMIT %s OFFSET %s"
+            query_params.extend([per_page, offset])
             
-            cursor.execute(base_query, query_params)
+            # 메인 쿼리 실행
+            cursor.execute(paginated_query, query_params)
             results = cursor.fetchall()
             
-            return results
+            # 검색 결과에 매치 정보 추가
+            for result in results:
+                # 제품명 매치 하이라이트
+                result['matched_name'] = False
+                for name in product_names:
+                    if name.lower() in result['item_name'].lower():
+                        result['item_name'] = highlight_text(result['item_name'], name)
+                        result['matched_name'] = True
+                        break
+                
+                # 제조사 매치 하이라이트
+                result['matched_manufacturer'] = False
+                for manufacturer in manufacturers:
+                    if manufacturer.lower() in result['entp_name'].lower():
+                        result['entp_name'] = highlight_text(result['entp_name'], manufacturer)
+                        result['matched_manufacturer'] = True
+                        break
+                
+                # 부작용 매치 하이라이트
+                result['matched_side_effect'] = False
+                if result.get('se_qesitm'):
+                    for side_effect in side_effects:
+                        if side_effect.lower() in result['se_qesitm'].lower():
+                            result['se_qesitm'] = highlight_text(result['se_qesitm'], side_effect)
+                            result['matched_side_effect'] = True
+                            break
+            
+            return {
+                'results': results,
+                'total_count': total_count,
+                'page': page,
+                'per_page': per_page,
+                'total_pages': (total_count + per_page - 1) // per_page
+            }
     except Exception as e:
         logger.error(f"의약품 검색 오류: {e}")
-        return []
-
+        return {
+            'results': [],
+            'total_count': 0,
+            'page': page,
+            'per_page': per_page,
+            'total_pages': 0
+        }
+    
 def get_medicine_detail_from_db(medicine_id):
     """데이터베이스에서 의약품 상세 정보 가져오기"""
     conn = mysql.connection
     try:
         with conn.cursor(MySQLdb.cursors.DictCursor) as cursor:
-            # 기본 정보
+            # 기본 정보 - LEFT JOIN 제거, unified_medicines 테이블만 사용
             base_query = """
-            SELECT m.*, ms.*, mi.item_image
-            FROM medicines m
-            LEFT JOIN medicine_shapes ms ON m.id = ms.medicine_id
-            LEFT JOIN medicine_images mi ON m.id = mi.medicine_id
-            WHERE m.id = %s
+            SELECT *
+            FROM unified_medicines
+            WHERE id = %s
             """
             cursor.execute(base_query, (medicine_id,))
             medicine = cursor.fetchone()
@@ -310,34 +369,33 @@ def get_medicine_detail_from_db(medicine_id):
             if not medicine:
                 return None
             
-            # 용법/용량 정보
-            usage_query = """
-            SELECT * FROM medicine_usage
-            WHERE medicine_id = %s
-            """
-            cursor.execute(usage_query, (medicine_id,))
-            usage = cursor.fetchone()
+            # 성분 정보 쿼리 - 테이블 존재 여부 확인 필요
+            try:
+                component_query = """
+                SELECT * FROM medicine_components
+                WHERE medicine_id = %s
+                """
+                cursor.execute(component_query, (medicine_id,))
+                components = cursor.fetchall()
+            except Exception as e:
+                logger.warning(f"성분 정보 조회 실패: {e}")
+                components = []
             
-            # 성분 정보
-            component_query = """
-            SELECT * FROM medicine_components
-            WHERE medicine_id = %s
-            """
-            cursor.execute(component_query, (medicine_id,))
-            components = cursor.fetchall()
-            
-            # 병용금기 정보
-            dur_query = """
-            SELECT * FROM medicine_dur_usjnt
-            WHERE medicine_id = %s
-            """
-            cursor.execute(dur_query, (medicine_id,))
-            dur_info = cursor.fetchall()
+            # 병용금기 정보 쿼리 - 테이블 존재 여부 확인 필요
+            try:
+                dur_query = """
+                SELECT * FROM medicine_dur_usjnt
+                WHERE medicine_id = %s
+                """
+                cursor.execute(dur_query, (medicine_id,))
+                dur_info = cursor.fetchall()
+            except Exception as e:
+                logger.warning(f"DUR 정보 조회 실패: {e}")
+                dur_info = []
             
             # 통합 결과
             result = {
                 'basic': medicine,
-                'usage': usage,
                 'components': components,
                 'dur_info': dur_info
             }
@@ -352,298 +410,69 @@ def get_medicine_detail_from_db(medicine_id):
 #---------------------------------------------------
 @app.route('/')
 def index():
-    # 로그인 여부 확인
-    if 'loggedin' in session:
-        # 로그인한 경우 메인 검색 페이지로 이동
-        # 의약품 모양과 색상 목록 가져오기
-        shapes = get_medicine_shapes()
-        colors = get_medicine_colors()
-        
-        return render_template('index.html', username=session['username'], shapes=shapes, colors=colors)
-    # 로그인하지 않은 경우 로그인 페이지로 리디렉션
-    return redirect(url_for('login'))
+    return render_template('index.html')
 
-@app.route('/search', methods=['GET', 'POST'])
+@app.route('/search')
 def search():
-    if 'loggedin' not in session:
-        return redirect(url_for('login'))
-        
-    if request.method == 'POST':
-        # POST 요청에서 검색 파라미터 가져오기
-        search_params = {
-            'item_name': request.form.get('item_name', ''),
-            'drug_shape': request.form.get('drug_shape', ''),
-            'color_class1': request.form.get('color_class1', ''),
-            'print_front': request.form.get('print_front', '')
-        }
-    else:
-        # GET 요청에서 검색 파라미터 가져오기
-        search_params = {
-            'item_name': request.args.get('item_name', ''),
-            'drug_shape': request.args.get('drug_shape', ''),
-            'color_class1': request.args.get('color_class1', ''),
-            'print_front': request.args.get('print_front', '')
-        }
+    # 검색 파라미터 가져오기
+    product_names = request.args.getlist('product_name')
+    manufacturers = request.args.getlist('manufacturer')
+    side_effects = request.args.getlist('side_effect')
     
-    # 검색 실행 - 데이터베이스에서 먼저 검색
-    results = search_medicines_in_db(search_params)
+    # 검색 파라미터가 비어있으면 홈으로 리디렉션
+    if not product_names and not manufacturers and not side_effects:
+        return redirect(url_for('index'))
     
-    # 결과가 없으면 API에서 실시간 검색
-    if not results:
-        try:
-            # API 파라미터 매핑
-            api_params = {}
-            if search_params['item_name']:
-                api_params['item_name'] = search_params['item_name']
-            if search_params['drug_shape']:
-                api_params['drug_shape'] = search_params['drug_shape']
-            if search_params['color_class1']:
-                api_params['color_class1'] = search_params['color_class1']
-            if search_params['print_front']:
-                api_params['print_front'] = search_params['print_front']
-                
-            # API 호출
-            api_results = search_medicines_by_shape(api_params)
-            if api_results and api_results['items']:
-                # API 결과 형식을 DB 결과 형식으로 변환
-                results = []
-                for item in api_results['items']:
-                    results.append({
-                        'id': None,  # API 결과는 DB ID가 없음
-                        'item_seq': item.get('ITEM_SEQ', ''),
-                        'item_name': item.get('ITEM_NAME', ''),
-                        'entp_name': item.get('ENTP_NAME', ''),
-                        'drug_shape': item.get('DRUG_SHAPE', ''),
-                        'color_class1': item.get('COLOR_CLASS1', ''),
-                        'print_front': item.get('PRINT_FRONT', ''),
-                        'print_back': item.get('PRINT_BACK', ''),
-                        'item_image': item.get('ITEM_IMAGE', '')
-                    })
-        except Exception as e:
-            logger.error(f"API 검색 오류: {e}")
+    # 페이지네이션 파라미터
+    page = int(request.args.get('page', 1))
+    per_page = int(request.args.get('per_page', 12))
     
-    # 의약품 모양과 색상 목록 가져오기
-    shapes = get_medicine_shapes()
-    colors = get_medicine_colors()
+    # 검색 파라미터 구성
+    search_params = {
+        'product_names': product_names,
+        'manufacturers': manufacturers,
+        'side_effects': side_effects
+    }
+    
+    # 데이터베이스에서 검색
+    search_result = search_medicines_in_db(search_params, page, per_page)
+    
+    # 페이지네이션 URL 구성
+    pagination_url = url_for('search') + '?'
+    url_params = []
+    
+    for name in product_names:
+        url_params.append(f'product_name={name}')
+    
+    for manufacturer in manufacturers:
+        url_params.append(f'manufacturer={manufacturer}')
+    
+    for side_effect in side_effects:
+        url_params.append(f'side_effect={side_effect}')
+    
+    pagination_url += '&'.join(url_params)
     
     return render_template(
-        'search_results.html', 
-        results=results, 
-        params=search_params,
-        shapes=shapes,
-        colors=colors,
-        username=session.get('username', '')
+        'search_results.html',
+        results=search_result['results'],
+        total_count=search_result['total_count'],
+        current_page=page,
+        per_page=per_page,
+        total_pages=search_result['total_pages'],
+        pagination_url=pagination_url,
+        search_params=search_params
     )
 
 @app.route('/medicine/<int:medicine_id>')
 def medicine_detail(medicine_id):
-    if 'loggedin' not in session:
-        return redirect(url_for('login'))
-        
     # 의약품 상세 정보 가져오기
     medicine = get_medicine_detail_from_db(medicine_id)
     
-    # DB에 정보가 없는 경우 API에서 정보 가져오기
-    if not medicine and 'item_seq' in request.args:
-        try:
-            item_seq = request.args['item_seq']
-            # API에서 상세 정보 가져오기
-            basic_info = get_medicine_detail(item_seq)
-            dur_info = get_dur_info(item_seq)
-            components = get_medicine_components(item_seq)
-            
-            if basic_info:
-                # API 결과를 DB 결과 형식으로 변환
-                medicine = {
-                    'basic': {
-                        'item_name': basic_info.get('itemName', ''),
-                        'entp_name': basic_info.get('entpName', ''),
-                        'item_image': basic_info.get('itemImage', '')
-                    },
-                    'usage': {
-                        'efcy_qesitm': basic_info.get('efcyQesitm', ''),
-                        'use_method_qesitm': basic_info.get('useMethodQesitm', ''),
-                        'atpn_warn_qesitm': basic_info.get('atpnWarnQesitm', ''),
-                        'atpn_qesitm': basic_info.get('atpnQesitm', ''),
-                        'intrc_qesitm': basic_info.get('intrcQesitm', ''),
-                        'se_qesitm': basic_info.get('seQesitm', ''),
-                        'deposit_method_qesitm': basic_info.get('depositMethodQesitm', '')
-                    },
-                    'components': components,
-                    'dur_info': dur_info
-                }
-        except Exception as e:
-            logger.error(f"API 상세 정보 조회 오류: {e}")
-    
     if not medicine:
+        flash('의약품 정보를 찾을 수 없습니다.', 'error')
         return redirect(url_for('index'))
     
-    return render_template('medicine_detail.html', medicine=medicine, username=session.get('username', ''))
-
-#---------------------------------------------------
-# 라우트 - API 호출
-#---------------------------------------------------
-@app.route('/api/search', methods=['GET'])
-def api_search():
-    if 'loggedin' not in session:
-        return jsonify({'success': False, 'message': '로그인이 필요합니다.'}), 401
-        
-    # API 검색 엔드포인트
-    search_params = {
-        'item_name': request.args.get('item_name', ''),
-        'drug_shape': request.args.get('drug_shape', ''),
-        'color_class1': request.args.get('color_class1', ''),
-        'print_front': request.args.get('print_front', '')
-    }
-    
-    # 데이터베이스에서 검색
-    results = search_medicines_in_db(search_params)
-    
-    # 결과가 없으면 API에서 검색
-    if not results:
-        try:
-            # API 파라미터 매핑
-            api_params = {}
-            if search_params['item_name']:
-                api_params['item_name'] = search_params['item_name']
-            if search_params['drug_shape']:
-                api_params['drug_shape'] = search_params['drug_shape']
-            if search_params['color_class1']:
-                api_params['color_class1'] = search_params['color_class1']
-            if search_params['print_front']:
-                api_params['print_front'] = search_params['print_front']
-                
-            # API 호출
-            api_results = search_medicines_by_shape(api_params)
-            if api_results and api_results['items']:
-                # API 결과 형식을 DB 결과 형식으로 변환
-                results = []
-                for item in api_results['items']:
-                    results.append({
-                        'id': None,  # API 결과는 DB ID가 없음
-                        'item_seq': item.get('ITEM_SEQ', ''),
-                        'item_name': item.get('ITEM_NAME', ''),
-                        'entp_name': item.get('ENTP_NAME', ''),
-                        'drug_shape': item.get('DRUG_SHAPE', ''),
-                        'color_class1': item.get('COLOR_CLASS1', ''),
-                        'print_front': item.get('PRINT_FRONT', ''),
-                        'print_back': item.get('PRINT_BACK', ''),
-                        'item_image': item.get('ITEM_IMAGE', '')
-                    })
-        except Exception as e:
-            logger.error(f"API 검색 오류: {e}")
-            return jsonify({'success': False, 'message': f"API 검색 오류: {str(e)}"}), 500
-    
-    return jsonify({
-        'success': True,
-        'count': len(results),
-        'results': results
-    })
-
-@app.route('/api/medicine/<int:medicine_id>', methods=['GET'])
-def api_medicine_detail(medicine_id):
-    if 'loggedin' not in session:
-        return jsonify({'success': False, 'message': '로그인이 필요합니다.'}), 401
-        
-    # API 상세 정보 엔드포인트
-    medicine = get_medicine_detail_from_db(medicine_id)
-    
-    if not medicine:
-        return jsonify({
-            'success': False,
-            'message': '의약품을 찾을 수 없습니다.'
-        }), 404
-    
-    return jsonify({
-        'success': True,
-        'medicine': medicine
-    })
-
-#---------------------------------------------------
-# 라우트 - 로그인/회원가입
-#---------------------------------------------------
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    # 로그인 폼 제출 처리
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-        username = request.form['username']
-        password = request.form['password']
-        
-        # MySQL 커서 생성
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
-        
-        # 사용자 정보 가져오기
-        user = cursor.fetchone()
-        
-        # 로그인 정보 검증
-        if user and check_password_hash(user['password'], password):
-            # 로그인 성공, 세션 생성
-            session['loggedin'] = True
-            session['id'] = user['id']
-            session['username'] = user['username']
-            
-            # 메인 페이지로 리디렉션
-            return redirect(url_for('index'))
-        else:
-            # 로그인 실패
-            flash('잘못된 사용자 이름/비밀번호입니다!')
-    
-    # 로그인 페이지 렌더링
-    return render_template('login.html')
-
-@app.route('/logout')
-def logout():
-    # 세션에서 사용자 정보 제거
-    session.pop('loggedin', None)
-    session.pop('id', None)
-    session.pop('username', None)
-    
-    # 로그인 페이지로 리디렉션
-    return redirect(url_for('login'))
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    # 회원가입 폼 제출 처리
-    if request.method == 'POST':
-        # 폼 데이터 가져오기
-        username = request.form['username']
-        password = request.form['password']
-        name = request.form['name']
-        age = request.form['age']
-        ssn = request.form['ssn']  # 주민등록번호
-        phone = request.form['phone']
-        height = request.form['height']
-        weight = request.form['weight']
-        
-        # MySQL 커서 생성
-        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        
-        # 사용자 이름 중복 확인
-        cursor.execute('SELECT * FROM users WHERE username = %s', (username,))
-        account = cursor.fetchone()
-        
-        # 폼 유효성 검사
-        if account:
-            flash('이미 존재하는 계정입니다!')
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            flash('사용자 이름은 문자와 숫자만 포함해야 합니다!')
-        elif not username or not password or not name or not age or not ssn or not phone:
-            flash('양식을 작성해주세요!')
-        else:
-            # 비밀번호 해싱
-            hashed_password = generate_password_hash(password)
-            
-            # 새 사용자 추가
-            cursor.execute('INSERT INTO users (username, password, name, age, ssn, phone, height, weight) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)',
-                           (username, hashed_password, name, age, ssn, phone, height, weight))
-            mysql.connection.commit()
-            
-            flash('성공적으로 등록되었습니다!')
-            return redirect(url_for('login'))
-    
-    # 회원가입 페이지 렌더링
-    return render_template('register.html')
+    return render_template('medicine_detail.html', medicine=medicine)
 
 #---------------------------------------------------
 # 메인 함수

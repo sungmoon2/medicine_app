@@ -10,3 +10,856 @@
 2025-03-24 18:18:05,313 - werkzeug - INFO -  * Restarting with stat
 2025-03-24 18:18:06,105 - werkzeug - WARNING -  * Debugger is active!
 2025-03-24 18:18:06,109 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 20:41:23,771 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 20:41:23,771 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 20:41:23,772 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 20:41:24,481 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 20:41:24,483 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 20:41:31,363 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-24 20:41:31,388 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:31] "GET /login HTTP/1.1" 200 -
+2025-03-24 20:41:31,649 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:31] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-24 20:41:31,707 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:31] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-03-24 20:41:32,023 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,110 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-24 20:41:37,283 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:37,283 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:37,286 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "GET / HTTP/1.1" 200 -
+2025-03-24 20:41:37,617 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/diamond.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,618 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/pentagon.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,618 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/octagon.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,620 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/hexagon.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,622 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/round.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,625 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/oval.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,932 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/rectangle.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,933 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/semicircle.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,934 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/triangle.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:37,936 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:37] "[33mGET /static/img/shapes/square.png HTTP/1.1[0m" 404 -
+2025-03-24 20:41:40,170 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:40,241 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 20:41:40,241 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 20:41:40,241 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:40,241 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:40,249 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:40] "POST /search HTTP/1.1" 200 -
+2025-03-24 20:41:45,199 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:45,246 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 20:41:45,246 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 20:41:45,247 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:45,247 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 20:41:45,247 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 20:41:45] "POST /search HTTP/1.1" 200 -
+2025-03-24 20:59:02,926 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\api_data_migration.py', reloading
+2025-03-24 20:59:02,962 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 20:59:03,694 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 20:59:03,697 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:00:34,010 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\api_data_migration.py', reloading
+2025-03-24 21:00:34,040 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 21:00:34,763 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 21:00:34,765 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:39:20,905 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 21:39:20,905 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:39:20,906 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 21:39:21,615 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 21:39:21,618 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:39:27,019 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:27,075 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:39:27,075 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:39:27,075 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:27,076 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:27,117 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:27] "[35m[1mPOST /search HTTP/1.1[0m" 500 -
+2025-03-24 21:39:27,175 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:27] "GET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 21:39:27,300 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:27] "GET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 21:39:27,639 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:27] "GET /search?__debugger__=yes&cmd=resource&f=console.png&s=v0vKvymBTIIDn4osnb8e HTTP/1.1" 200 -
+2025-03-24 21:39:27,905 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:27] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 21:39:30,078 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:30,123 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:39:30,123 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:39:30,123 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:30,124 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:39:30,130 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:30] "[35m[1mPOST /search HTTP/1.1[0m" 500 -
+2025-03-24 21:39:30,383 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:30] "[36mGET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:39:30,447 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:30] "[36mGET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-24 21:39:30,765 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:30] "[36mGET /search?__debugger__=yes&cmd=resource&f=console.png&s=v0vKvymBTIIDn4osnb8e HTTP/1.1[0m" 304 -
+2025-03-24 21:39:31,015 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:39:31] "[36mGET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-24 21:43:37,617 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\search_controller.py', reloading
+2025-03-24 21:43:37,647 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 21:43:38,395 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 21:43:38,397 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:43:43,721 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 21:43:43,721 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:43:43,722 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 21:43:44,420 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 21:43:44,422 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:43:48,572 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:48,622 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:43:48,622 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:43:48,623 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:48,623 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:48,652 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:48] "POST /search HTTP/1.1" 200 -
+2025-03-24 21:43:52,244 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:52,291 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:43:52,291 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:43:52,291 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:52,292 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:52,292 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:52] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:43:54,196 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:54,240 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:43:54,240 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:43:54,241 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:54,241 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:54,242 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:54] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:43:56,034 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:56,061 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:43:56,061 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:43:56,062 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:56,062 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:56,062 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:56] "GET /search?etc_otc_name=Àü¹®ÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:43:57,742 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:57,787 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:43:57,787 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:43:57,788 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:57,788 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:43:57,788 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:43:57] "GET /search HTTP/1.1" 200 -
+2025-03-24 21:44:00,543 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:00,589 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:44:00,589 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:44:00,589 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:00,589 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:00,590 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:44:00] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:44:01,035 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:01,079 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:44:01,079 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:44:01,079 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:01,080 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:44:01,080 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:44:01] "GET /search?etc_otc_name=Àü¹®ÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:45:38,499 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:38,547 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:45:38,547 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:45:38,547 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:38,547 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:38,573 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:38] "GET /search?etc_otc_name=Àü¹®ÀÇ¾àÇ°&class_name= HTTP/1.1" 200 -
+2025-03-24 21:45:41,510 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:41,540 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:45:41,540 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:45:41,540 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:41,540 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:41,541 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:41] "GET /search?item_name=Å¸ÀÌ&print_front=&drug_shape=&color_class1= HTTP/1.1" 200 -
+2025-03-24 21:45:47,383 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:47,428 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:45:47,428 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:45:47,429 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:47,429 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:45:47,430 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:45:47] "GET /search?item_name=Å¸ÀÌ·¹³î&print_front=&drug_shape=&color_class1= HTTP/1.1" 200 -
+2025-03-24 21:46:42,561 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:46:42,606 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:46:42,606 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:46:42,607 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:46:42,607 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:46:42,607 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:46:42] "GET /search?item_name=¿ì¸Õ½ºÅ¸ÀÌ·¹³îÁ¤&print_front=&drug_shape=&color_class1= HTTP/1.1" 200 -
+2025-03-24 21:49:33,702 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:33,772 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:49:33,772 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:49:33,772 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:33,772 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:33,773 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:33] "GET /search?item_name=¿ì¸Õ½ºÅ¸ÀÌ·¹³îÁ¤&print_front=&drug_shape=&color_class1= HTTP/1.1" 200 -
+2025-03-24 21:49:36,002 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:36,003 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:36,022 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "GET / HTTP/1.1" 200 -
+2025-03-24 21:49:36,036 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/round.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,348 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/diamond.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,349 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/octagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,349 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/hexagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,349 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/pentagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,353 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/oval.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,354 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/rectangle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,655 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/semicircle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,656 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/triangle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:36,657 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:36] "[33mGET /static/img/shapes/square.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:37,857 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:37,857 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:37,858 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:37] "GET / HTTP/1.1" 200 -
+2025-03-24 21:49:37,939 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:37] "[33mGET /static/img/shapes/diamond.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,115 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/pentagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,171 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/hexagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,172 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/octagon.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,173 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/round.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,178 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/oval.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,255 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/rectangle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,420 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/semicircle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,490 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/triangle.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:38,491 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:38] "[33mGET /static/img/shapes/square.png HTTP/1.1[0m" 404 -
+2025-03-24 21:49:40,577 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:40,620 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:49:40,620 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:49:40,621 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:40,621 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:49:40,621 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:49:40] "POST /search HTTP/1.1" 200 -
+2025-03-24 21:58:37,997 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 21:58:37,997 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 21:58:37,998 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 21:58:38,719 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 21:58:38,721 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 21:58:41,550 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:41,551 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:41,563 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:41] "GET / HTTP/1.1" 200 -
+2025-03-24 21:58:41,573 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:41] "[33mGET /static/img/medicine-illustration.png HTTP/1.1[0m" 404 -
+2025-03-24 21:58:43,955 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:44,005 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:44,005 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:44,005 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:44,005 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:44,043 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:44] "GET /search HTTP/1.1" 200 -
+2025-03-24 21:58:44,301 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:44,364 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:58:47,320 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:47,320 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:47,321 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:47] "GET / HTTP/1.1" 200 -
+2025-03-24 21:58:47,431 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:47] "[33mGET /static/img/medicine-illustration.png HTTP/1.1[0m" 404 -
+2025-03-24 21:58:48,285 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:48,330 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:48,330 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:48,330 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:48,331 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:48,331 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:48] "GET /search HTTP/1.1" 200 -
+2025-03-24 21:58:48,587 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:48,654 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:58:49,704 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:49,750 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:49,751 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:49,751 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:49,751 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:49,752 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:49] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&symptom= HTTP/1.1" 200 -
+2025-03-24 21:58:49,771 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:49,967 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:58:51,140 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:51,186 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:51,186 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:51,187 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:51,188 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:51,191 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:51] "GET /search?etc_otc_name=Àü¹®ÀÇ¾àÇ°&symptom= HTTP/1.1" 200 -
+2025-03-24 21:58:51,205 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:51,396 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:58:56,349 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:56,395 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:56,395 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:56,395 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:56,396 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:56,397 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:56] "GET /search?etc_otc_name=&symptom=±¸Åä HTTP/1.1" 200 -
+2025-03-24 21:58:56,411 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:56,613 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:58:58,401 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:58,451 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:58:58,451 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:58:58,451 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:58,451 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:58:58,452 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:58] "GET /search?etc_otc_name=&symptom=¾îÁö·¯¿ò HTTP/1.1" 200 -
+2025-03-24 21:58:58,467 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:58:58,667 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:58:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:00,569 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:00,615 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:00,615 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:00,616 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:00,616 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:00,616 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:00] "GET /search?etc_otc_name=&symptom=¹ß¿­ HTTP/1.1" 200 -
+2025-03-24 21:59:00,631 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:00,828 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:17,193 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:17,240 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:17,240 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:17,240 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:17,241 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:17,241 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:17] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&symptom= HTTP/1.1" 200 -
+2025-03-24 21:59:17,255 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:17,455 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:19,653 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:19,697 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:19,697 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:19,698 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:19,698 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:19,699 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:19] "GET /search?etc_otc_name=&symptom=±âÄ§ HTTP/1.1" 200 -
+2025-03-24 21:59:19,713 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:19,913 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:21,664 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:21,712 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:21,712 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:21,712 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:21,713 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:21,714 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:21] "GET /search?etc_otc_name=ÀÏ¹ÝÀÇ¾àÇ°&symptom= HTTP/1.1" 200 -
+2025-03-24 21:59:21,727 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:21,920 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:21] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:23,098 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:23,146 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:23,146 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:23,146 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:23,146 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:23,147 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:23] "GET /search?etc_otc_name=Àü¹®ÀÇ¾àÇ°&symptom= HTTP/1.1" 200 -
+2025-03-24 21:59:23,181 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:23,380 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:55,976 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:55,977 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:55,977 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:55] "GET / HTTP/1.1" 200 -
+2025-03-24 21:59:56,086 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:56] "[33mGET /static/img/medicine-illustration.png HTTP/1.1[0m" 404 -
+2025-03-24 21:59:57,370 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:57,441 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:57,441 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:57,441 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:57,442 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:57,442 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:57] "GET /search HTTP/1.1" 200 -
+2025-03-24 21:59:57,678 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:57,765 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 21:59:59,373 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:59,417 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 21:59:59,417 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 21:59:59,419 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:59,420 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 21:59:59,423 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:59] "GET /search HTTP/1.1" 200 -
+2025-03-24 21:59:59,450 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 21:59:59,613 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 21:59:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 22:00:01,387 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:01,432 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 22:00:01,432 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 22:00:01,432 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:01,432 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:01,433 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:01] "GET /search HTTP/1.1" 200 -
+2025-03-24 22:00:01,476 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 22:00:01,651 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 22:00:13,607 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:13,657 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 22:00:13,657 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 22:00:13,658 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:13,659 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:00:13,660 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:13] "GET /search HTTP/1.1" 200 -
+2025-03-24 22:00:13,677 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-24 22:00:13,870 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:00:13] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-24 22:17:04,011 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:17:04,076 - app - WARNING - API ¿äÃ» ½ÇÆÐ: 500. Àç½Ãµµ 1/3
+2025-03-24 22:17:04,077 - app - ERROR - API ¿äÃ» ¿¹¿Ü ¹ß»ý: name 'time' is not defined, URL: http://apis.data.go.kr/1471000/MdcinGrnIdntfcAPIService/getMdcinGrnIdntfcList
+2025-03-24 22:17:04,077 - app - ERROR - ÀÇ¾àÇ° ¸ð¾ç ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:17:04,077 - app - ERROR - ÀÇ¾àÇ° »ö»ó ¸ñ·Ï Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:17:04,122 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:04] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+2025-03-24 22:17:04,134 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:04] "[36mGET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-24 22:17:04,264 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:04] "[36mGET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-24 22:17:04,597 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:04] "GET /search?__debugger__=yes&cmd=resource&f=console.png&s=3B7OMxpf0UMjFb1j2l79 HTTP/1.1" 200 -
+2025-03-24 22:17:04,844 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:17:04] "[36mGET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-24 22:17:59,080 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:17:59,135 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:18:00,024 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:18:00,026 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:23:54,816 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:23:54] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-24 22:23:54,844 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:23:54] "GET / HTTP/1.1" 200 -
+2025-03-24 22:24:00,474 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:24:00,484 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:00] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:24:10,906 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:24:10,906 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:24:10,907 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:24:11,605 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:24:11,607 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:24:14,334 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:24:14,350 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:14] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:24:15,545 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:15] "GET / HTTP/1.1" 200 -
+2025-03-24 22:24:22,649 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:24:22,649 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:24:22] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:25:32,815 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:25:32] "GET / HTTP/1.1" 200 -
+2025-03-24 22:29:18,737 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\config.py', reloading
+2025-03-24 22:29:18,771 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:29:19,494 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:29:19,496 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:29:24,050 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:29:24] "GET / HTTP/1.1" 200 -
+2025-03-24 22:29:29,060 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:29:29,071 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:29:29] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:30:37,697 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:30:37] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-24 22:30:37,700 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:30:37] "GET / HTTP/1.1" 200 -
+2025-03-24 22:30:44,068 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:30:44,068 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:30:44] "GET /search?product_name=¿ì¸Õ½ºÅ¸ÀÌ·¹³îÁ¤ HTTP/1.1" 200 -
+2025-03-24 22:32:34,202 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:32:34,233 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:32:34,971 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:32:34,974 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:32:36,265 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: name 'product_names' is not defined
+2025-03-24 22:32:36,276 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:32:36] "GET /search?product_name=¿ì¸Õ½ºÅ¸ÀÌ·¹³îÁ¤ HTTP/1.1" 200 -
+2025-03-24 22:32:37,215 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:32:37] "GET / HTTP/1.1" 200 -
+2025-03-24 22:32:43,496 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: name 'product_names' is not defined
+2025-03-24 22:32:43,497 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:32:43] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:34:12,305 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:34:12,337 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:34:13,091 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:34:13,093 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:36:15,533 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:36:15,565 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:36:16,288 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:36:16,290 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:36:19,664 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:36:19,664 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:36:19,666 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:36:20,407 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:36:20,410 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:36:21,105 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))
+2025-03-24 22:36:21,105 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:36:21,105 - app - INFO - Ä«¿îÆ® Äõ¸®: SELECT COUNT(*) as total FROM (
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))) as count_table
+2025-03-24 22:36:21,105 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:36:21,106 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') as count_table' at line 10")
+2025-03-24 22:36:21,118 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:36:21] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:36:22,648 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:36:22] "GET / HTTP/1.1" 200 -
+2025-03-24 22:36:26,717 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))
+2025-03-24 22:36:26,717 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:36:26,717 - app - INFO - Ä«¿îÆ® Äõ¸®: SELECT COUNT(*) as total FROM (
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))) as count_table
+2025-03-24 22:36:26,717 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:36:26,717 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') as count_table' at line 10")
+2025-03-24 22:36:26,717 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:36:26] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:37:09,590 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:37:09,621 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:37:10,419 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:37:10,421 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:37:19,454 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:37:19,493 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:37:20,230 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:37:20,232 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:37:38,308 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:37:38,362 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:38:27,260 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:38:27,260 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:38:27,265 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:38:28,006 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:38:28,009 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:38:30,093 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))
+2025-03-24 22:38:30,095 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:38:30,095 - app - INFO - Ä«¿îÆ® Äõ¸®: SELECT COUNT(*) as total FROM (
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))) as count_table
+2025-03-24 22:38:30,096 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:38:30,096 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') as count_table' at line 10")
+2025-03-24 22:38:30,108 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:38:30] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:38:30,920 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:38:30] "GET / HTTP/1.1" 200 -
+2025-03-24 22:38:38,352 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))
+2025-03-24 22:38:38,353 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:38:38,353 - app - INFO - Ä«¿îÆ® Äõ¸®: SELECT COUNT(*) as total FROM (
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s))))) as count_table
+2025-03-24 22:38:38,354 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:38:38,355 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') as count_table' at line 10")
+2025-03-24 22:38:38,355 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:38:38] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:39:32,238 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:39:32,267 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:39:32,991 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:39:32,993 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:39:35,983 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s)))
+2025-03-24 22:39:35,985 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:39:35,985 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:39:35,986 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:39:35,986 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:39:35,998 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:39:35] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:39:36,980 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:39:36] "GET / HTTP/1.1" 200 -
+2025-03-24 22:39:42,282 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s)))
+2025-03-24 22:39:42,283 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:39:42,284 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT m.id, m.item_seq, m.item_name, m.entp_name, m.class_name, 
+                   ms.drug_shape, ms.color_class1, ms.print_front, ms.print_back,
+                   mi.item_image, mu.se_qesitm
+            FROM unified_medicines m
+            LEFT JOIN medicine_shapes ms ON m.medicine_id = ms.medicine_id
+            LEFT JOIN medicine_images mi ON m.medicine_id = mi.medicine_id
+            LEFT JOIN unified_medicines mu ON m.id = mu.id
+            WHERE 1=1
+             AND ((LOWER(m.item_name) LIKE LOWER(%s) OR LOWER(m.item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:39:42,286 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:39:42,286 - app - ERROR - ÀÇ¾àÇ° °Ë»ö ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:39:42,287 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:39:42] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:40:53,280 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:40:53,311 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:40:54,041 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:40:54,043 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:40:55,054 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:40:55,083 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:40:55,824 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:40:55,826 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:41:04,878 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:41:04,878 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:41:04,879 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:41:05,586 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:41:05,588 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:41:08,310 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-24 22:41:08,310 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:41:08,310 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:41:08,311 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
+2025-03-24 22:41:08,330 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:08] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
+2025-03-24 22:41:19,217 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:19] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-24 22:41:19,223 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:19] "GET / HTTP/1.1" 200 -
+2025-03-24 22:41:23,596 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-24 22:41:23,597 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%¾Æ¼¼%', '¾Æ¼¼%']
+2025-03-24 22:41:23,597 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:41:23,598 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%¾Æ¼¼%', '¾Æ¼¼%']
+2025-03-24 22:41:23,608 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:23] "GET /search?product_name=¾Æ¼¼ HTTP/1.1" 200 -
+2025-03-24 22:41:27,721 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-24 22:41:27,723 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%¾Æ¼¼%', '¾Æ¼¼%']
+2025-03-24 22:41:27,723 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:41:27,724 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%¾Æ¼¼%', '¾Æ¼¼%']
+2025-03-24 22:41:27,735 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:27] "GET /search?product_name=¾Æ¼¼&page=12 HTTP/1.1" 200 -
+2025-03-24 22:41:37,038 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:37] "[32mGET /search?page=12 HTTP/1.1[0m" 302 -
+2025-03-24 22:41:37,338 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:37] "GET / HTTP/1.1" 200 -
+2025-03-24 22:41:42,083 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(entp_name) LIKE LOWER(%s))
+2025-03-24 22:41:42,085 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%µ¿±¹%']
+2025-03-24 22:41:42,085 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(entp_name) LIKE LOWER(%s))
+            ) as count_subquery
+            
+2025-03-24 22:41:42,087 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%µ¿±¹%']
+2025-03-24 22:41:42,093 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:42] "GET /search?manufacturer=µ¿±¹ HTTP/1.1" 200 -
+2025-03-24 22:41:48,203 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:48] "[32mGET /search HTTP/1.1[0m" 302 -
+2025-03-24 22:41:48,207 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:41:48] "GET / HTTP/1.1" 200 -
+2025-03-24 22:42:16,622 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s))) AND (LOWER(entp_name) LIKE LOWER(%s))
+2025-03-24 22:42:16,623 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%', '%µ¿¾Æ%']
+2025-03-24 22:42:16,624 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s))) AND (LOWER(entp_name) LIKE LOWER(%s))
+            ) as count_subquery
+            
+2025-03-24 22:42:16,625 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%', '%µ¿¾Æ%']
+2025-03-24 22:42:16,635 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:42:16] "GET /search?product_name=Å¸ÀÌ&manufacturer=µ¿¾Æ HTTP/1.1" 200 -
+2025-03-24 22:42:18,275 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-24 22:42:18,277 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-24 22:42:18,277 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:42:18,278 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-24 22:42:18,286 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:42:18] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-24 22:43:00,533 - app - ERROR - ÀÇ¾àÇ° »ó¼¼ Á¤º¸ Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:43:00,534 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:43:00] "[32mGET /medicine/1083 HTTP/1.1[0m" 302 -
+2025-03-24 22:43:00,839 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:43:00] "GET / HTTP/1.1" 200 -
+2025-03-24 22:43:03,175 - app - ERROR - ÀÇ¾àÇ° »ó¼¼ Á¤º¸ Á¶È¸ ¿À·ù: (1146, "Table 'medicine_db.medicine_shapes' doesn't exist")
+2025-03-24 22:43:03,176 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:43:03] "[32mGET /medicine/1083 HTTP/1.1[0m" 302 -
+2025-03-24 22:43:03,179 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:43:03] "GET / HTTP/1.1" 200 -
+2025-03-24 22:44:02,197 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
+2025-03-24 22:44:02,233 - werkzeug - INFO -  * Restarting with stat
+2025-03-24 22:44:02,978 - werkzeug - WARNING -  * Debugger is active!
+2025-03-24 22:44:02,980 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-24 22:44:10,939 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+2025-03-24 22:44:10,940 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-24 22:44:10,941 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
+            ) as count_subquery
+            
+2025-03-24 22:44:10,942 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
+2025-03-24 22:44:10,960 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:10] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
+2025-03-24 22:44:11,555 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-24 22:44:11,556 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-24 22:44:11,586 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:11] "GET /medicine/1083 HTTP/1.1" 200 -
+2025-03-24 22:44:29,938 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:29] "GET / HTTP/1.1" 200 -
+2025-03-24 22:44:35,058 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(entp_name) LIKE LOWER(%s))
+2025-03-24 22:44:35,059 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%µ¿±¹%']
+2025-03-24 22:44:35,059 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(entp_name) LIKE LOWER(%s))
+            ) as count_subquery
+            
+2025-03-24 22:44:35,061 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%µ¿±¹%']
+2025-03-24 22:44:35,068 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:35] "GET /search?manufacturer=µ¿±¹ HTTP/1.1" 200 -
+2025-03-24 22:44:36,140 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-24 22:44:36,140 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-24 22:44:36,141 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:36] "GET /medicine/3974 HTTP/1.1" 200 -
+2025-03-24 22:44:42,900 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(se_qesitm) LIKE LOWER(%s))
+2025-03-24 22:44:42,901 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%±¸Åä%']
+2025-03-24 22:44:42,901 - app - INFO - Ä«¿îÆ® Äõ¸®: 
+            SELECT COUNT(*) as total 
+            FROM (
+                
+            SELECT 
+                id, item_seq, item_name, item_eng_name, 
+                entp_seq, entp_name, chart, 
+                class_no, class_name, etc_otc_name, 
+                item_permit_date, form_code_name, 
+                efcy_qesitm, se_qesitm
+            FROM unified_medicines
+            WHERE 1=1
+             AND (LOWER(se_qesitm) LIKE LOWER(%s))
+            ) as count_subquery
+            
+2025-03-24 22:44:42,903 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%±¸Åä%']
+2025-03-24 22:44:42,934 - werkzeug - INFO - 127.0.0.1 - - [24/Mar/2025 22:44:42] "GET /search?side_effect=±¸Åä HTTP/1.1" 200 -

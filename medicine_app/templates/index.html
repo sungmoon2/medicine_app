@@ -33,48 +33,60 @@
             font-weight: bold;
             color: #0d6efd;
         }
-        .shape-selector {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
+        .search-btn-group {
+            display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
-        .shape-item {
-            text-align: center;
-            cursor: pointer;
-            padding: 10px;
+        .search-btn {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
             border: 1px solid #dee2e6;
-            border-radius: 5px;
-        }
-        .shape-item:hover {
-            background-color: #f1f3f5;
-        }
-        .shape-item.active {
-            background-color: #e2f2ff;
-            border-color: #0d6efd;
-        }
-        .color-selector {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .color-item {
-            height: 30px;
-            border-radius: 50%;
             cursor: pointer;
-            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
         }
-        .color-item:hover {
-            transform: scale(1.1);
+        .search-btn:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
         }
-        .color-item.active {
-            border: 2px solid #0d6efd;
+        .search-btn i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #0d6efd;
         }
-        .hidden-field {
+        .selected-terms {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
             display: none;
         }
+        .selected-term {
+            display: inline-block;
+            background-color: #0d6efd;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .selected-term span {
+            cursor: pointer;
+            margin-left: 6px;
+        }
+        .selected-term .term-type {
+            font-size: 0.8em;
+            opacity: 0.8;
+            margin-right: 5px;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -86,138 +98,267 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col-md-12">
-                <h1 class="header-title">의약품 정보 입력</h1>
-                <p class="text-muted">알약의 이름, 모양, 색상 등으로 검색하여 의약품 정보를 확인하세요.</p>
+                <h1 class="header-title">의약품 정보 검색</h1>
+                <p class="text-muted">제품명, 제조사명, 부작용 등으로 의약품을 검색하세요. 어떤 정보를 검색하시겠습니까?</p>
             </div>
         </div>
 
         <div class="search-container">
-            <form action="/search" method="POST">
-                <!-- 검색어 입력 필드 -->
-                <div class="mb-4">
-                    <label for="item_name" class="form-label">의약품 이름</label>
-                    <input type="text" class="form-control" id="item_name" name="item_name" placeholder="의약품 이름을 입력하세요">
+            <div class="search-btn-group">
+                <div class="search-btn" data-bs-toggle="modal" data-bs-target="#productNameModal">
+                    <i class="fas fa-pills"></i>
+                    <h5>제품명</h5>
+                    <p class="text-muted">제품 이름으로 검색</p>
                 </div>
+                <div class="search-btn" data-bs-toggle="modal" data-bs-target="#manufacturerModal">
+                    <i class="fas fa-industry"></i>
+                    <h5>제조사</h5>
+                    <p class="text-muted">제조사 이름으로 검색</p>
+                </div>
+                <div class="search-btn" data-bs-toggle="modal" data-bs-target="#sideEffectModal">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h5>부작용</h5>
+                    <p class="text-muted">부작용 정보로 검색</p>
+                </div>
+            </div>
 
-                <!-- 모양 선택 -->
-                <div class="mb-4">
-                    <label class="form-label">모양</label>
-                    <div class="shape-selector">
-                        <div class="shape-item" data-shape="원형">
-                            <img src="/static/img/shapes/round.png" alt="원형" class="img-fluid mb-2">
-                            <div>원형</div>
-                        </div>
-                        <div class="shape-item" data-shape="타원형">
-                            <img src="/static/img/shapes/oval.png" alt="타원형" class="img-fluid mb-2">
-                            <div>타원형</div>
-                        </div>
-                        <div class="shape-item" data-shape="장방형">
-                            <img src="/static/img/shapes/rectangle.png" alt="장방형" class="img-fluid mb-2">
-                            <div>장방형</div>
-                        </div>
-                        <div class="shape-item" data-shape="반원형">
-                            <img src="/static/img/shapes/semicircle.png" alt="반원형" class="img-fluid mb-2">
-                            <div>반원형</div>
-                        </div>
-                        <div class="shape-item" data-shape="삼각형">
-                            <img src="/static/img/shapes/triangle.png" alt="삼각형" class="img-fluid mb-2">
-                            <div>삼각형</div>
-                        </div>
-                        <div class="shape-item" data-shape="사각형">
-                            <img src="/static/img/shapes/square.png" alt="사각형" class="img-fluid mb-2">
-                            <div>사각형</div>
-                        </div>
-                        <div class="shape-item" data-shape="마름모형">
-                            <img src="/static/img/shapes/diamond.png" alt="마름모형" class="img-fluid mb-2">
-                            <div>마름모형</div>
-                        </div>
-                        <div class="shape-item" data-shape="오각형">
-                            <img src="/static/img/shapes/pentagon.png" alt="오각형" class="img-fluid mb-2">
-                            <div>오각형</div>
-                        </div>
-                        <div class="shape-item" data-shape="육각형">
-                            <img src="/static/img/shapes/hexagon.png" alt="육각형" class="img-fluid mb-2">
-                            <div>육각형</div>
-                        </div>
-                        <div class="shape-item" data-shape="팔각형">
-                            <img src="/static/img/shapes/octagon.png" alt="팔각형" class="img-fluid mb-2">
-                            <div>팔각형</div>
-                        </div>
-                    </div>
-                    <input type="hidden" id="drug_shape" name="drug_shape">
+            <div id="selectedTermsContainer" class="selected-terms">
+                <h5>검색 조건</h5>
+                <div id="selectedTermsList"></div>
+                <div class="mt-3">
+                    <button id="searchButton" class="btn btn-primary">검색하기</button>
+                    <button id="clearButton" class="btn btn-outline-secondary ms-2">초기화</button>
                 </div>
-
-                <!-- 색상 선택 -->
-                <div class="mb-4">
-                    <label class="form-label">색상</label>
-                    <div class="color-selector">
-                        <div class="color-item" style="background-color: #FFFFFF;" data-color="하양"></div>
-                        <div class="color-item" style="background-color: #F9ED32;" data-color="노랑"></div>
-                        <div class="color-item" style="background-color: #F7941E;" data-color="주황"></div>
-                        <div class="color-item" style="background-color: #FF00FF;" data-color="분홍"></div>
-                        <div class="color-item" style="background-color: #FF0000;" data-color="빨강"></div>
-                        <div class="color-item" style="background-color: #A52A2A;" data-color="갈색"></div>
-                        <div class="color-item" style="background-color: #39B54A;" data-color="연두"></div>
-                        <div class="color-item" style="background-color: #00A651;" data-color="초록"></div>
-                        <div class="color-item" style="background-color: #00AEEF;" data-color="청록"></div>
-                        <div class="color-item" style="background-color: #0072BC;" data-color="파랑"></div>
-                        <div class="color-item" style="background-color: #2E3192;" data-color="남색"></div>
-                        <div class="color-item" style="background-color: #662D91;" data-color="자주"></div>
-                        <div class="color-item" style="background-color: #92278F;" data-color="보라"></div>
-                        <div class="color-item" style="background-color: #808080;" data-color="회색"></div>
-                        <div class="color-item" style="background-color: #000000;" data-color="검정"></div>
-                        <div class="color-item" style="background: transparent; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc); background-size: 10px 10px; background-position: 0 0, 5px 5px;" data-color="투명"></div>
-                    </div>
-                    <input type="hidden" id="color_class1" name="color_class1">
-                </div>
-
-                <!-- 표시(각인) 입력 필드 -->
-                <div class="mb-4">
-                    <label for="print_front" class="form-label">표시(각인)</label>
-                    <input type="text" class="form-control" id="print_front" name="print_front" placeholder="알약에 새겨진 문자나 숫자를 입력하세요">
-                </div>
-
-                <!-- 검색 버튼 -->
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-lg px-4">검색</button>
-                    <button type="reset" class="btn btn-outline-secondary btn-lg px-4 ms-2">초기화</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 
+    <!-- 제품명 검색 모달 -->
+    <div class="modal fade" id="productNameModal" tabindex="-1" aria-labelledby="productNameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productNameModalLabel">제품명으로 검색</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="productNameInput" class="form-label">제품명</label>
+                        <input type="text" class="form-control" id="productNameInput" placeholder="제품명을 입력하세요">
+                        <div class="form-text">예: 타이레놀, 아스피린, 판콜 등</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" id="addProductNameBtn">추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 제조사 검색 모달 -->
+    <div class="modal fade" id="manufacturerModal" tabindex="-1" aria-labelledby="manufacturerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="manufacturerModalLabel">제조사로 검색</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="manufacturerInput" class="form-label">제조사명</label>
+                        <input type="text" class="form-control" id="manufacturerInput" placeholder="제조사명을 입력하세요">
+                        <div class="form-text">예: 한국얀센, 동아제약, 유한양행 등</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" id="addManufacturerBtn">추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 부작용 검색 모달 -->
+    <div class="modal fade" id="sideEffectModal" tabindex="-1" aria-labelledby="sideEffectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sideEffectModalLabel">부작용으로 검색</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="sideEffectInput" class="form-label">부작용</label>
+                        <input type="text" class="form-control" id="sideEffectInput" placeholder="부작용을 입력하세요">
+                        <div class="form-text">예: 두통, 구토, 어지러움 등</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" id="addSideEffectBtn">추가</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // 모양 선택 이벤트
-        const shapeItems = document.querySelectorAll('.shape-item');
-        const drugShapeInput = document.getElementById('drug_shape');
+        document.addEventListener('DOMContentLoaded', function() {
+            // 검색 조건을 저장할 객체
+            let searchTerms = {
+                product_names: [],
+                manufacturers: [],
+                side_effects: []
+            };
 
-        shapeItems.forEach(item => {
-            item.addEventListener('click', function() {
-                // 이전 선택 제거
-                shapeItems.forEach(el => el.classList.remove('active'));
-                // 현재 선택 표시
-                this.classList.add('active');
-                // 숨겨진 입력 필드에 값 설정
-                drugShapeInput.value = this.getAttribute('data-shape');
+            // 검색 조건 표시 업데이트 함수
+            function updateSelectedTerms() {
+                const container = document.getElementById('selectedTermsContainer');
+                const list = document.getElementById('selectedTermsList');
+                list.innerHTML = '';
+
+                const hasTerms = searchTerms.product_names.length > 0 || 
+                                searchTerms.manufacturers.length > 0 || 
+                                searchTerms.side_effects.length > 0;
+                
+                if (hasTerms) {
+                    container.style.display = 'block';
+                    
+                    // 제품명 추가
+                    searchTerms.product_names.forEach(term => {
+                        const termElem = document.createElement('div');
+                        termElem.className = 'selected-term';
+                        termElem.innerHTML = `<span class="term-type">제품명</span>${term} <span data-type="product_names" data-term="${term}">×</span>`;
+                        list.appendChild(termElem);
+                    });
+                    
+                    // 제조사 추가
+                    searchTerms.manufacturers.forEach(term => {
+                        const termElem = document.createElement('div');
+                        termElem.className = 'selected-term';
+                        termElem.innerHTML = `<span class="term-type">제조사</span>${term} <span data-type="manufacturers" data-term="${term}">×</span>`;
+                        list.appendChild(termElem);
+                    });
+                    
+                    // 부작용 추가
+                    searchTerms.side_effects.forEach(term => {
+                        const termElem = document.createElement('div');
+                        termElem.className = 'selected-term';
+                        termElem.innerHTML = `<span class="term-type">부작용</span>${term} <span data-type="side_effects" data-term="${term}">×</span>`;
+                        list.appendChild(termElem);
+                    });
+                } else {
+                    container.style.display = 'none';
+                }
+            }
+
+            // 제품명 추가 버튼 이벤트
+            document.getElementById('addProductNameBtn').addEventListener('click', function() {
+                const input = document.getElementById('productNameInput');
+                const term = input.value.trim();
+                
+                if (term && !searchTerms.product_names.includes(term)) {
+                    searchTerms.product_names.push(term);
+                    updateSelectedTerms();
+                    input.value = '';
+                }
+                
+                const modal = bootstrap.Modal.getInstance(document.getElementById('productNameModal'));
+                modal.hide();
             });
-        });
 
-        // 색상 선택 이벤트
-        const colorItems = document.querySelectorAll('.color-item');
-        const colorInput = document.getElementById('color_class1');
+            // 제조사 추가 버튼 이벤트
+            document.getElementById('addManufacturerBtn').addEventListener('click', function() {
+                const input = document.getElementById('manufacturerInput');
+                const term = input.value.trim();
+                
+                if (term && !searchTerms.manufacturers.includes(term)) {
+                    searchTerms.manufacturers.push(term);
+                    updateSelectedTerms();
+                    input.value = '';
+                }
+                
+                const modal = bootstrap.Modal.getInstance(document.getElementById('manufacturerModal'));
+                modal.hide();
+            });
 
-        colorItems.forEach(item => {
-            item.addEventListener('click', function() {
-                // 이전 선택 제거
-                colorItems.forEach(el => el.classList.remove('active'));
-                // 현재 선택 표시
-                this.classList.add('active');
-                // 숨겨진 입력 필드에 값 설정
-                colorInput.value = this.getAttribute('data-color');
+            // 부작용 추가 버튼 이벤트
+            document.getElementById('addSideEffectBtn').addEventListener('click', function() {
+                const input = document.getElementById('sideEffectInput');
+                const term = input.value.trim();
+                
+                if (term && !searchTerms.side_effects.includes(term)) {
+                    searchTerms.side_effects.push(term);
+                    updateSelectedTerms();
+                    input.value = '';
+                }
+                
+                const modal = bootstrap.Modal.getInstance(document.getElementById('sideEffectModal'));
+                modal.hide();
+            });
+
+            // 검색 조건 삭제 이벤트
+            document.getElementById('selectedTermsList').addEventListener('click', function(e) {
+                if (e.target.hasAttribute('data-term')) {
+                    const type = e.target.getAttribute('data-type');
+                    const term = e.target.getAttribute('data-term');
+                    
+                    searchTerms[type] = searchTerms[type].filter(t => t !== term);
+                    updateSelectedTerms();
+                }
+            });
+
+            // 검색 버튼 이벤트
+            document.getElementById('searchButton').addEventListener('click', function() {
+                // 검색 조건을 URL 파라미터로 변환
+                const params = new URLSearchParams();
+                
+                searchTerms.product_names.forEach(term => {
+                    params.append('product_name', term);
+                });
+                
+                searchTerms.manufacturers.forEach(term => {
+                    params.append('manufacturer', term);
+                });
+                
+                searchTerms.side_effects.forEach(term => {
+                    params.append('side_effect', term);
+                });
+                
+                // 검색 결과 페이지로 이동
+                window.location.href = `/search?${params.toString()}`;
+            });
+
+            // 초기화 버튼 이벤트
+            document.getElementById('clearButton').addEventListener('click', function() {
+                searchTerms = {
+                    product_names: [],
+                    manufacturers: [],
+                    side_effects: []
+                };
+                updateSelectedTerms();
+            });
+
+            // 엔터 키 이벤트 처리
+            document.getElementById('productNameInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('addProductNameBtn').click();
+                }
+            });
+            
+            document.getElementById('manufacturerInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('addManufacturerBtn').click();
+                }
+            });
+            
+            document.getElementById('sideEffectInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('addSideEffectBtn').click();
+                }
             });
         });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

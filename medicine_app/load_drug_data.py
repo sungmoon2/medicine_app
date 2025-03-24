@@ -56,7 +56,7 @@ DB_CONFIG = {
 
 # API URL을 Dictionary로 변경 (set이 아님)
 API_URLS = {
-    #'의약품개요정보': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
+    '의약품개요정보': 'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList',
     '의약품 낱알식별 정보': 'http://apis.data.go.kr/1471000/MdcinGrnIdntfcInfoService01/getMdcinGrnIdntfcInfoList01',
     '의약품성분약효정보': 'http://apis.data.go.kr/B551182/msupCmpnMeftInfoService/getMajorCmpnNmCdList', # 데이터 로드 1개도 안됨.
     '성분별 1일 최대투여량 정보': 'http://apis.data.go.kr/1471000/DayMaxDosgQyByIngdService/getDayMaxDosgQyByIngdInq'

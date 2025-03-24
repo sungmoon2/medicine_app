@@ -2,7 +2,7 @@
 DATABASE_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'your_password',
+    'password': '1234',
     'db': 'medicine_db',
     'charset': 'utf8mb4'
 }

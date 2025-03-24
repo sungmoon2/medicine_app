@@ -1,0 +1,256 @@
+2025-03-24 20:31:54,220 - data_migration_fix - INFO - [32mmedicine_usage 테이블 데이터 재마이그레이션 시작...[0m
+2025-03-24 20:31:54,228 - data_migration_fix - INFO - 테이블 데이터 통계: medicines=4738, medicine_usage=4738, integrated_drug_info=32227
+2025-03-24 20:31:54,247 - data_migration_fix - INFO - medicine_usage와 medicines 간의 관계 수: 4738
+2025-03-24 20:31:54,247 - data_migration_fix - INFO - medicine_usage 유효 필드: ['medicine_id', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm', 'atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm']
+2025-03-24 20:31:54,328 - data_migration_fix - INFO - 통합 테이블의 medicine_usage 관련 필드 초기화: 0개 행
+2025-03-24 20:31:54,329 - data_migration_fix - INFO - medicines와 integrated_drug_info 간의 item_seq 관계 샘플 (5개):
+2025-03-24 20:31:54,329 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=2355
+2025-03-24 20:31:54,330 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=16047
+2025-03-24 20:31:54,330 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=5719
+2025-03-24 20:31:54,330 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=16048
+2025-03-24 20:31:54,330 - data_migration_fix - INFO -   medicines.id=35, item_seq=197000076, integrated_id=9979
+2025-03-24 20:31:54,331 - data_migration_fix - INFO - 동일한 item_seq를 가진 의약품 샘플 (10개):
+2025-03-24 20:31:54,331 - data_migration_fix - INFO -   integrated_id=2355, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:31:54,331 - data_migration_fix - INFO -   integrated_id=16047, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:31:54,332 - data_migration_fix - INFO -   integrated_id=5719, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:31:54,332 - data_migration_fix - INFO -   integrated_id=16048, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:31:54,332 - data_migration_fix - INFO -   integrated_id=9979, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:31:54,332 - data_migration_fix - INFO -   integrated_id=16050, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:31:54,332 - data_migration_fix - INFO -   integrated_id=7134, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:31:54,333 - data_migration_fix - INFO -   integrated_id=16051, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:31:54,333 - data_migration_fix - INFO -   integrated_id=8566, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:31:54,333 - data_migration_fix - INFO -   integrated_id=16052, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:31:54,431 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_seq 기준): 3225개 항목
+2025-03-24 20:31:54,477 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_name 기준): 0개 항목
+2025-03-24 20:31:54,482 - data_migration_fix - INFO - 총 매핑된 medicine_id: 3225개
+2025-03-24 20:31:54,694 - data_migration_fix - INFO - medicine_usage 데이터 마이그레이션 완료: 3225개 항목
+2025-03-24 20:31:54,695 - data_migration_fix - INFO - 데이터 샘플 (HTML 태그 포함):
+2025-03-24 20:31:54,695 - data_migration_fix - INFO -   로페시콘츄정
+2025-03-24 20:31:54,696 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:31:54,696 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:31:54,696 - data_migration_fix - INFO -   케어담정
+2025-03-24 20:31:54,696 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:31:54,696 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:31:54,697 - data_migration_fix - INFO -   브렌콜에프연질캡슐
+2025-03-24 20:31:54,697 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:31:54,697 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:31:55,331 - data_migration_fix - INFO - [32mmedicine_usage 데이터 재마이그레이션 완료[0m
+2025-03-24 20:31:55,353 - data_migration_fix - INFO - 통합 테이블 통계:
+2025-03-24 20:31:55,354 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:31:55,354 - data_migration_fix - INFO -   효능효과 있음: 3225개 (10.0%)
+2025-03-24 20:31:55,354 - data_migration_fix - INFO -   용법용량 있음: 3225개 (10.0%)
+2025-03-24 20:31:55,354 - data_migration_fix - INFO -   주의사항 있음: 3217개 (10.0%)
+2025-03-24 20:31:55,355 - data_migration_fix - INFO -   부작용 있음: 3066개 (9.5%)
+2025-03-24 20:35:59,616 - data_migration_fix - INFO - [32mmedicine_usage 테이블 데이터 재마이그레이션 시작...[0m
+2025-03-24 20:35:59,623 - data_migration_fix - INFO - 테이블 데이터 통계: medicines=4738, medicine_usage=4738, integrated_drug_info=32227
+2025-03-24 20:35:59,638 - data_migration_fix - INFO - medicine_usage와 medicines 간의 관계 수: 4738
+2025-03-24 20:35:59,638 - data_migration_fix - INFO - medicine_usage 유효 필드: ['medicine_id', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm', 'atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm']
+2025-03-24 20:35:59,838 - data_migration_fix - INFO - 통합 테이블의 medicine_usage 관련 필드 초기화: 3225개 행
+2025-03-24 20:35:59,838 - data_migration_fix - INFO - medicines와 integrated_drug_info 간의 item_seq 관계 샘플 (5개):
+2025-03-24 20:35:59,839 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=2355
+2025-03-24 20:35:59,839 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=16047
+2025-03-24 20:35:59,839 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=5719
+2025-03-24 20:35:59,839 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=16048
+2025-03-24 20:35:59,840 - data_migration_fix - INFO -   medicines.id=35, item_seq=197000076, integrated_id=9979
+2025-03-24 20:35:59,840 - data_migration_fix - INFO - 동일한 item_seq를 가진 의약품 샘플 (10개):
+2025-03-24 20:35:59,840 - data_migration_fix - INFO -   integrated_id=2355, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=16047, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=5719, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=16048, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=9979, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=16050, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:35:59,841 - data_migration_fix - INFO -   integrated_id=7134, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:35:59,842 - data_migration_fix - INFO -   integrated_id=16051, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:35:59,842 - data_migration_fix - INFO -   integrated_id=8566, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:35:59,842 - data_migration_fix - INFO -   integrated_id=16052, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:35:59,961 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_seq 기준): 3225개 항목
+2025-03-24 20:35:59,986 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_name 기준): 0개 항목
+2025-03-24 20:35:59,991 - data_migration_fix - INFO - 총 매핑된 medicine_id: 3225개
+2025-03-24 20:36:00,169 - data_migration_fix - INFO - medicine_usage 데이터 마이그레이션 완료: 3225개 항목
+2025-03-24 20:36:00,170 - data_migration_fix - INFO - 데이터 샘플 (HTML 태그 포함):
+2025-03-24 20:36:00,170 - data_migration_fix - INFO -   로페시콘츄정
+2025-03-24 20:36:00,170 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:00,170 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:00,171 - data_migration_fix - INFO -   케어담정
+2025-03-24 20:36:00,171 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:00,171 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:00,171 - data_migration_fix - INFO -   브렌콜에프연질캡슐
+2025-03-24 20:36:00,171 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:00,172 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:00,622 - data_migration_fix - INFO - [32mmedicine_usage 데이터 재마이그레이션 완료[0m
+2025-03-24 20:36:00,642 - data_migration_fix - INFO - 통합 테이블 통계:
+2025-03-24 20:36:00,642 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:36:00,643 - data_migration_fix - INFO -   효능효과 있음: 3225개 (10.0%)
+2025-03-24 20:36:00,643 - data_migration_fix - INFO -   용법용량 있음: 3225개 (10.0%)
+2025-03-24 20:36:00,643 - data_migration_fix - INFO -   주의사항 있음: 3217개 (10.0%)
+2025-03-24 20:36:00,643 - data_migration_fix - INFO -   부작용 있음: 3066개 (9.5%)
+2025-03-24 20:36:02,623 - data_migration_fix - INFO - [32mmedicine_usage 테이블 데이터 재마이그레이션 시작...[0m
+2025-03-24 20:36:02,630 - data_migration_fix - INFO - 테이블 데이터 통계: medicines=4738, medicine_usage=4738, integrated_drug_info=32227
+2025-03-24 20:36:02,644 - data_migration_fix - INFO - medicine_usage와 medicines 간의 관계 수: 4738
+2025-03-24 20:36:02,644 - data_migration_fix - INFO - medicine_usage 유효 필드: ['medicine_id', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm', 'atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm']
+2025-03-24 20:36:03,195 - data_migration_fix - INFO - 통합 테이블의 medicine_usage 관련 필드 초기화: 3225개 행
+2025-03-24 20:36:03,196 - data_migration_fix - INFO - medicines와 integrated_drug_info 간의 item_seq 관계 샘플 (5개):
+2025-03-24 20:36:03,196 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=2355
+2025-03-24 20:36:03,196 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=16047
+2025-03-24 20:36:03,197 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=5719
+2025-03-24 20:36:03,197 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=16048
+2025-03-24 20:36:03,197 - data_migration_fix - INFO -   medicines.id=35, item_seq=197000076, integrated_id=9979
+2025-03-24 20:36:03,198 - data_migration_fix - INFO - 동일한 item_seq를 가진 의약품 샘플 (10개):
+2025-03-24 20:36:03,198 - data_migration_fix - INFO -   integrated_id=2355, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:03,198 - data_migration_fix - INFO -   integrated_id=16047, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:03,198 - data_migration_fix - INFO -   integrated_id=5719, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:03,198 - data_migration_fix - INFO -   integrated_id=16048, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:03,198 - data_migration_fix - INFO -   integrated_id=9979, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:03,199 - data_migration_fix - INFO -   integrated_id=16050, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:03,199 - data_migration_fix - INFO -   integrated_id=7134, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:03,199 - data_migration_fix - INFO -   integrated_id=16051, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:03,199 - data_migration_fix - INFO -   integrated_id=8566, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:03,199 - data_migration_fix - INFO -   integrated_id=16052, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:03,296 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_seq 기준): 3225개 항목
+2025-03-24 20:36:03,321 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_name 기준): 0개 항목
+2025-03-24 20:36:03,326 - data_migration_fix - INFO - 총 매핑된 medicine_id: 3225개
+2025-03-24 20:36:03,520 - data_migration_fix - INFO - medicine_usage 데이터 마이그레이션 완료: 3225개 항목
+2025-03-24 20:36:03,520 - data_migration_fix - INFO - 데이터 샘플 (HTML 태그 포함):
+2025-03-24 20:36:03,520 - data_migration_fix - INFO -   로페시콘츄정
+2025-03-24 20:36:03,521 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:03,521 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:03,521 - data_migration_fix - INFO -   케어담정
+2025-03-24 20:36:03,522 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:03,522 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:03,522 - data_migration_fix - INFO -   브렌콜에프연질캡슐
+2025-03-24 20:36:03,522 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:03,522 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:03,961 - data_migration_fix - INFO - [32mmedicine_usage 데이터 재마이그레이션 완료[0m
+2025-03-24 20:36:03,981 - data_migration_fix - INFO - 통합 테이블 통계:
+2025-03-24 20:36:03,981 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:36:03,981 - data_migration_fix - INFO -   효능효과 있음: 3225개 (10.0%)
+2025-03-24 20:36:03,982 - data_migration_fix - INFO -   용법용량 있음: 3225개 (10.0%)
+2025-03-24 20:36:03,982 - data_migration_fix - INFO -   주의사항 있음: 3217개 (10.0%)
+2025-03-24 20:36:03,982 - data_migration_fix - INFO -   부작용 있음: 3066개 (9.5%)
+2025-03-24 20:36:05,407 - data_migration_fix - INFO - [32mmedicine_usage 테이블 데이터 재마이그레이션 시작...[0m
+2025-03-24 20:36:05,414 - data_migration_fix - INFO - 테이블 데이터 통계: medicines=4738, medicine_usage=4738, integrated_drug_info=32227
+2025-03-24 20:36:05,428 - data_migration_fix - INFO - medicine_usage와 medicines 간의 관계 수: 4738
+2025-03-24 20:36:05,428 - data_migration_fix - INFO - medicine_usage 유효 필드: ['medicine_id', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm', 'atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm']
+2025-03-24 20:36:05,611 - data_migration_fix - INFO - 통합 테이블의 medicine_usage 관련 필드 초기화: 3225개 행
+2025-03-24 20:36:05,612 - data_migration_fix - INFO - medicines와 integrated_drug_info 간의 item_seq 관계 샘플 (5개):
+2025-03-24 20:36:05,612 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=2355
+2025-03-24 20:36:05,613 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=16047
+2025-03-24 20:36:05,613 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=5719
+2025-03-24 20:36:05,613 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=16048
+2025-03-24 20:36:05,613 - data_migration_fix - INFO -   medicines.id=35, item_seq=197000076, integrated_id=9979
+2025-03-24 20:36:05,614 - data_migration_fix - INFO - 동일한 item_seq를 가진 의약품 샘플 (10개):
+2025-03-24 20:36:05,614 - data_migration_fix - INFO -   integrated_id=2355, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:05,614 - data_migration_fix - INFO -   integrated_id=16047, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=5719, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=16048, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=9979, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=16050, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=7134, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:05,615 - data_migration_fix - INFO -   integrated_id=16051, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:05,616 - data_migration_fix - INFO -   integrated_id=8566, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:05,616 - data_migration_fix - INFO -   integrated_id=16052, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:05,711 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_seq 기준): 3225개 항목
+2025-03-24 20:36:05,736 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_name 기준): 0개 항목
+2025-03-24 20:36:05,743 - data_migration_fix - INFO - 총 매핑된 medicine_id: 3225개
+2025-03-24 20:36:06,057 - data_migration_fix - INFO - medicine_usage 데이터 마이그레이션 완료: 3225개 항목
+2025-03-24 20:36:06,058 - data_migration_fix - INFO - 데이터 샘플 (HTML 태그 포함):
+2025-03-24 20:36:06,058 - data_migration_fix - INFO -   로페시콘츄정
+2025-03-24 20:36:06,058 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:06,058 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -   케어담정
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -   브렌콜에프연질캡슐
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:06,059 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:06,544 - data_migration_fix - INFO - [32mmedicine_usage 데이터 재마이그레이션 완료[0m
+2025-03-24 20:36:06,565 - data_migration_fix - INFO - 통합 테이블 통계:
+2025-03-24 20:36:06,565 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:36:06,565 - data_migration_fix - INFO -   효능효과 있음: 3225개 (10.0%)
+2025-03-24 20:36:06,566 - data_migration_fix - INFO -   용법용량 있음: 3225개 (10.0%)
+2025-03-24 20:36:06,566 - data_migration_fix - INFO -   주의사항 있음: 3217개 (10.0%)
+2025-03-24 20:36:06,566 - data_migration_fix - INFO -   부작용 있음: 3066개 (9.5%)
+2025-03-24 20:36:08,212 - data_migration_fix - INFO - [32mmedicine_usage 테이블 데이터 재마이그레이션 시작...[0m
+2025-03-24 20:36:08,219 - data_migration_fix - INFO - 테이블 데이터 통계: medicines=4738, medicine_usage=4738, integrated_drug_info=32227
+2025-03-24 20:36:08,232 - data_migration_fix - INFO - medicine_usage와 medicines 간의 관계 수: 4738
+2025-03-24 20:36:08,232 - data_migration_fix - INFO - medicine_usage 유효 필드: ['medicine_id', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm', 'atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm']
+2025-03-24 20:36:08,415 - data_migration_fix - INFO - 통합 테이블의 medicine_usage 관련 필드 초기화: 3225개 행
+2025-03-24 20:36:08,415 - data_migration_fix - INFO - medicines와 integrated_drug_info 간의 item_seq 관계 샘플 (5개):
+2025-03-24 20:36:08,416 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=2355
+2025-03-24 20:36:08,416 - data_migration_fix - INFO -   medicines.id=10, item_seq=196200034, integrated_id=16047
+2025-03-24 20:36:08,416 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=5719
+2025-03-24 20:36:08,416 - data_migration_fix - INFO -   medicines.id=15, item_seq=196500051, integrated_id=16048
+2025-03-24 20:36:08,417 - data_migration_fix - INFO -   medicines.id=35, item_seq=197000076, integrated_id=9979
+2025-03-24 20:36:08,417 - data_migration_fix - INFO - 동일한 item_seq를 가진 의약품 샘플 (10개):
+2025-03-24 20:36:08,418 - data_migration_fix - INFO -   integrated_id=2355, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:08,418 - data_migration_fix - INFO -   integrated_id=16047, item_seq=196200034, item_name=삐콤정, medicine_id=10
+2025-03-24 20:36:08,418 - data_migration_fix - INFO -   integrated_id=5719, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:08,418 - data_migration_fix - INFO -   integrated_id=16048, item_seq=196500051, item_name=지엘타이밍정(카페인무수물), medicine_id=15
+2025-03-24 20:36:08,418 - data_migration_fix - INFO -   integrated_id=9979, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:08,419 - data_migration_fix - INFO -   integrated_id=16050, item_seq=197000076, item_name=보나링에이정(디멘히드리네이트), medicine_id=35
+2025-03-24 20:36:08,419 - data_migration_fix - INFO -   integrated_id=7134, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:08,419 - data_migration_fix - INFO -   integrated_id=16051, item_seq=197100015, item_name=타치온정50밀리그램(글루타티온(환원형)), medicine_id=4
+2025-03-24 20:36:08,419 - data_migration_fix - INFO -   integrated_id=8566, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:08,419 - data_migration_fix - INFO -   integrated_id=16052, item_seq=197100081, item_name=키모랄에스정, medicine_id=39
+2025-03-24 20:36:08,511 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_seq 기준): 3225개 항목
+2025-03-24 20:36:08,537 - data_migration_fix - INFO - medicine_id 매핑 완료 (item_name 기준): 0개 항목
+2025-03-24 20:36:08,541 - data_migration_fix - INFO - 총 매핑된 medicine_id: 3225개
+2025-03-24 20:36:08,842 - data_migration_fix - INFO - medicine_usage 데이터 마이그레이션 완료: 3225개 항목
+2025-03-24 20:36:08,843 - data_migration_fix - INFO - 데이터 샘플 (HTML 태그 포함):
+2025-03-24 20:36:08,843 - data_migration_fix - INFO -   로페시콘츄정
+2025-03-24 20:36:08,844 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:08,844 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:08,844 - data_migration_fix - INFO -   케어담정
+2025-03-24 20:36:08,844 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:08,845 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:08,845 - data_migration_fix - INFO -   브렌콜에프연질캡슐
+2025-03-24 20:36:08,845 - data_migration_fix - INFO -     - 효능효과: NULL
+2025-03-24 20:36:08,845 - data_migration_fix - INFO -     - 용법용량: NULL
+2025-03-24 20:36:09,300 - data_migration_fix - INFO - [32mmedicine_usage 데이터 재마이그레이션 완료[0m
+2025-03-24 20:36:09,320 - data_migration_fix - INFO - 통합 테이블 통계:
+2025-03-24 20:36:09,321 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:36:09,321 - data_migration_fix - INFO -   효능효과 있음: 3225개 (10.0%)
+2025-03-24 20:36:09,321 - data_migration_fix - INFO -   용법용량 있음: 3225개 (10.0%)
+2025-03-24 20:36:09,321 - data_migration_fix - INFO -   주의사항 있음: 3217개 (10.0%)
+2025-03-24 20:36:09,321 - data_migration_fix - INFO -   부작용 있음: 3066개 (9.5%)
+2025-03-24 20:39:14,742 - data_migration_fix - INFO - [32m주의사항 데이터 중심 마이그레이션 시작...[0m
+2025-03-24 20:39:14,749 - data_migration_fix - INFO - medicine_usage 테이블 데이터 통계:
+2025-03-24 20:39:14,749 - data_migration_fix - INFO -   총 항목: 4738개
+2025-03-24 20:39:14,750 - data_migration_fix - INFO -   효능효과 있음: 0개 (0.0% 있음)
+2025-03-24 20:39:14,750 - data_migration_fix - INFO -   용법용량 있음: 0개 (0.0% 있음)
+2025-03-24 20:39:14,750 - data_migration_fix - INFO -   주의사항 있음: 4292개 (90.6% 있음)
+2025-03-24 20:39:14,750 - data_migration_fix - INFO -   경고 있음: 824개 (17.4% 있음)
+2025-03-24 20:39:14,751 - data_migration_fix - INFO -   상호작용 있음: 2833개 (59.8% 있음)
+2025-03-24 20:39:14,751 - data_migration_fix - INFO -   부작용 있음: 4080개 (86.1% 있음)
+2025-03-24 20:39:14,751 - data_migration_fix - INFO -   보관법 있음: 4286개 (90.5% 있음)
+2025-03-24 20:39:14,752 - data_migration_fix - INFO - 통합 테이블 중복 항목 샘플 (10개):
+2025-03-24 20:39:14,752 - data_migration_fix - INFO -   item_seq=196200034, 중복 수=2
+2025-03-24 20:39:14,752 - data_migration_fix - INFO -   item_seq=196500051, 중복 수=2
+2025-03-24 20:39:14,752 - data_migration_fix - INFO -   item_seq=197000005, 중복 수=2
+2025-03-24 20:39:14,752 - data_migration_fix - INFO -   item_seq=197000076, 중복 수=2
+2025-03-24 20:39:14,752 - data_migration_fix - INFO -   item_seq=197100015, 중복 수=2
+2025-03-24 20:39:14,753 - data_migration_fix - INFO -   item_seq=197100081, 중복 수=2
+2025-03-24 20:39:14,753 - data_migration_fix - INFO -   item_seq=197200084, 중복 수=2
+2025-03-24 20:39:14,753 - data_migration_fix - INFO -   item_seq=197200376, 중복 수=2
+2025-03-24 20:39:14,753 - data_migration_fix - INFO -   item_seq=197300128, 중복 수=2
+2025-03-24 20:39:14,754 - data_migration_fix - INFO -   item_seq=197300172, 중복 수=2
+2025-03-24 20:39:14,776 - data_migration_fix - INFO - medicine_id 매핑 (item_seq 기준): 0개 항목
+2025-03-24 20:39:14,801 - data_migration_fix - INFO - atpn_qesitm 데이터 마이그레이션: 0개 항목
+2025-03-24 20:39:14,827 - data_migration_fix - INFO - atpn_warn_qesitm 데이터 마이그레이션: 0개 항목
+2025-03-24 20:39:14,862 - data_migration_fix - INFO - intrc_qesitm 데이터 마이그레이션: 0개 항목
+2025-03-24 20:39:14,889 - data_migration_fix - INFO - se_qesitm 데이터 마이그레이션: 0개 항목
+2025-03-24 20:39:14,917 - data_migration_fix - INFO - deposit_method_qesitm 데이터 마이그레이션: 0개 항목
+2025-03-24 20:39:14,934 - data_migration_fix - INFO - 주의사항 데이터 예시:
+2025-03-24 20:39:14,935 - data_migration_fix - INFO -   id=20780, item_name=보니타정, 주의사항 길이=2362
+2025-03-24 20:39:14,935 - data_migration_fix - INFO -   id=21833, item_name=쎄스콘미니정, 주의사항 길이=2362
+2025-03-24 20:39:14,935 - data_migration_fix - INFO -   id=3281, item_name=쎄스콘미니정, 주의사항 길이=2362
+2025-03-24 20:39:14,935 - data_migration_fix - INFO -   id=3545, item_name=보니타정, 주의사항 길이=2362
+2025-03-24 20:39:14,936 - data_migration_fix - INFO -   id=1440, item_name=라니아정, 주의사항 길이=2356
+2025-03-24 20:39:14,963 - data_migration_fix - INFO - [32m마이그레이션 완료. 최종 통계:[0m
+2025-03-24 20:39:14,964 - data_migration_fix - INFO -   총 항목: 32227개
+2025-03-24 20:39:14,964 - data_migration_fix - INFO -   medicine_id 매핑됨: 3225개 (10.0%)
+2025-03-24 20:39:14,964 - data_migration_fix - INFO -   주의사항 있음: 3197개 (9.9%)
+2025-03-24 20:39:14,965 - data_migration_fix - INFO -   경고 있음: 818개 (2.5%)
+2025-03-24 20:39:14,965 - data_migration_fix - INFO -   상호작용 있음: 2858개 (8.9%)
+2025-03-24 20:39:14,965 - data_migration_fix - INFO -   부작용 있음: 3046개 (9.5%)
+2025-03-24 20:39:14,965 - data_migration_fix - INFO -   보관법 있음: 3203개 (9.9%)
