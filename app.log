@@ -1,59 +1,58 @@
-<<<<<<< HEAD
 2025-03-25 02:12:36,154 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2025-03-25 02:12:36,154 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
 2025-03-25 02:12:36,155 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:12:36,909 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:12:36,911 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:12:36,917 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:36] code 400, message Bad request syntax ('\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03¢¥6\x18\xdb\xdcV\x1e\x0c')
-2025-03-25 02:12:36,917 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03¢¥6\x18\xdb\xdcV\x1e\x0c[0m" 400 -
+2025-03-25 02:12:36,917 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:36] code 400, message Bad request syntax ('\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03ï¿½ï¿½6\x18\xdb\xdcV\x1e\x0c')
+2025-03-25 02:12:36,917 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03ï¿½ï¿½6\x18\xdb\xdcV\x1e\x0c[0m" 400 -
 2025-03-25 02:12:36,918 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:36] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00')
-2025-03-25 02:12:36,918 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x19%\x1dG©öV\xcaN©÷\xc4@\x15\xea\xef\x09,\xe8¡¾KD¡À(7o8T\xfdJ\x03¡©\x07T \x95\x95<~S\x19¨¢\x9a\xe2\x86\x9b\x96\x9aWX \x85\xe7\x84\x93 W¡Æ\x89K&\xc8kt\xe4I\x1a\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85¨¬¨¬\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x17\x00\x00\x00[0m" 400 -
+2025-03-25 02:12:36,918 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x19%\x1dGï¿½ï¿½V\xcaNï¿½ï¿½\xc4@\x15\xea\xef\x09,\xe8ï¿½ï¿½KDï¿½ï¿½(7o8T\xfdJ\x03ï¿½ï¿½\x07T \x95\x95<~S\x19ï¿½ï¿½\x9a\xe2\x86\x9b\x96\x9aWX \x85\xe7\x84\x93 Wï¿½ï¿½\x89K&\xc8kt\xe4I\x1a\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85ï¿½ï¿½ï¿½ï¿½\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x17\x00\x00\x00[0m" 400 -
 2025-03-25 02:12:36,919 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:36] code 400, message Bad request version ('localhost\x00')
-2025-03-25 02:12:36,919 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03uk{¢Ò\xaff\xeb¡Æ\xdcr\xcc\x92\xfbg\xc2\x980\x1c¢Òh:©ö\xdd2¢¥¡À©÷\xacZ,[\x01 ¨¡[\xc0¢¬¢Ò\x0d/@\x94Xt0<\x11\x9aQA\x8c\xda\x9c{O/z¡Æ\x1d{\xc8&l&¨­\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\x8a\x8a\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\x09localhost\x00[0m" 400 -
-2025-03-25 02:12:37,220 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:37] code 400, message Bad request version ('\xa21\x9a\xe4E\xf9\xea\x03\x13\x08M\xd2¨ù\x98\xaf\x87\xcb')
-2025-03-25 02:12:37,220 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:37] "[31m[1m\x16\x03\x01\x06©÷\x01\x00\x06¢ç\x03\x03¨¡~©¡\xc1©¡¨£\x0d¨¢F5\x0c\xa21\x9a\xe4E\xf9\xea\x03\x13\x08M\xd2¨ù\x98\xaf\x87\xcb[0m" 400 -
+2025-03-25 02:12:36,919 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:36] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03uk{ï¿½ï¿½\xaff\xebï¿½ï¿½\xdcr\xcc\x92\xfbg\xc2\x980\x1cï¿½ï¿½h:ï¿½ï¿½\xdd2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\xacZ,[\x01 ï¿½ï¿½[\xc0ï¿½ï¿½ï¿½ï¿½\x0d/@\x94Xt0<\x11\x9aQA\x8c\xda\x9c{O/zï¿½ï¿½\x1d{\xc8&l&ï¿½ï¿½\x00 ::\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\x8a\x8a\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\x09localhost\x00[0m" 400 -
+2025-03-25 02:12:37,220 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:37] code 400, message Bad request version ('\xa21\x9a\xe4E\xf9\xea\x03\x13\x08M\xd2ï¿½ï¿½\x98\xaf\x87\xcb')
+2025-03-25 02:12:37,220 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:37] "[31m[1m\x16\x03\x01\x06ï¿½ï¿½\x01\x00\x06ï¿½ï¿½\x03\x03ï¿½ï¿½~ï¿½ï¿½\xc1ï¿½ï¿½ï¿½ï¿½\x0dï¿½ï¿½F5\x0c\xa21\x9a\xe4E\xf9\xea\x03\x13\x08M\xd2ï¿½ï¿½\x98\xaf\x87\xcb[0m" 400 -
 2025-03-25 02:12:37,220 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:37] code 400, message Bad request syntax ('\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\xd6\x83\xcf\xa5\xc4B\xda?k\x96\xfcR\x19g=\xd6\xa6')
 2025-03-25 02:12:37,221 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:37] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\xd6\x83\xcf\xa5\xc4B\xda?k\x96\xfcR\x19g=\xd6\xa6[0m" 400 -
-2025-03-25 02:12:37,221 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:37] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x1b¡¾=\xcd\xfc!\xe2\x01¢¥)\x81\x94Y\x86a¡¾Q0\xe0\xf3\xf2\x89\x04_\x97z6,\xd4\xe9J\x92')
-2025-03-25 02:12:37,221 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:37] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x1b¡¾=\xcd\xfc!\xe2\x01¢¥)\x81\x94Y\x86a¡¾Q0\xe0\xf3\xf2\x89\x04_\x97z6,\xd4\xe9J\x92 \x82(\x7f[0m" 400 -
+2025-03-25 02:12:37,221 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:12:37] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x1bï¿½ï¿½=\xcd\xfc!\xe2\x01ï¿½ï¿½)\x81\x94Y\x86aï¿½ï¿½Q0\xe0\xf3\xf2\x89\x04_\x97z6,\xd4\xe9J\x92')
+2025-03-25 02:12:37,221 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:37] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\x1bï¿½ï¿½=\xcd\xfc!\xe2\x01ï¿½ï¿½)\x81\x94Y\x86aï¿½ï¿½Q0\xe0\xf3\xf2\x89\x04_\x97z6,\xd4\xe9J\x92 \x82(\x7f[0m" 400 -
 2025-03-25 02:12:38,348 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:12:38] "[33mGET /advanced/medicine-detail/1353 HTTP/1.1[0m" 404 -
 2025-03-25 02:13:55,179 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:55] "[33mGET /advanced/medicine-detail/1353 HTTP/1.1[0m" 404 -
-2025-03-25 02:13:56,228 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('=\xc8\x08\xf1¡×\xcarL2\xafC\xa2¨£\xc7S\xee\xfa¡¾U¢¬\x02¨öyA¢Ò\x94CJ')
-2025-03-25 02:13:56,228 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\xe0C\xa3\x97Xg,Q\x01\x14\xa6\x7f<N¡§C\x95\x84G{\xdd$pjHR\x8dNj56C <\xf6\x15\x8b\x13dp\x91\x8d\x8dd\x84\xd6\x82E\xcc_@\x7f\x09©ö\xc8\xf1\x08\x82\xac\xf9¨¢\xdd\xe2\xf9\xca\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\xfa\xfa\x00\x00\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02©­\x0d\x00\xfa\x00\x00\x01\x00\x01\x1a\x00 \x9b@\x1a\xfa+¡Àn^*\xa5\x9ah\x85\xc9~"\xb5\xcd\xd6\x97\xdb\x8c\xd9Y\xf3]\x91\x86F\xc2\xc9m\x00¨¢©øv\\#\xf3\xf1T\xc1¨¢".\xef\xe1\x06\x1a\xf61\x11\xc3\x00\\Z\xfd©÷\xea\x8e_\x0d`\x88¢¬\x88~\xeeT¡¿\x02v\x94¢Ò$\x7f\x14\x0e©÷\xa5\xf4c6.k5\x93C\x1a\x91\xef#\x10\x17\x05>\x11\x07\xec>K+\xe7\xc7\x96¢®\x1cz\x96`f¢¥ge\xee'\x97\x16\\}z\xdc\xed\x8d\xe5\xf3"\x96H\x18$2¢¯\x1f\x8c~\x93Q\xefW¡¤¨ù\x11\x05ny\xda\x1a\xdc\x11\xc8\x99\xe7(`\x9d>4\xdd\xf3\\\xe4'*Fh\x17¢ç\xc5\xecM\x00\xd6\x1b©ø\xea<\x85\xdd\xfc¢¥\xc7©÷\xfc}\xc4\x8b¡ÀT¡¿@,\x8f\x05\xf2\xd2.\x97nX¨¡wU5\x8f\xef\xc0=\x7f\x8b|v::\x04>\xc8o0\x93\xfba?\xd2\x1b\x84\x03\x98¡Àg\x07\x9fF¨­\x05\x7f¡©\x05\x9a\x15\x1d¡§\x003\x04\xef\x04\xed\x1a\x1a\x00\x01\x00\x11\xec\x04\xc0\xa6\xfa\x9d\xe8\x0b@\xda\x03n\x0e4\x10k\xf2d\x88T\x83SJnz0\x11~6\x0d\x83Ko\xac\xe1\xc9\x08\x03F\xac\x04Z\xca\xa2\x9d!\x03¡Æ\x83\x81\x93©÷\x88N\xc1\xeb¨£¨­\x91d¢®LK\xe8\x05\x971d\x1b\x00\xf33y,\xa65\x8c\x85=\xc8\x08\xf1¡×\xcarL2\xafC\xa2¨£\xc7S\xee\xfa¡¾U¢¬\x02¨öyA¢Ò\x94CJ[0m" 400 -
-2025-03-25 02:13:56,228 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('\x00l\xacB$~\x8a\x13¨¡¡×\xd98¢¯\x9a')
-2025-03-25 02:13:56,229 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03^2\xc1\x9a¨­\xcb¨ù\x1f©÷mU©£g¡§}V\xf9s>\x9d\x90\x13I\x87e\x01\x9c\x09\x9f\xc3\x9c\xce B\x99c"\x09\xc0PK\xf1\xe8v\xe4r¨¢\x08\x8c/\x8d1\x16\xebZ@\x08\x99_©ö©÷p\x97\xb5¨ù\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\xfa\xfa\x00\x00\x00#\x00\x00©­\x0d\x00\xfa\x00\x00\x01\x00\x015\x00 *\x1cP\xcc\x9f\xcd¢®¨£t;\x84z\xeav\xf3r\x80fd\xd9\x8d¢¥@\x1b\x10\xf9\x89©ø\xd1\x1f\x13p\x00¨¢]\xa2:\xf5\x0d\x1f\xd1\x98\x0f¡¤¡À\x84\xfc\xfc\xac©­\x92~\x83\x04\xdb\xbbl\xec5"¡¤Aq*!\x11P\xc4/\xfc\x94?\x0f\x80¡§|[\x8d\xa5\xf1\xd3\xa5\xa6q\x1b6\x84\xfc\x07\x9d¢´q\x8e=\xc4\xc3<g\xe7\xca\xe0¡©\x95\xa0\xd1\xa6#\xa6\x1b\xe7¢¬%\x18 ¢¬\x1c¢Ò"fp[\x1aN\xa6k\x09NV\x84\xd3\xa6\xc7<w\x08h\xeb\xca\xceT\x87\x1a\xe1{Y\xc0gGA\xdbE\xdb2\x0c\x86\x9b\xcdFv\x9a\x07u\xd1\xff@N\xe7qV\x94Qi\x064\x0b\x00l\xacB$~\x8a\x13¨¡¡×\xd98¢¯\x9a[0m" 400 -
-2025-03-25 02:13:56,490 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('\x82\xf6\\©¬\x146\xfc¨ù\x00')
-2025-03-25 02:13:56,490 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03E`w8\x93\x8c\xce\xd4¢´{\xec-+¢ç\x86e¨¢\x07¢´\x862|©£\xe0T_\xd2-©ö\x1f\x82\x9e \xc7\x02b©÷\x13\xc9¢¯2\xd6\x9d\xc4#\xeb\xa6¢®©ö\x18G\x99¢¬¨ú"©ø\x1e\x82\xf6\\©¬\x146\xfc¨ù\x00 [0m" 400 -
-2025-03-25 02:13:56,530 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Ezz\x00\x00\x00#\x00\x00\x00')
-2025-03-25 02:13:56,530 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06©÷\x01\x00\x06¢ç\x03\x03Z\x81\xe4K\x99<eAX\xff\x0b\x97\xcba\x1aol\xda\x0c¨¢\x98\xc2x"]\xd6¨ö\x02\xd5\xc2\x05\x81 &\x88\x08©ªxJ'zy\xe5©­u3%\x9en\x9b\xafk¡¤¨ö8\xee\xdc©ö\xc2\x1e¨ùg\x8bwa\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Ezz\x00\x00\x00#\x00\x00\x00[0m" 400 -
+2025-03-25 02:13:56,228 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('=\xc8\x08\xf1ï¿½ï¿½\xcarL2\xafC\xa2ï¿½ï¿½\xc7S\xee\xfaï¿½ï¿½Uï¿½ï¿½\x02ï¿½ï¿½yAï¿½ï¿½\x94CJ')
+2025-03-25 02:13:56,228 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03\xe0C\xa3\x97Xg,Q\x01\x14\xa6\x7f<Nï¿½ï¿½C\x95\x84G{\xdd$pjHR\x8dNj56C <\xf6\x15\x8b\x13dp\x91\x8d\x8dd\x84\xd6\x82E\xcc_@\x7f\x09ï¿½ï¿½\xc8\xf1\x08\x82\xac\xf9ï¿½ï¿½\xdd\xe2\xf9\xca\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\xfa\xfa\x00\x00\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02ï¿½ï¿½\x0d\x00\xfa\x00\x00\x01\x00\x01\x1a\x00 \x9b@\x1a\xfa+ï¿½ï¿½n^*\xa5\x9ah\x85\xc9~"\xb5\xcd\xd6\x97\xdb\x8c\xd9Y\xf3]\x91\x86F\xc2\xc9m\x00ï¿½ï¿½ï¿½ï¿½v\\#\xf3\xf1T\xc1ï¿½ï¿½".\xef\xe1\x06\x1a\xf61\x11\xc3\x00\\Z\xfdï¿½ï¿½\xea\x8e_\x0d`\x88ï¿½ï¿½\x88~\xeeTï¿½ï¿½\x02v\x94ï¿½ï¿½$\x7f\x14\x0eï¿½ï¿½\xa5\xf4c6.k5\x93C\x1a\x91\xef#\x10\x17\x05>\x11\x07\xec>K+\xe7\xc7\x96ï¿½ï¿½\x1cz\x96`fï¿½ï¿½ge\xee'\x97\x16\\}z\xdc\xed\x8d\xe5\xf3"\x96H\x18$2ï¿½ï¿½\x1f\x8c~\x93Q\xefWï¿½ï¿½ï¿½ï¿½\x11\x05ny\xda\x1a\xdc\x11\xc8\x99\xe7(`\x9d>4\xdd\xf3\\\xe4'*Fh\x17ï¿½ï¿½\xc5\xecM\x00\xd6\x1bï¿½ï¿½\xea<\x85\xdd\xfcï¿½ï¿½\xc7ï¿½ï¿½\xfc}\xc4\x8bï¿½ï¿½Tï¿½ï¿½@,\x8f\x05\xf2\xd2.\x97nXï¿½ï¿½wU5\x8f\xef\xc0=\x7f\x8b|v::\x04>\xc8o0\x93\xfba?\xd2\x1b\x84\x03\x98ï¿½ï¿½g\x07\x9fFï¿½ï¿½\x05\x7fï¿½ï¿½\x05\x9a\x15\x1dï¿½ï¿½\x003\x04\xef\x04\xed\x1a\x1a\x00\x01\x00\x11\xec\x04\xc0\xa6\xfa\x9d\xe8\x0b@\xda\x03n\x0e4\x10k\xf2d\x88T\x83SJnz0\x11~6\x0d\x83Ko\xac\xe1\xc9\x08\x03F\xac\x04Z\xca\xa2\x9d!\x03ï¿½ï¿½\x83\x81\x93ï¿½ï¿½\x88N\xc1\xebï¿½ï¿½ï¿½ï¿½\x91dï¿½ï¿½LK\xe8\x05\x971d\x1b\x00\xf33y,\xa65\x8c\x85=\xc8\x08\xf1ï¿½ï¿½\xcarL2\xafC\xa2ï¿½ï¿½\xc7S\xee\xfaï¿½ï¿½Uï¿½ï¿½\x02ï¿½ï¿½yAï¿½ï¿½\x94CJ[0m" 400 -
+2025-03-25 02:13:56,228 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('\x00l\xacB$~\x8a\x13ï¿½ï¿½ï¿½ï¿½\xd98ï¿½ï¿½\x9a')
+2025-03-25 02:13:56,229 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xf2\x01\x00\x06\xee\x03\x03^2\xc1\x9aï¿½ï¿½\xcbï¿½ï¿½\x1fï¿½ï¿½mUï¿½ï¿½gï¿½ï¿½}V\xf9s>\x9d\x90\x13I\x87e\x01\x9c\x09\x9f\xc3\x9c\xce B\x99c"\x09\xc0PK\xf1\xe8v\xe4rï¿½ï¿½\x08\x8c/\x8d1\x16\xebZ@\x08\x99_ï¿½ï¿½ï¿½ï¿½p\x97\xb5ï¿½ï¿½\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\xfa\xfa\x00\x00\x00#\x00\x00ï¿½ï¿½\x0d\x00\xfa\x00\x00\x01\x00\x015\x00 *\x1cP\xcc\x9f\xcdï¿½ï¿½ï¿½ï¿½t;\x84z\xeav\xf3r\x80fd\xd9\x8dï¿½ï¿½@\x1b\x10\xf9\x89ï¿½ï¿½\xd1\x1f\x13p\x00ï¿½ï¿½]\xa2:\xf5\x0d\x1f\xd1\x98\x0fï¿½ï¿½ï¿½ï¿½\x84\xfc\xfc\xacï¿½ï¿½\x92~\x83\x04\xdb\xbbl\xec5"ï¿½ï¿½Aq*!\x11P\xc4/\xfc\x94?\x0f\x80ï¿½ï¿½|[\x8d\xa5\xf1\xd3\xa5\xa6q\x1b6\x84\xfc\x07\x9dï¿½ï¿½q\x8e=\xc4\xc3<g\xe7\xca\xe0ï¿½ï¿½\x95\xa0\xd1\xa6#\xa6\x1b\xe7ï¿½ï¿½%\x18 ï¿½ï¿½\x1cï¿½ï¿½"fp[\x1aN\xa6k\x09NV\x84\xd3\xa6\xc7<w\x08h\xeb\xca\xceT\x87\x1a\xe1{Y\xc0gGA\xdbE\xdb2\x0c\x86\x9b\xcdFv\x9a\x07u\xd1\xff@N\xe7qV\x94Qi\x064\x0b\x00l\xacB$~\x8a\x13ï¿½ï¿½ï¿½ï¿½\xd98ï¿½ï¿½\x9a[0m" 400 -
+2025-03-25 02:13:56,490 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('\x82\xf6\\ï¿½ï¿½\x146\xfcï¿½ï¿½\x00')
+2025-03-25 02:13:56,490 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03E`w8\x93\x8c\xce\xd4ï¿½ï¿½{\xec-+ï¿½ï¿½\x86eï¿½ï¿½\x07ï¿½ï¿½\x862|ï¿½ï¿½\xe0T_\xd2-ï¿½ï¿½\x1f\x82\x9e \xc7\x02bï¿½ï¿½\x13\xc9ï¿½ï¿½2\xd6\x9d\xc4#\xeb\xa6ï¿½ï¿½ï¿½ï¿½\x18G\x99ï¿½ï¿½ï¿½ï¿½"ï¿½ï¿½\x1e\x82\xf6\\ï¿½ï¿½\x146\xfcï¿½ï¿½\x00 [0m" 400 -
+2025-03-25 02:13:56,530 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Ezz\x00\x00\x00#\x00\x00\x00')
+2025-03-25 02:13:56,530 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06ï¿½ï¿½\x01\x00\x06ï¿½ï¿½\x03\x03Z\x81\xe4K\x99<eAX\xff\x0b\x97\xcba\x1aol\xda\x0cï¿½ï¿½\x98\xc2x"]\xd6ï¿½ï¿½\x02\xd5\xc2\x05\x81 &\x88\x08ï¿½ï¿½xJ'zy\xe5ï¿½ï¿½u3%\x9en\x9b\xafkï¿½ï¿½ï¿½ï¿½8\xee\xdcï¿½ï¿½\xc2\x1eï¿½ï¿½g\x8bwa\x00 zz\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Ezz\x00\x00\x00#\x00\x00\x00[0m" 400 -
 2025-03-25 02:13:56,530 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad request version ('\xa6\\')
-2025-03-25 02:13:56,530 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03\x8d4\x1c2\x0f \x0e\xab©¡\x134\xe4\x08Z¡×PL¨ö\xee\xf2\xf9d\x8e¡©wK\xc4\x1d\x17\x92\xca\xee P\x94Ct\xd6\xce©ø\x90'\xc4\xc9~\xe2}\xfc\xf4\xb5-\x05\xd9\xdb\x15.\xee#\x9d\xddu\xee\xcb©­U\x00 jj\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc¡§\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\xa5JJ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\xff\x01\x00\x01\x00©­\x0d\x01\x1a\x00\x00\x01\x00\x01\xfc\x00 )\x11x\xfa\x93|\x85(\x08\x05.w\x18\x1d\xa6\\[0m" 400 -
+2025-03-25 02:13:56,530 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03\x8d4\x1c2\x0f \x0e\xabï¿½ï¿½\x134\xe4\x08Zï¿½ï¿½PLï¿½ï¿½\xee\xf2\xf9d\x8eï¿½ï¿½wK\xc4\x1d\x17\x92\xca\xee P\x94Ct\xd6\xceï¿½ï¿½\x90'\xc4\xc9~\xe2}\xfc\xf4\xb5-\x05\xd9\xdb\x15.\xee#\x9d\xddu\xee\xcbï¿½ï¿½U\x00 jj\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xccï¿½ï¿½\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\xa5JJ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00-\x00\x02\x01\x01\xff\x01\x00\x01\x00ï¿½ï¿½\x0d\x01\x1a\x00\x00\x01\x00\x01\xfc\x00 )\x11x\xfa\x93|\x85(\x08\x05.w\x18\x1d\xa6\\[0m" 400 -
 2025-03-25 02:13:56,800 - werkzeug - ERROR - 127.0.0.1 - - [25/Mar/2025 02:13:56] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06\xd2\x01\x00\x06\xce\x03\x03\xfd\xafEO\xa6a.$\xdb^\xdd')
-2025-03-25 02:13:56,800 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xd2\x01\x00\x06\xce\x03\x03\xfd\xafEO\xa6a.$\xdb^\xdd\x1d\xdb©ª©øM&\xec[0m" 400 -
+2025-03-25 02:13:56,800 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:56] "[31m[1m\x16\x03\x01\x06\xd2\x01\x00\x06\xce\x03\x03\xfd\xafEO\xa6a.$\xdb^\xdd\x1d\xdbï¿½ï¿½ï¿½ï¿½M&\xec[0m" 400 -
 2025-03-25 02:13:57,772 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:13:57] "[33mGET /advanced/medicine-detail/3483 HTTP/1.1[0m" 404 -
 2025-03-25 02:14:16,521 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:16] "[33mGET /advanced/medicine-detail/3483 HTTP/1.1[0m" 404 -
 2025-03-25 02:14:17,245 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:17] "[33mGET /advanced/medicine-detail/3483 HTTP/1.1[0m" 404 -
-2025-03-25 02:14:19,634 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:19] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=³ë¶û&color=ÃÊ·Ï&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:14:19,634 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:19] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½&color=ï¿½Ê·ï¿½&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:14:19,936 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:14:19,962 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:19] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:14:19,962 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:14:21,640 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:14:21,640 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:14:21,640 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:14:21,640 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:14:21,659 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:21] "GET /advanced/medicine_detail/3483 HTTP/1.1" 200 -
-2025-03-25 02:14:26,313 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:26] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=³ë¶û&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:14:26,313 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:26] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:14:26,332 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:14:26,639 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:26] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:14:26,640 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:14:27,422 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:14:27,423 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:14:27,422 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:14:27,423 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:14:27,423 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:14:27] "GET /advanced/medicine_detail/8698 HTTP/1.1" 200 -
 2025-03-25 02:16:44,529 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:16:44] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=ITR&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:16:44,551 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:16:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:16:44,768 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:16:44] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:16:44,860 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:16:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:16:50,236 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:16:50,237 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:16:50,236 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:16:50,237 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:16:50,237 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:16:50] "GET /advanced/medicine_detail/3 HTTP/1.1" 200 -
 2025-03-25 02:19:00,021 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:00] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=MF&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:19:00,063 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
@@ -63,15 +62,15 @@
 2025-03-25 02:19:06,083 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:19:06,299 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:06] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:19:06,391 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:19:08,482 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:19:08,483 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:19:08,482 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:19:08,483 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:19:08,484 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:19:08] "GET /advanced/medicine_detail/5667 HTTP/1.1" 200 -
 2025-03-25 02:20:37,251 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:20:37] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=MF&print_back=2&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:20:37,267 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:20:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:20:37,472 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:20:37] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:20:37,580 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:20:37] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:20:38,121 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:20:38,122 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:20:38,121 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:20:38,122 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:20:38,122 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:20:38] "GET /advanced/medicine_detail/5667 HTTP/1.1" 200 -
 2025-03-25 02:25:04,131 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
 2025-03-25 02:25:04,197 - werkzeug - INFO -  * Restarting with stat
@@ -81,9 +80,9 @@
 2025-03-25 02:25:06,626 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:25:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:25:06,787 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:25:06] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:25:06,896 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:25:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:25:08,361 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:25:08,362 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
-2025-03-25 02:25:08,362 - app - INFO - ÀÇ¾àÇ° ±âº» Á¤º¸ Å°: dict_keys(['id', 'item_seq', 'item_name', 'entp_seq', 'entp_name', 'chart', 'item_image', 'print_front', 'print_back', 'drug_shape', 'color_class1', 'color_class2', 'line_front', 'line_back', 'leng_long', 'leng_short', 'thick', 'img_regist_ts', 'class_no', 'class_name', 'etc_otc_name', 'item_permit_date', 'form_code_name', 'mark_code_front_anal', 'mark_code_back_anal', 'mark_code_front_img', 'mark_code_back_img', 'change_date', 'mark_code_front', 'mark_code_back', 'item_eng_name', 'edi_code', 'created_at', 'updated_at'])
+2025-03-25 02:25:08,361 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:25:08,362 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:25:08,362 - app - INFO - ï¿½Ç¾ï¿½Ç° ï¿½âº» ï¿½ï¿½ï¿½ï¿½ Å°: dict_keys(['id', 'item_seq', 'item_name', 'entp_seq', 'entp_name', 'chart', 'item_image', 'print_front', 'print_back', 'drug_shape', 'color_class1', 'color_class2', 'line_front', 'line_back', 'leng_long', 'leng_short', 'thick', 'img_regist_ts', 'class_no', 'class_name', 'etc_otc_name', 'item_permit_date', 'form_code_name', 'mark_code_front_anal', 'mark_code_back_anal', 'mark_code_front_img', 'mark_code_back_img', 'change_date', 'mark_code_front', 'mark_code_back', 'item_eng_name', 'edi_code', 'created_at', 'updated_at'])
 2025-03-25 02:25:08,378 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:25:08] "GET /advanced/medicine-detail/5667 HTTP/1.1" 200 -
 2025-03-25 02:27:45,637 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
 2025-03-25 02:27:45,672 - werkzeug - INFO -  * Restarting with stat
@@ -99,28 +98,28 @@
 2025-03-25 02:28:00,736 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:28:00,794 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:00] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:28:00,795 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:00] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:28:04,382 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:04] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=°ËÁ¤&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:28:07,720 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:07] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=Ã»·Ï&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:29:35,416 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:29:35] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=Ã»·Ï&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:29:38,576 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:29:38] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:00,990 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:00] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:01,637 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:01] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:04,864 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:04] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:29,115 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:29] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:31,751 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:31] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:32,964 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:32] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:30:33,564 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:33] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:28:04,382 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:04] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:28:07,720 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:28:07] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=Ã»ï¿½ï¿½&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:29:35,416 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:29:35] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=Ã»ï¿½ï¿½&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:29:38,576 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:29:38] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:00,990 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:00] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:01,637 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:01] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:04,864 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:04] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:29,115 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:29] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:31,751 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:31] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:32,964 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:32] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:30:33,564 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:30:33] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
 2025-03-25 02:32:33,046 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
 2025-03-25 02:32:33,085 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:32:33,884 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:32:33,886 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:32:33,894 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:33] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 02:32:36,200 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:36] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:32:33,894 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:33] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
+2025-03-25 02:32:36,200 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:36] "[33mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
 2025-03-25 02:32:37,907 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
 2025-03-25 02:32:37,947 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:32:38,747 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:32:38,750 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:32:40,499 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:40] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:32:40,499 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:40] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:32:40,556 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:32:40,693 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:40] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:32:40,820 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:32:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -129,11 +128,11 @@
 2025-03-25 02:34:15,041 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:34:15,804 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:34:15,806 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:34:18,088 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:34:18,089 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:34:18,088 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:34:18,089 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:34:18,124 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:18] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
-2025-03-25 02:34:23,403 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:34:23,403 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:34:23,403 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:34:23,403 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:34:23,404 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:23] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
 2025-03-25 02:34:23,840 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
 2025-03-25 02:34:23,880 - werkzeug - INFO -  * Restarting with stat
@@ -148,15 +147,15 @@
 2025-03-25 02:34:34,503 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:34:35,291 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:34:35,294 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:34:35,553 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:34:35,553 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:34:35,553 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:34:35,553 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:34:35,563 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:35] "[35m[1mGET /advanced/medicine-detail/12453 HTTP/1.1[0m" 500 -
 2025-03-25 02:34:35,614 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:35] "GET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
 2025-03-25 02:34:35,804 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:35] "GET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 2025-03-25 02:34:36,160 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:36] "GET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=console.png&s=AOzmvDxj7P5YUaoQWiAw HTTP/1.1" 200 -
 2025-03-25 02:34:36,406 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:36] "GET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2025-03-25 02:34:37,668 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:34:37,669 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:34:37,668 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:34:37,669 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:34:37,675 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:37] "[35m[1mGET /advanced/medicine-detail/12453 HTTP/1.1[0m" 500 -
 2025-03-25 02:34:37,968 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:37] "[36mGET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:34:37,999 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:37] "[36mGET /advanced/medicine-detail/12453?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
@@ -166,24 +165,24 @@
 2025-03-25 02:34:40,361 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:34:41,162 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:34:41,164 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:34:41,635 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:34:41,635 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:34:41,635 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:34:41,635 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:34:41,656 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:34:41] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
 2025-03-25 02:35:22,287 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
 2025-03-25 02:35:22,319 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:35:23,055 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:35:23,058 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:37:02,666 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:37:02,667 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:37:02,666 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:37:02,667 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:37:02,698 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:37:02] "GET /advanced/medicine-detail/5857 HTTP/1.1" 200 -
-2025-03-25 02:37:05,395 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:37:05,395 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:37:05,395 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:37:05,395 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:37:05,396 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:37:05] "GET /advanced/medicine-detail/5857 HTTP/1.1" 200 -
-2025-03-25 02:37:23,793 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:37:23,793 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:37:23,793 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:37:23,793 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:37:23,794 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:37:23] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
-2025-03-25 02:38:14,300 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:38:14,300 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:38:14,300 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:38:14,300 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:38:14,345 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:38:14] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
 2025-03-25 02:38:14,644 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:38:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:38:14,678 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:38:14] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -193,7 +192,7 @@
 2025-03-25 02:39:47,480 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:47] "[33mGET /advanced/advanced-search HTTP/1.1[0m" 404 -
 2025-03-25 02:39:49,902 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:39:49,903 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:49] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:39:56,474 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:39:56,474 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:39:56,495 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:39:56,696 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:56] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:39:56,805 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:39:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -201,7 +200,7 @@
 2025-03-25 02:40:03,029 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:40:03,030 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:03] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:40:04,698 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:04] "[33mGET /advanced/advanced-search HTTP/1.1[0m" 404 -
-2025-03-25 02:40:52,053 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:52] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:40:52,053 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:52] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:40:52,076 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:40:52,392 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:40:52,392 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -210,7 +209,7 @@
 2025-03-25 02:40:54,945 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:54] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:40:55,883 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:40:55] "[33mGET /advanced/advanced_search HTTP/1.1[0m" 404 -
 2025-03-25 02:41:32,184 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:32] "[33mGET /advanced/advanced_search HTTP/1.1[0m" 404 -
-2025-03-25 02:41:35,056 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:35] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:41:35,056 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:35] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:41:35,309 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:35,389 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:35] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:35,390 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -219,7 +218,7 @@
 2025-03-25 02:41:44,542 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:44] "[33mGET /advanced/advanced HTTP/1.1[0m" 404 -
 2025-03-25 02:41:45,294 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:45,295 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:45] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:41:46,391 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:46] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:41:46,391 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:46] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:41:46,412 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:46,584 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:46] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:46,726 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:46] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -233,20 +232,20 @@
 2025-03-25 02:41:51,547 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:51] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:41:52,243 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:52,551 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:41:54,440 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:54] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=2 HTTP/1.1" 200 -
+2025-03-25 02:41:54,440 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:54] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=2 HTTP/1.1" 200 -
 2025-03-25 02:41:54,460 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:54,664 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:54] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:54,774 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:41:56,542 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=20 HTTP/1.1" 200 -
+2025-03-25 02:41:56,542 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=20 HTTP/1.1" 200 -
 2025-03-25 02:41:56,593 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:56,764 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:56] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:56,884 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:41:58,428 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:58] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=16 HTTP/1.1" 200 -
+2025-03-25 02:41:58,428 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:58] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È²&line_front=&line_back=&print_front=1&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no=&page=16 HTTP/1.1" 200 -
 2025-03-25 02:41:58,711 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:58,759 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:58] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:58,760 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:41:59,667 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:41:59,668 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:41:59,667 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:41:59,668 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:41:59,669 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:59] "GET /advanced/medicine-detail/10945 HTTP/1.1" 200 -
 2025-03-25 02:41:59,759 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:41:59,914 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:41:59] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -255,26 +254,26 @@
 2025-03-25 02:43:11,216 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:11,540 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:11] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:11,540 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:43:41,507 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:41] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=¹«±âÁúÁ¦Á¦&class_no= HTTP/1.1" 200 -
+2025-03-25 02:43:41,507 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:41] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½&class_no= HTTP/1.1" 200 -
 2025-03-25 02:43:41,799 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:41,846 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:41,847 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:43:44,001 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:44,002 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:44] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:43:47,316 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:47] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=ÇöÅ¹»ó&etc_otc_name=&class_name=¹«±âÁúÁ¦Á¦&class_no= HTTP/1.1" 200 -
+2025-03-25 02:43:47,316 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:47] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=ï¿½ï¿½Å¹ï¿½ï¿½&etc_otc_name=&class_name=ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½&class_no= HTTP/1.1" 200 -
 2025-03-25 02:43:47,586 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:47,648 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:47] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:47,648 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:47] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:43:52,259 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:43:52,259 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:43:52,259 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:43:52,259 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:43:52,260 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:52] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:43:52,414 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:52,523 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:52,603 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:43:58,561 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:43:58,866 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:43:58] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:45:19,452 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:45:19,453 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:45:19,452 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:45:19,453 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:45:19,454 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:45:19] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:45:19,478 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:45:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:45:19,692 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:45:19] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -324,8 +323,8 @@
 2025-03-25 02:46:23,676 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:46:23,733 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:46:23,735 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:23] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:46:25,623 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:46:25,624 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:46:25,623 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:46:25,624 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:46:25,625 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:25] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:46:25,746 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:46:25,879 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:46:25] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -338,48 +337,48 @@
 2025-03-25 02:47:33,072 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:33,101 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:33] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:33,104 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:47:34,063 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:47:34,063 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:47:34,063 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:47:34,063 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:47:34,064 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:34] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:47:34,190 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:34,327 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:34] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:34,405 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:47:48,345 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:48,657 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:48] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:47:55,645 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:47:55,646 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:47:55,645 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:47:55,646 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:47:55,647 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:55] "GET /advanced/medicine-detail/3313 HTTP/1.1" 200 -
 2025-03-25 02:47:55,682 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:47:55,994 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:55] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:47:55,994 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:47:55] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:05,473 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:05,789 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:05] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:48:07,020 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:48:07,022 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:48:07,020 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:48:07,022 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:48:07,025 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:07] "GET /advanced/medicine-detail/7857 HTTP/1.1" 200 -
 2025-03-25 02:48:07,069 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:07,276 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:07] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:07,383 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:48:19,558 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:48:19,559 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:48:19,558 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:48:19,559 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:48:19,560 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:19] "GET /advanced/medicine-detail/4236 HTTP/1.1" 200 -
 2025-03-25 02:48:19,585 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:19,796 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:19] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:19,890 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:48:24,436 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:48:24,436 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:48:24,436 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:48:24,436 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:48:24,437 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:24] "GET /advanced/medicine-detail/12453 HTTP/1.1" 200 -
 2025-03-25 02:48:24,472 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:24,703 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:24] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:24,795 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:48:52,715 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:48:52,715 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:48:52,715 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:48:52,715 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:48:52,716 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:52] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:48:52,748 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:52,973 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:53,064 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:48:57,801 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:48:57,801 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:48:57,801 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:48:57,801 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:48:57,802 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:57] "GET /advanced/medicine-detail/7857 HTTP/1.1" 200 -
 2025-03-25 02:48:57,833 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:48:58,052 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:48:58] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -388,14 +387,14 @@
 2025-03-25 02:49:41,525 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:41,830 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:41,832 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:49:42,895 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:49:42,895 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:49:42,895 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:49:42,895 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:49:42,896 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:42] "GET /advanced/medicine-detail/3313 HTTP/1.1" 200 -
 2025-03-25 02:49:43,206 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:43,248 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:49:43,248 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:43] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:49:50,231 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:49:50,231 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:49:50,231 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:49:50,231 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:49:50,232 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:50] "GET /advanced/medicine-detail/10092 HTTP/1.1" 200 -
 2025-03-25 02:49:50,261 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:50,593 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:50] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -408,8 +407,8 @@
 2025-03-25 02:49:54,717 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:54,748 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:54] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:54,748 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:49:58,567 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:49:58,567 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:49:58,567 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:49:58,567 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:49:58,569 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:58] "GET /advanced/medicine-detail/10092 HTTP/1.1" 200 -
 2025-03-25 02:49:58,659 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:49:58,815 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:49:58] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -420,16 +419,16 @@
 2025-03-25 02:50:05,161 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:05,358 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:05] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:05,484 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:05] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:50:08,442 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:50:08,442 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:50:08,442 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:50:08,442 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:50:08,443 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:08] "GET /advanced/medicine-detail/5339 HTTP/1.1" 200 -
 2025-03-25 02:50:08,548 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:08,707 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:08] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:08,787 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:50:12,774 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:13,086 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:13] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:50:15,172 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:50:15,173 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:50:15,172 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:50:15,173 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:50:15,174 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:15] "GET /advanced/medicine-detail/1661 HTTP/1.1" 200 -
 2025-03-25 02:50:15,207 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:15,419 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:15] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -439,18 +438,18 @@
 2025-03-25 02:50:25,375 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:25,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:25] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:25,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:50:30,433 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:30] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:50:30,433 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:30] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:50:30,459 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:30,670 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:30] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:30,774 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:50:33,459 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:33,460 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:33] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:50:34,567 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:34] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=±âÅ¸&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:50:34,567 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:34] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=ï¿½ï¿½Å¸&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:50:34,848 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:34,911 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:34] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:34,912 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:50:37,359 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:50:37,360 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:50:37,359 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:50:37,360 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:50:37,360 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:37] "GET /advanced/medicine-detail/2788 HTTP/1.1" 200 -
 2025-03-25 02:50:37,470 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:50:37,625 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:50:37] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -461,12 +460,12 @@
 2025-03-25 02:52:17,184 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:17,412 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:17] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:17,505 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:52:23,132 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:23] "GET /advanced/search?search_type=text&item_name=ÇÁ·Î³ªµåÁ¤5¹Ð&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:52:23,132 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:23] "GET /advanced/search?search_type=text&item_name=ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½5ï¿½ï¿½&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:52:23,156 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:23,360 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:23] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:23,467 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:52:24,665 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:52:24,665 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:52:24,665 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:52:24,665 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:52:24,666 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:24] "GET /advanced/medicine-detail/1274 HTTP/1.1" 200 -
 2025-03-25 02:52:24,788 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:24,915 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:24] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -480,8 +479,8 @@
 2025-03-25 02:52:39,565 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:39,778 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:39] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:39,879 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:52:44,619 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:52:44,620 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:52:44,619 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:52:44,620 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:52:44,621 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:44] "GET /advanced/medicine-detail/10092 HTTP/1.1" 200 -
 2025-03-25 02:52:44,742 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:52:44,864 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:52:44] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -495,11 +494,11 @@
 2025-03-25 02:54:44,610 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:54:44,808 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:54:44,809 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:44] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:54:47,468 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:54:47,468 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:54:47,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:47] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
 2025-03-25 02:54:48,857 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:48] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:54:48,857 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 02:54:50,822 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:54:50,822 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:54:50,823 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:50] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
 2025-03-25 02:54:51,886 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:54:51,887 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:54:51] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -522,35 +521,35 @@
 2025-03-25 02:56:07,753 - werkzeug - INFO -  * Restarting with stat
 2025-03-25 02:56:08,547 - werkzeug - WARNING -  * Debugger is active!
 2025-03-25 02:56:08,550 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:56:12,641 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:56:12,641 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:56:12,642 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:12] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 02:56:20,305 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:56:20,305 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:56:20,305 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:20] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
 2025-03-25 02:56:22,148 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:22] "GET /advanced/ HTTP/1.1" 200 -
 2025-03-25 02:56:22,484 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:22,533 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:22] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:22,534 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:56:25,657 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:25] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:56:25,657 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:25] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:56:25,679 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:25,888 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:25] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:26,006 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:56:26,971 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:26,972 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:26] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:56:27,866 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:27] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:56:27,866 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:27] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:56:28,154 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:28,201 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:28] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:28,201 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:56:30,453 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:56:30,454 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:56:30,453 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:56:30,454 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:56:30,481 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:30] "GET /advanced/medicine-detail/4004 HTTP/1.1" 200 -
 2025-03-25 02:56:30,561 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:30,721 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:30] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:30,828 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:56:37,925 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:38,242 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:38] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:56:41,550 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
-2025-03-25 02:56:41,551 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:41] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 02:56:44,675 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:56:41,550 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
+2025-03-25 02:56:41,551 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:41] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
+2025-03-25 02:56:44,675 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:56:44,676 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:44] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
 2025-03-25 02:56:46,664 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
 2025-03-25 02:56:46,710 - werkzeug - INFO -  * Restarting with stat
@@ -565,17 +564,17 @@
 2025-03-25 02:56:50,458 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:50,677 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:50] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:50,680 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:56:52,989 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:52] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=±âÅ¸&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:56:52,989 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:52] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=ï¿½ï¿½Å¸&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:56:53,257 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:53,330 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:53] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:53,330 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 02:56:54,937 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:54,938 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:54] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:56:56,967 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=±âÅ¸&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:56:56,967 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=ï¿½ï¿½Å¸&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:56:57,256 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:57,312 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:57] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:56:57,313 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:56:57] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:57:02,923 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:02] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=±âÅ¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:57:02,923 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:02] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=&line_back=ï¿½ï¿½Å¸&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:57:02,952 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:03,149 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:03] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:03,274 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -588,12 +587,12 @@
 2025-03-25 02:57:19,562 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:19,839 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:19] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:19,839 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:19] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:57:21,841 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:21] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=±âÅ¸&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 02:57:21,841 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:21] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=ï¿½ï¿½Å¸&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 02:57:21,860 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:22,067 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:22] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:22,176 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:57:25,070 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:57:25,071 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:57:25,070 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:57:25,071 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:57:25,097 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:25] "GET /advanced/medicine-detail/4856 HTTP/1.1" 200 -
 2025-03-25 02:57:25,138 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:25,331 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:25] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -602,7 +601,7 @@
 2025-03-25 02:57:32,040 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:32,508 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:57:32,812 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:57:36,892 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: not enough arguments for format string
+2025-03-25 02:57:36,892 - app - ERROR - ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½: not enough arguments for format string
 2025-03-25 02:57:36,893 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:57:36] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
 2025-03-25 02:58:17,654 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
 2025-03-25 02:58:17,698 - werkzeug - INFO -  * Restarting with stat
@@ -616,8 +615,8 @@
 2025-03-25 02:58:24,994 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:58:25,217 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:25] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 02:58:25,310 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:58:26,892 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 02:58:26,893 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 02:58:26,892 - app - WARNING - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 02:58:26,893 - app - WARNING - DUR ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
 2025-03-25 02:58:26,919 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:26] "GET /advanced/medicine-detail/5283 HTTP/1.1" 200 -
 2025-03-25 02:58:26,979 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 02:58:27,155 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:58:27] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -639,7 +638,7 @@
 2025-03-25 03:06:40,504 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:40,691 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:40] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:40,698 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 03:06:44,379 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:44] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:06:44,379 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:44] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½È«&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:06:44,658 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:44,718 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:44] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 03:06:44,718 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:44] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -650,7 +649,7 @@
 2025-03-25 03:06:48,067 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:48,280 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:48] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:48,379 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 03:06:51,940 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:51] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=Åõ¸í&line_front=&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:06:51,940 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:51] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:06:51,965 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:52,170 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:06:52,286 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -664,7 +663,7 @@
 2025-03-25 03:06:59,167 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:06:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 03:07:02,143 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:02,144 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:02] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 03:07:03,791 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:03] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=°¥»ö&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:07:03,791 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:03] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:07:04,093 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:04,136 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:04] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:04,136 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -677,7 +676,7 @@
 2025-03-25 03:07:49,597 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:49,597 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:49] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:49,619 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 03:07:53,890 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:53] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=°¥»ö&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:07:53,890 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:53] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:07:54,186 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:07:54,238 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:54] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 03:07:54,238 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:07:54] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -685,7 +684,7 @@
 2025-03-25 03:08:19,899 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:19] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:19,899 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:20,939 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:20] "[33mGET /advanced/advanced-search HTTP/1.1[0m" 404 -
-2025-03-25 03:08:23,649 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:23] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=°¥»ö&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:08:23,649 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:23] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:08:23,664 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:23,973 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:23] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:23,974 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -698,7 +697,7 @@
 2025-03-25 03:08:28,332 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:28,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:28] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:28,470 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 03:08:33,127 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:33] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=»¡°­&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:08:33,127 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:33] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ï¿½ï¿½ï¿½ï¿½&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:08:33,412 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:08:33,473 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 03:08:33,473 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:08:33] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
@@ -721,13 +720,13 @@
 2025-03-25 03:11:22,407 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:22,554 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:22,555 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:22] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 03:11:26,162 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:11:26,162 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=ï¿½ï¿½ï¿½ï¿½ï¿½&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:11:26,425 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:26,506 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:26,506 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
 2025-03-25 03:11:27,699 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:27,699 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:27] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 03:11:32,222 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=ÀüÃ¼&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:11:32,222 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=ï¿½ï¿½Ã¼&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:11:32,509 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:32,564 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:32,566 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
@@ -738,700 +737,71 @@
 2025-03-25 03:11:37,711 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:37] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
 2025-03-25 03:11:38,007 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-03-25 03:11:38,059 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 03:11:38,060 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-=======
-2025-03-25 00:33:52,931 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-03-25 03:11:38,060 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:11:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -2025-03-25 03:37:54,953 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2025-03-25 00:33:52,931 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 00:33:52,932 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:33:53,656 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:33:53,659 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:33:55,058 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:33:55,059 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
-2025-03-25 00:33:55,060 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:33:55,062 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ·¹³î%', 'Å¸ÀÌ·¹³î%']
-2025-03-25 00:33:55,082 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:55] "GET /search?product_name=Å¸ÀÌ·¹³î HTTP/1.1" 200 -
-2025-03-25 00:33:56,205 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:56] "GET / HTTP/1.1" 200 -
-2025-03-25 00:33:59,640 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:33:59,642 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:33:59,643 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:33:59,646 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:33:59,657 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:33:59] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 00:34:00,422 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 00:34:00,422 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
-2025-03-25 00:34:00,440 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:34:00] "GET /medicine/1083 HTTP/1.1" 200 -
-2025-03-25 00:34:06,468 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:34:06] "GET / HTTP/1.1" 200 -
-2025-03-25 00:47:01,981 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 00:47:02,056 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:47:02,842 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:47:02,844 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:53:03,871 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 00:53:03,871 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 00:53:03,873 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:53:04,570 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:53:04,572 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:53:06,616 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:06] "GET / HTTP/1.1" 200 -
-2025-03-25 00:53:08,537 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:08] "GET / HTTP/1.1" 200 -
-2025-03-25 00:53:09,817 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:09] "GET / HTTP/1.1" 200 -
-2025-03-25 00:53:17,492 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:53:17,494 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:53:17,494 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:53:17,495 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:53:17,515 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:53:17] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 00:54:55,900 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 00:54:55,940 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:54:56,730 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:54:56,733 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:55:30,847 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 00:55:30,892 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:57:04,772 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 00:57:04,772 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 00:57:04,773 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:57:05,558 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:57:05,561 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:57:25,383 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:57:25,384 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:57:25,385 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:57:25,386 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:57:25,405 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:25] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 00:57:26,878 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:26] "GET / HTTP/1.1" 200 -
-2025-03-25 00:57:31,320 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:57:31,321 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:57:31,321 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:57:31,323 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:57:31,331 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:57:31] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 00:58:25,176 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 00:58:25,176 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 00:58:25,177 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 00:58:25,899 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 00:58:25,901 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 00:58:27,717 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:58:27,719 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:58:27,719 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:58:27,720 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:58:27,740 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:27] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 00:58:29,135 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:29] "GET / HTTP/1.1" 200 -
-2025-03-25 00:58:32,630 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 00:58:32,631 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:58:32,632 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 00:58:32,634 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 00:58:32,642 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 00:58:32] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 01:00:15,430 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "[35m[1mGET /advanced/advanced-search HTTP/1.1[0m" 500 -
-2025-03-25 01:00:15,489 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2025-03-25 01:00:15,646 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2025-03-25 01:00:15,989 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:15] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=console.png&s=GCt2YuOfdPADkRI7AUdq HTTP/1.1" 200 -
-2025-03-25 01:00:16,237 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:16] "GET /advanced/advanced-search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2025-03-25 01:00:49,526 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /advanced/advanced-search HTTP/1.1" 200 -
-2025-03-25 01:00:49,831 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /static/css/advanced_search.css HTTP/1.1" 200 -
-2025-03-25 01:00:49,858 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:00:49,860 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:00:49] "GET /static/js/script.js HTTP/1.1" 200 -
-2025-03-25 01:01:04,062 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:01:04] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=&color=³ë¶û&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:01:17,047 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:01:17] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ·¹³î&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:04:33,499 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:04:33,499 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:04:33,500 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:04:34,221 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:04:34,224 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:04:36,491 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:36] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ·¹³î&entp_name=&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:04:40,066 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:40] "GET / HTTP/1.1" 200 -
-2025-03-25 01:04:47,472 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:47] "GET /advanced/advanced-search HTTP/1.1" 200 -
-2025-03-25 01:04:47,802 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:04:52,151 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:04:52] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:07:32,579 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:07:32] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:08:14,947 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:08:15,001 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:08:55,848 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:08:55,848 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:08:55,850 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:08:56,567 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:08:56,570 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:09:03,755 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:03] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&color=¿¬µÎ&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:09:10,536 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:10] "[33mGET /advanced-search?search_type=text&item_name=&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:09:14,259 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:09:14] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:10:33,848 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:10:33,880 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:10:34,651 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:10:34,654 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:11:26,808 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\search_controller.py', reloading
-2025-03-25 01:11:26,842 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:11:27,602 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:11:27,604 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:11:36,334 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:11:36,334 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:11:36,335 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:11:37,132 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:11:37,135 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:11:47,281 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:11:47] "[33mGET /advanced-search?search_type=text&item_name=Å¸ÀÌ&entp_name=µ¿±¹&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 404 -
-2025-03-25 01:12:50,353 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:12:50,395 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:14:52,167 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:14:52,167 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:14:52,168 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:14:52,895 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:14:52,898 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:14:57,014 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:14:57] "[33mGET /advanced/advanced-search HTTP/1.1[0m" 404 -
-2025-03-25 01:14:59,221 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:14:59] "GET / HTTP/1.1" 200 -
-2025-03-25 01:15:03,729 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 01:15:03,730 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 01:15:03,731 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 01:15:03,732 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 01:15:03,751 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:15:03] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 01:17:12,305 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\config.py', reloading
-2025-03-25 01:17:12,340 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:17:13,080 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:17:13,083 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:18:00,241 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:18:00,282 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:18:01,038 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:18:01,040 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:18:12,078 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:18:12,126 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:18:12,890 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:18:12,893 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:18:21,748 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:18:21,748 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:18:21,750 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:18:22,492 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:18:22,495 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:18:25,973 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:25] "GET / HTTP/1.1" 200 -
-2025-03-25 01:18:29,900 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 01:18:29,901 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 01:18:29,902 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 01:18:29,903 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%Å¸ÀÌ%', 'Å¸ÀÌ%']
-2025-03-25 01:18:29,920 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:29] "GET /search?product_name=Å¸ÀÌ HTTP/1.1" 200 -
-2025-03-25 01:18:36,604 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:36] "[32mGET /search HTTP/1.1[0m" 302 -
-2025-03-25 01:18:36,915 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:18:36] "GET / HTTP/1.1" 200 -
-2025-03-25 01:19:07,224 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 01:19:07,226 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%°ÇÆ®¶ó¼Â%', '°ÇÆ®¶ó¼Â%']
-2025-03-25 01:19:07,226 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 01:19:07,229 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%°ÇÆ®¶ó¼Â%', '°ÇÆ®¶ó¼Â%']
-2025-03-25 01:19:07,236 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:07] "GET /search?product_name=°ÇÆ®¶ó¼Â HTTP/1.1" 200 -
-2025-03-25 01:19:11,341 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:11] "[32mGET /search HTTP/1.1[0m" 302 -
-2025-03-25 01:19:11,662 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:11] "GET / HTTP/1.1" 200 -
-2025-03-25 01:19:20,555 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 01:19:20,557 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
-2025-03-25 01:19:20,557 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 01:19:20,559 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
-2025-03-25 01:19:20,567 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:20] "GET /search?product_name=ÀÌ HTTP/1.1" 200 -
-2025-03-25 01:19:26,909 - app - INFO - ÃÖÁ¾ °Ë»ö Äõ¸®: 
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-2025-03-25 01:19:26,911 - app - INFO - °Ë»ö ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
-2025-03-25 01:19:26,911 - app - INFO - Ä«¿îÆ® Äõ¸®: 
-            SELECT COUNT(*) as total 
-            FROM (
-                
-            SELECT 
-                id, item_seq, item_name, item_eng_name, 
-                entp_seq, entp_name, chart, 
-                class_no, class_name, etc_otc_name, 
-                item_permit_date, form_code_name, 
-                efcy_qesitm, se_qesitm
-            FROM unified_medicines
-            WHERE 1=1
-             AND ((LOWER(item_name) LIKE LOWER(%s) OR LOWER(item_name) LIKE LOWER(%s)))
-            ) as count_subquery
-            
-2025-03-25 01:19:26,912 - app - INFO - Ä«¿îÆ® Äõ¸® ÆÄ¶ó¹ÌÅÍ: ['%ÀÌ%', 'ÀÌ%']
-2025-03-25 01:19:26,923 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:19:26] "GET /search?product_name=ÀÌ&page=2 HTTP/1.1" 200 -
-2025-03-25 01:20:58,993 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:20:59,044 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:20:59,866 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:20:59,868 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:21:01,554 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2025-03-25 01:21:01,662 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2025-03-25 01:21:01,778 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2025-03-25 01:21:01,880 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:01] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=tPCSKgJQBbNzkChIBxKS HTTP/1.1" 200 -
-2025-03-25 01:21:02,114 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2025-03-25 01:21:09,908 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:21:09,940 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:21:10,701 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:21:10,703 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:21:11,359 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[32mGET / HTTP/1.1[0m" 302 -
-2025-03-25 01:21:11,362 - app - INFO - Accessing advanced search index
-2025-03-25 01:21:11,390 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:21:11,644 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:21:11,709 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:21:11,710 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:11] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:21:14,560 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
-2025-03-25 01:21:14,561 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:14] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=³ë¶û&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:21:50,701 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:21:50,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:21:50,702 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:21:51,451 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:21:51,453 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:21:58,130 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
-2025-03-25 01:21:58,131 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:21:58] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:23:58,318 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:23:58,318 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:23:58,319 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:23:59,053 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:23:59,056 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:24:06,051 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[32mGET / HTTP/1.1[0m" 302 -
-2025-03-25 01:24:06,054 - app - INFO - Accessing advanced search index
-2025-03-25 01:24:06,064 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:24:06,356 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:24:06,395 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:24:06,395 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:06] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:24:10,285 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
-2025-03-25 01:24:10,286 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:24:10] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:25:00,261 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:25:00,303 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:25:01,089 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:25:01,091 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:26:25,329 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:26:25,360 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:26:26,127 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:26:26,129 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:26:31,703 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:26:31,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:26:31,705 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:26:32,434 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:26:32,436 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:26:35,815 - app - INFO - Accessing advanced search index
-2025-03-25 01:26:35,825 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:35] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:26:35,871 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:26:36,080 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:36] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:26:36,149 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:36] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:26:38,969 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: name 'mysql' is not defined
-2025-03-25 01:26:38,970 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:26:38] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&color=»¡°­&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:27:08,561 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:27:08,617 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:27:09,382 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:27:09,385 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:27:13,403 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:27:13,453 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:27:14,204 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:27:14,206 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:29:01,522 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:29:01,553 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:29:02,320 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:29:02,322 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:29:10,979 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:29:10,979 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:29:10,981 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:29:11,717 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:29:11,719 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:29:18,154 - app - INFO - Accessing advanced search index
-2025-03-25 01:29:18,163 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:29:18,217 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:29:18,426 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:29:18,499 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:29:23,615 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:29:23,630 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "GET /advanced/search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2025-03-25 01:29:23,875 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:23] "GET /advanced/search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2025-03-25 01:29:24,206 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:24] "GET /advanced/search?__debugger__=yes&cmd=resource&f=console.png&s=DzKxKym2J6we7f2viicR HTTP/1.1" 200 -
-2025-03-25 01:29:24,474 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:29:24] "GET /advanced/search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2025-03-25 01:37:50,321 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:37:50,362 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:37:51,157 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:37:51,160 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:37:59,936 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:37:59,936 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:37:59,937 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:38:00,651 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:38:00,653 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:38:02,431 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
-2025-03-25 01:38:02,432 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:02] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=¿øÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:38:12,669 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:38:12,723 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:38:12,995 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:38:12,995 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:12] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:38:15,967 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (2059, "Authentication plugin 'b'auth_gssapi_client'' not configured")
-2025-03-25 01:38:15,969 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:38:15] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=»ï°¢Çü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:39:08,848 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:39:08,883 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:39:09,661 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:39:09,663 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:39:35,802 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:39:35,802 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:39:35,803 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:39:36,601 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:39:36,603 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:39:41,433 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:39:41,483 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:39:41,692 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:39:41,754 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:39:44,764 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: Connection.__init__() got an unexpected keyword argument 'auth_plugin'. Did you mean 'auth_plugin_map'?
-2025-03-25 01:39:44,765 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:39:44] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:40:07,573 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: Connection.__init__() got an unexpected keyword argument 'auth_plugin'. Did you mean 'auth_plugin_map'?
-2025-03-25 01:40:07,574 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:40:07] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:40:30,747 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:40:30,781 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:40:31,541 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:40:31,544 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:40:33,797 - app - ERROR - °í±Þ °Ë»ö ¿À·ù: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
-2025-03-25 01:40:33,798 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:40:33] "[35m[1mGET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1[0m" 500 -
-2025-03-25 01:41:06,655 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:41:06,689 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:41:07,499 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:41:07,501 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:41:08,370 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=Àå¹æÇü&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 01:41:08,414 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:41:08,583 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:41:08,691 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:41:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:47:50,661 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:47:50] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
-2025-03-25 01:49:30,979 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:49:31,017 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:49:31,797 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:49:31,799 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:49:32,323 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:32] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
-2025-03-25 01:49:42,844 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\app.py', reloading
-2025-03-25 01:49:42,893 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:49:43,656 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:49:43,658 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:49:44,670 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:44] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
-2025-03-25 01:49:45,380 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:45] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
-2025-03-25 01:49:46,436 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:49:46] "[33mGET /advanced/medicine-detail/2788 HTTP/1.1[0m" 404 -
-2025-03-25 01:50:23,794 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 01:50:23,794 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
-2025-03-25 01:50:23,814 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:23] "GET /advanced/medicine_detail/123 HTTP/1.1" 200 -
-2025-03-25 01:50:28,833 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:28] "[32mGET / HTTP/1.1[0m" 302 -
-2025-03-25 01:50:29,151 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:50:29,519 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:50:29,541 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:50:29,543 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:50:31,557 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=»¡°­&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 01:50:31,831 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:50:31,893 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:50:31,894 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:31] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:50:33,602 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:33] "[33mGET /advanced/medicine-detail/5857 HTTP/1.1[0m" 404 -
-2025-03-25 01:50:37,966 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
-2025-03-25 01:50:37,967 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
-2025-03-25 01:50:37,968 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:50:37] "GET /advanced/medicine_detail/123 HTTP/1.1" 200 -
-2025-03-25 01:51:40,775 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:51:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:51:41,082 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:51:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:52:38,205 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:52:38] "[33mGET /advanced/medicine-detail/5857 HTTP/1.1[0m" 404 -
-2025-03-25 01:55:47,704 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\advanced_search_controller.py', reloading
-2025-03-25 01:55:47,758 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:55:48,550 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:55:48,553 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:56:18,629 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:56:18,691 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:56:18,883 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:56:18,961 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:18] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:56:54,374 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:56:54,374 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:56:54,375 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:56:55,095 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:56:55,098 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:56:58,823 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:58] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 01:56:58,875 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:56:59,058 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:59] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:56:59,143 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:56:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:57:00,033 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:57:00] "[33mGET /advanced/medicine-detail/12453 HTTP/1.1[0m" 404 -
-2025-03-25 01:58:33,350 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 01:58:33,350 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 01:58:33,351 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 01:58:34,104 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 01:58:34,106 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 01:58:37,040 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 01:58:37,097 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /static/css/style.css HTTP/1.1" 200 -
-2025-03-25 01:58:37,293 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:58:37,400 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:37] "GET /static/js/script.js HTTP/1.1" 200 -
-2025-03-25 01:58:39,808 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:39] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 01:58:39,828 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 01:58:40,045 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 01:58:40,139 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 01:58:40,974 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 01:58:40] "[33mGET /advanced/medicine-detail/3313 HTTP/1.1[0m" 404 -
-2025-03-25 02:00:33,577 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-03-25 02:00:33,577 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-03-25 02:00:33,578 - werkzeug - INFO -  * Restarting with stat
-2025-03-25 02:00:34,340 - werkzeug - WARNING -  * Debugger is active!
-2025-03-25 02:00:34,343 - werkzeug - INFO -  * Debugger PIN: 141-752-462
-2025-03-25 02:00:34,773 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:34] "[32mGET / HTTP/1.1[0m" 302 -
-2025-03-25 02:00:34,784 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:34] "GET /advanced/ HTTP/1.1" 200 -
-2025-03-25 02:00:35,057 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:35,111 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:35,112 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:35] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:00:38,167 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 02:00:38,180 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:38,406 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:38,484 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:38] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:00:41,355 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ÁÖÈ²&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 02:00:41,372 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:41,579 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:41,687 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:00:45,469 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "GET /advanced/search?search_type=text&item_name=&entp_name=&drug_shape=»ï°¢Çü&color=ÁÖÈ²&line_front=&line_back=-&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
-2025-03-25 02:00:45,487 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:45,669 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
-2025-03-25 02:00:45,791 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:45] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
-2025-03-25 02:00:51,592 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 02:00:51] "[33mGET /advanced/medicine-detail/12338 HTTP/1.1[0m" 404 -
->>>>>>> 77f6da08a94c089abbe25dd1386026ccadbb9871
+2025-03-25 03:37:54,953 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 03:37:54,955 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 03:37:55,753 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 03:37:55,755 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 03:37:58,572 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:37:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-25 03:37:58,685 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:37:58] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 03:37:58,878 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:37:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:37:59,012 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:37:59] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:37:59,015 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:37:59] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:01,199 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:01] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:38:01,459 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:01,541 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:01] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:01,542 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:02,695 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 03:38:02,696 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 03:38:02,732 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:02] "[35m[1mGET /advanced/medicine-detail/3313 HTTP/1.1[0m" 500 -
+2025-03-25 03:38:02,989 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:02] "[36mGET /advanced/medicine-detail/3313?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:03,076 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:03] "[36mGET /advanced/medicine-detail/3313?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:03,408 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:03] "GET /advanced/medicine-detail/3313?__debugger__=yes&cmd=resource&f=console.png&s=Ksh2KsDNQoanjjCe8gRC HTTP/1.1" 200 -
+2025-03-25 03:38:04,048 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:04,351 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:04] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:04,743 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:04,744 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:04] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:29,289 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:29] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=&line_back=&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:38:29,568 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:29,629 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:29] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:29,629 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:29] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:33,802 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 03:38:33,803 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 03:38:33,826 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:33] "[35m[1mGET /advanced/medicine-detail/10027 HTTP/1.1[0m" 500 -
+2025-03-25 03:38:33,907 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:33] "GET /advanced/medicine-detail/10027?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-25 03:38:34,051 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:34] "GET /advanced/medicine-detail/10027?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-25 03:38:34,165 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:34] "GET /advanced/medicine-detail/10027?__debugger__=yes&cmd=resource&f=console.png&s=Ksh2KsDNQoanjjCe8gRC HTTP/1.1" 200 -
+2025-03-25 03:38:34,382 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:34] "GET /advanced/medicine-detail/10027?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-25 03:38:48,901 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 03:38:48,901 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 03:38:48,935 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:48] "GET /advanced/medicine-detail/10027 HTTP/1.1" 200 -
+2025-03-25 03:38:49,207 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:49,273 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:49] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:49,273 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:53,864 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:53,864 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:53] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:56,470 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:56] "GET /advanced/search?search_type=text&item_name=&entp_name=&color=ºÐÈ«&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:38:56,746 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:56,817 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:56] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:56,817 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:56] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:38:58,535 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:58] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 03:38:58,631 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:58,800 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:58] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:38:58,869 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:38:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:39:01,959 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:01] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:39:02,258 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:39:02,305 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:39:02,306 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:02] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:39:03,991 - app - WARNING - ¼ººÐ Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_components' doesn't exist")
+2025-03-25 03:39:03,992 - app - WARNING - DUR Á¤º¸ Á¶È¸ ½ÇÆÐ: (1146, "Table 'medicine_db.medicine_dur_usjnt' doesn't exist")
+2025-03-25 03:39:03,993 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:03] "GET /advanced/medicine-detail/5283 HTTP/1.1" 200 -
+2025-03-25 03:39:04,293 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:39:04,343 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:04] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:39:04,343 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:04] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 03:39:10,592 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:39:10,593 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:39:10] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:40:01,179 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:40:01] "GET /advanced/search?search_type=text&item_name=&entp_name=&line_front=%2B&line_back=%2B&print_front=&print_back=&form_code_name=&etc_otc_name=&class_name=&class_no= HTTP/1.1" 200 -
+2025-03-25 03:40:01,436 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:40:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 03:40:01,505 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:40:01] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 03:40:01,506 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 03:40:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
