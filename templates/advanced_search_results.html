@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% block title %}의약품 검색 결과{% endblock %}
+
+{% block content %}
+<div class="container mt-4 mb-5">
+    <div class="search-header">
+        <h1 class="mb-3">의약품 검색 결과</h1>
+        <p class="text-muted">검색 조건에 맞는 의약품 총 <strong>{{ total_count }}</strong>개가 검색되었습니다.</p>
+    </div>
+    
+    <!-- 검색 조건 표시 -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">검색 조건</h5>
+                <div>
+                    <a href="/advanced/" class="btn btn-outline-primary btn-sm me-2">
+                        <i class="bi bi-search"></i> 새 검색
+                    </a>
+                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#searchConditions">
+                        <i class="bi bi-chevron-down"></i> 검색 조건 보기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="collapse" id="searchConditions">
+            <div class="card-body">
+                <div class="row">
+                    {% if search_params.item_name %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">제품명:</span>
+                            <span class="condition-value">{{ search_params.item_name }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.entp_name %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">제조사:</span>
+                            <span class="condition-value">{{ search_params.entp_name }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.class_name %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">분류명:</span>
+                            <span class="condition-value">{{ search_params.class_name }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.drug_shapes %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">모양:</span>
+                            <span class="condition-value">{{ search_params.drug_shapes|join(', ') }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.colors %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">색상:</span>
+                            <span class="condition-value">{{ search_params.colors|join(', ') }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.print_front %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">앞면 표시:</span>
+                            <span class="condition-value">{{ search_params.print_front }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.print_back %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">뒷면 표시:</span>
+                            <span class="condition-value">{{ search_params.print_back }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if search_params.etc_otc_name %}
+                    <div class="col-md-3 mb-2">
+                        <div class="search-condition-item">
+                            <span class="condition-label">전문/일반:</span>
+                            <span class="condition-value">{{ search_params.etc_otc_name }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 검색 결과 정렬 옵션 -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="results-count">
+            총 <strong>{{ total_count }}</strong>개 결과 ({{ current_page }}/{{ total_pages }} 페이지)
+        </div>
+        <div class="sorting-options">
+            <select class="form-select form-select-sm" id="sortOption">
+                <option value="name_asc">이름순 (가나다)</option>
+                <option value="name_desc">이름순 (역순)</option>
+                <option value="company_asc">제조사순</option>
+                <option value="date_desc">최신등록순</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- 검색 결과 리스트 -->
+    {% if results|length > 0 %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+        {% for medicine in results %}
+        <div class="col">
+            <div class="card h-100 medicine-card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <div class="medicine-image-container">
+                            {% if medicine.item_image %}
+                            <img src="{{ medicine.item_image }}" class="medicine-image img-fluid rounded-start" alt="{{ medicine.item_name }}">
+                            {% else %}
+                            <div class="no-image">
+                                <i class="bi bi-capsule"></i>
+                                <span>이미지 없음</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" title="{{ medicine.item_name }}">{{ medicine.item_name|safe }}</h5>
+                            <p class="card-company">{{ medicine.entp_name|safe }}</p>
+                            <div class="medicine-properties">
+                                {% if medicine.drug_shape %}
+                                <span class="badge bg-light text-dark">{{ medicine.drug_shape }}</span>
+                                {% endif %}
+                                {% if medicine.color_class1 %}
+                                <span class="badge bg-light text-dark">{{ medicine.color_class1 }}</span>
+                                {% endif %}
+                                {% if medicine.etc_otc_name %}
+                                <span class="badge bg-primary">{{ medicine.etc_otc_name }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="medicine-specifications mt-2">
+                                <small class="text-muted">
+                                    {% if medicine.print_front %}앞면: {{ medicine.print_front }}{% endif %}
+                                    {% if medicine.print_front and medicine.print_back %} / {% endif %}
+                                    {% if medicine.print_back %}뒷면: {{ medicine.print_back }}{% endif %}
+                                </small>
+                            </div>
+                            <a href="/advanced/medicine-detail/{{ medicine.id }}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- 페이지네이션 -->
+    {% if total_pages > 1 %}
+    <nav aria-label="검색 결과 페이지 네비게이션">
+        <ul class="pagination justify-content-center">
+            <!-- 처음 페이지 -->
+            <li class="page-item {% if current_page == 1 %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination_url }}&page=1" aria-label="처음">
+                    <span aria-hidden="true">&laquo;&laquo;</span>
+                </a>
+            </li>
+            
+            <!-- 이전 페이지 -->
+            <li class="page-item {% if current_page == 1 %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination_url }}&page={{ current_page - 1 }}" aria-label="이전">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            
+            <!-- 페이지 번호 -->
+            {% set start_page = [current_page - 2, 1]|max %}
+            {% set end_page = [start_page + 4, total_pages]|min %}
+            {% set start_page = [end_page - 4, 1]|max %}
+            
+            {% for i in range(start_page, end_page + 1) %}
+            <li class="page-item {% if i == current_page %}active{% endif %}">
+                <a class="page-link" href="{{ pagination_url }}&page={{ i }}">{{ i }}</a>
+            </li>
+            {% endfor %}
+            
+            <!-- 다음 페이지 -->
+            <li class="page-item {% if current_page == total_pages %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination_url }}&page={{ current_page + 1 }}" aria-label="다음">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            
+            <!-- 마지막 페이지 -->
+            <li class="page-item {% if current_page == total_pages %}disabled{% endif %}">
+                <a class="page-link" href="{{ pagination_url }}&page={{ total_pages }}" aria-label="마지막">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {% endif %}
+    {% else %}
+    <!-- 검색 결과가 없을 때 -->
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center py-5">
+                <i class="bi bi-search" style="font-size: 3rem; color: #6c757d;"></i>
+                <h3 class="mt-3">검색 결과가 없습니다.</h3>
+                <p class="text-muted">검색 조건을 변경하여 다시 시도해 보세요.</p>
+                <a href="/advanced/advanced-search" class="btn btn-primary mt-3">새 검색</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 정렬 옵션 변경 이벤트
+    const sortOption = document.getElementById('sortOption');
+    if (sortOption) {
+        sortOption.addEventListener('change', function() {
+            // 현재 URL 가져오기
+            const url = new URL(window.location.href);
+            
+            // 정렬 옵션 추가
+            url.searchParams.set('sort', this.value);
+            
+            // 페이지 파라미터 제거 (첫 페이지로 돌아가기)
+            url.searchParams.delete('page');
+            
+            // 페이지 이동
+            window.location.href = url.toString();
+        });
+        
+        // 현재 정렬 상태 설정
+        const currentSort = new URLSearchParams(window.location.search).get('sort');
+        if (currentSort) {
+            sortOption.value = currentSort;
+        }
+    }
+});
+</script>
+{% endblock %}

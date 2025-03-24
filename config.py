@@ -4,7 +4,8 @@ DATABASE_CONFIG = {
     'user': 'root',
     'password': '1234',
     'db': 'medicine_db',
-    'charset': 'utf8mb4'
+    'charset': 'utf8mb4',
+    'table': 'drug_identification'
 }
 
 # 애플리케이션 설정

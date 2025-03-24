@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 import time
+from advanced_search_controller import advanced_search_bp  # 고급 검색 블루프린트 import
 
 # 로그 디렉토리 확인 및 생성
 log_dir = os.path.dirname(os.path.abspath('app.log'))
@@ -29,6 +30,13 @@ app.config['MYSQL_HOST'] = os.getenv('DB_HOST', 'localhost')
 app.config['MYSQL_USER'] = os.getenv('DB_USER', 'root')
 app.config['MYSQL_PASSWORD'] = os.getenv('DB_PASSWORD', 'your_password')
 app.config['MYSQL_DB'] = os.getenv('DB_NAME', 'medicine_db')
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+# 데이터베이스 테이블 설정
+app.config['DATABASE_TABLE'] = os.getenv('DB_TABLE', 'drug_identification')
+
+# 블루프린트 등록
+app.register_blueprint(advanced_search_bp, url_prefix='/advanced')
 
 # MySQL 인스턴스 초기화
 mysql = MySQL(app)
@@ -360,7 +368,7 @@ def get_medicine_detail_from_db(medicine_id):
             # 기본 정보 - LEFT JOIN 제거, unified_medicines 테이블만 사용
             base_query = """
             SELECT *
-            FROM unified_medicines
+            FROM drug_identification
             WHERE id = %s
             """
             cursor.execute(base_query, (medicine_id,))
@@ -410,7 +418,7 @@ def get_medicine_detail_from_db(medicine_id):
 #---------------------------------------------------
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return redirect(url_for('advanced_search.index'))
 
 @app.route('/search')
 def search():
@@ -463,7 +471,7 @@ def search():
         search_params=search_params
     )
 
-@app.route('/medicine/<int:medicine_id>')
+@app.route('/advanced/medicine-detail/<int:medicine_id>') # 언더스코어 X 하이픈 O (어딘가에서 경로지정을 하이픈으로 해서 하이픈을 따라해야함)
 def medicine_detail(medicine_id):
     # 의약품 상세 정보 가져오기
     medicine = get_medicine_detail_from_db(medicine_id)
@@ -472,7 +480,7 @@ def medicine_detail(medicine_id):
         flash('의약품 정보를 찾을 수 없습니다.', 'error')
         return redirect(url_for('index'))
     
-    return render_template('medicine_detail.html', medicine=medicine)
+    return render_template('medicine_detail.html', medicine=medicine) # 하이픈 X 언더스코어 O (html 파일을 불러오기 때문에 이름이 똑같아야함)
 
 #---------------------------------------------------
 # 메인 함수
