@@ -9,4 +9,4 @@ DATABASE_CONFIG = {
 
 # 애플리케이션 설정
 SECRET_KEY = '12341234'
-DEBUG = True
+DEBUG = True 

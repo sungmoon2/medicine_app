@@ -8,7 +8,7 @@ import logging
 search_bp = Blueprint('search', __name__)
 
 def get_db_connection():
-    """데이터베이스 연결 생성 함수"""
+    """데이터베이스 연결 생성 함수""" 
     return pymysql.connect(
         host=current_app.config.get('DB_HOST', 'localhost'),
         user=current_app.config.get('DB_USER', 'root'),

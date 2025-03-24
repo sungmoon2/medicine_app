@@ -12,7 +12,7 @@
 
 - **백엔드**: Python, Flask
 - **데이터베이스**: MySQL
-- **프론트엔드**: HTML, CSS, JavaScript, Bootstrap 5
+- **프론트엔드**: HTML, CSS, JavaScript, Bootstrap 5 
 - **API**: 식품의약품안전처 공공데이터 Open API
 
 ## 설치 방법

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let searchTerms = {
         product_names: [],
         manufacturers: [],
-        side_effects: []
+        side_effects: [] 
     };
     
     // 선택된 검색 조건 UI 업데이트 함수

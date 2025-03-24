@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 색상 선택 이벤트
     initColorSelector();
-    
+     
     // 검색 폼 이벤트
     initSearchForm();
     

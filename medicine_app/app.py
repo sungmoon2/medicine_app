@@ -173,7 +173,7 @@ def search_medicines_by_shape(params=None, page_no=1, num_of_rows=10):
         'page_no': page_no,
         'num_of_rows': num_of_rows
     }
-
+ 
 def get_medicine_detail(item_seq):
     """의약품 상세 정보 조회"""
     params = {'itemSeq': item_seq}
