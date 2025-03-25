@@ -23,6 +23,18 @@
                             증상, 색상, 모양, 용도 등으로 자유롭게 질문해보세요.
                         </div>
                     </div>
+                    
+                    <!-- 검색 예시 추가 -->
+                    <div class="search-examples mt-3">
+                        <p class="text-center text-muted mb-2">검색 예시:</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary example-btn" data-query="두통에 좋은 약 추천해줘">두통에 좋은 약</button>
+                            <button class="btn btn-sm btn-outline-secondary example-btn" data-query="소화가 잘 안될 때 먹는 약">소화 안될 때 먹는 약</button>
+                            <button class="btn btn-sm btn-outline-secondary example-btn" data-query="감기약 좀 알려줘">감기약 추천</button>
+                            <button class="btn btn-sm btn-outline-secondary example-btn" data-query="흰색 원형 정제 종류">흰색 원형 정제</button>
+                            <button class="btn btn-sm btn-outline-secondary example-btn" data-query="타이레놀 정보 알려줘">타이레놀 정보</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -41,6 +53,9 @@
                         <h5 class="mb-0">AI 검색 결과</h5>
                     </div>
                     <div class="card-body">
+                        <div id="userQuery" class="mb-3 p-3 bg-light rounded">
+                            <strong>검색어:</strong> <span id="queryText"></span>
+                        </div>
                         <div id="aiSummary" class="mb-4 p-3 bg-light rounded"></div>
                     </div>
                 </div>
@@ -53,6 +68,16 @@
                     <i class="bi bi-search" style="font-size: 3rem; color: #6c757d;"></i>
                     <h3 class="mt-3">검색 결과가 없습니다.</h3>
                     <p class="text-muted">다른 검색어로 시도해보세요.</p>
+                    <div class="mt-4">
+                        <p>다음과 같은 검색어를 시도해보세요:</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+                            <button class="btn btn-sm btn-outline-primary example-btn" data-query="진통제">진통제</button>
+                            <button class="btn btn-sm btn-outline-primary example-btn" data-query="소화제">소화제</button>
+                            <button class="btn btn-sm btn-outline-primary example-btn" data-query="감기약">감기약</button>
+                            <button class="btn btn-sm btn-outline-primary example-btn" data-query="타이레놀">타이레놀</button>
+                            <button class="btn btn-sm btn-outline-primary example-btn" data-query="알레르기약">알레르기약</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,8 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchLoading = document.getElementById('searchLoading');
     const aiResponseArea = document.getElementById('aiResponseArea');
     const aiSummary = document.getElementById('aiSummary');
+    const queryText = document.getElementById('queryText');
     const medicineResults = document.getElementById('medicineResults');
     const noResultsMessage = document.getElementById('noResultsMessage');
+    const exampleBtns = document.querySelectorAll('.example-btn');
+    
+    // 예시 버튼 클릭 이벤트
+    exampleBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const query = this.getAttribute('data-query');
+            aiQueryInput.value = query;
+            performSearch();
+        });
+    });
     
     // 엔터 키 이벤트 처리
     aiQueryInput.addEventListener('keypress', function(e) {
@@ -108,6 +144,9 @@ document.addEventListener('DOMContentLoaded', function() {
             searchLoading.classList.add('d-none');
             aiResponseArea.classList.remove('d-none');
             
+            // 검색어 표시
+            queryText.textContent = query;
+            
             if (data.success) {
                 // AI 요약 표시
                 aiSummary.innerHTML = `<p>${data.ai_summary}</p>`;
@@ -143,6 +182,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const col = document.createElement('div');
         col.className = 'col';
         
+        // 효능 정보 최대 200자 제한
+        const efficacy = medicine.efcy_qesitm 
+            ? (medicine.efcy_qesitm.length > 200 
+                ? medicine.efcy_qesitm.substring(0, 200) + '...' 
+                : medicine.efcy_qesitm)
+            : '';
+        
         col.innerHTML = `
             <div class="card h-100 medicine-card">
                 <div class="row g-0">
@@ -161,15 +207,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="card-body">
                             <h5 class="card-title" title="${medicine.item_name}">${medicine.item_name}</h5>
                             <p class="card-company">${medicine.entp_name}</p>
-                            <div class="medicine-properties">
-                                ${medicine.drug_shape ? `<span class="badge bg-light text-dark">${medicine.drug_shape}</span>` : ''}
-                                ${medicine.color_class1 ? `<span class="badge bg-light text-dark">${medicine.color_class1}</span>` : ''}
-                                ${medicine.etc_otc_name ? `<span class="badge bg-primary">${medicine.etc_otc_name}</span>` : ''}
+                            <div class="medicine-properties mb-2">
+                                ${medicine.drug_shape ? `<span class="badge bg-light text-dark me-1">${medicine.drug_shape}</span>` : ''}
+                                ${medicine.color_class1 ? `<span class="badge bg-light text-dark me-1">${medicine.color_class1}</span>` : ''}
+                                ${medicine.etc_otc_name ? `<span class="badge bg-primary me-1">${medicine.etc_otc_name}</span>` : ''}
+                                ${medicine.class_name ? `<span class="badge bg-secondary">${medicine.class_name}</span>` : ''}
                             </div>
-                            ${medicine.chart ? `<div class="medicine-specifications mt-2">
-                                <small class="text-muted">${medicine.chart}</small>
+                            ${efficacy ? `<div class="medicine-efficacy small text-muted mb-2">
+                                <strong>효능:</strong> ${efficacy}
                             </div>` : ''}
-                            <a href="/advanced/medicine-detail/${medicine.id}" class="stretched-link"></a>
+                            <a href="/advanced/medicine-detail/${medicine.id}" class="btn btn-sm btn-outline-primary w-100 mt-2">상세 정보</a>
                         </div>
                     </div>
                 </div>
@@ -180,4 +227,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+
+<style>
+.medicine-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.medicine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.medicine-image-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.medicine-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.medicine-efficacy {
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+.example-btn {
+    transition: all 0.2s;
+}
+.example-btn:hover {
+    transform: translateY(-2px);
+}
+</style>
 {% endblock %}
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+.no-image {
+    color: #adb5bd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;

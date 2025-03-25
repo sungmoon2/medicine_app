@@ -1,0 +1,21 @@
+2025-03-25 05:12:42,726 - INFO - 약품 데이터 전송 프로세스 시작
+2025-03-25 05:12:42,744 - INFO - drug_identification 테이블에 추가해야 할 컬럼: ['atpn_qesitm', 'intrc_qesitm', 'se_qesitm', 'deposit_method_qesitm', 'efcy_qesitm', 'use_method_qesitm', 'atpn_warn_qesitm']
+2025-03-25 05:12:42,745 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN atpn_qesitm TEXT
+2025-03-25 05:12:42,760 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN intrc_qesitm TEXT
+2025-03-25 05:12:42,775 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN se_qesitm TEXT
+2025-03-25 05:12:42,790 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN deposit_method_qesitm TEXT
+2025-03-25 05:12:42,806 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN efcy_qesitm TEXT
+2025-03-25 05:12:42,822 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN use_method_qesitm TEXT
+2025-03-25 05:12:42,838 - INFO - 컬럼 추가 쿼리: ALTER TABLE drug_identification ADD COLUMN atpn_warn_qesitm TEXT
+2025-03-25 05:12:42,854 - INFO - drug_identification 테이블에 7개 컬럼 추가 완료
+2025-03-25 05:12:42,941 - INFO - 두 테이블 간 공통 item_seq: 1622개
+2025-03-25 05:12:42,941 - INFO - 1622개 약품에 대해 데이터 전송 시작...
+2025-03-25 05:12:42,981 - INFO - 진행 상황: 100/1622 처리 중...
+2025-03-25 05:12:43,148 - INFO - 진행 상황: 600/1622 처리 중...
+2025-03-25 05:12:43,327 - INFO - 진행 상황: 1100/1622 처리 중...
+2025-03-25 05:12:43,492 - INFO - 진행 상황: 1600/1622 처리 중...
+2025-03-25 05:12:43,499 - INFO - 진행 상황: 1622/1622 처리 중...
+2025-03-25 05:12:43,499 - INFO - 데이터 전송 완료: 1622개 업데이트, 0개 오류
+2025-03-25 05:12:43,512 - INFO - 트랜잭션 커밋 완료: 1622개 업데이트됨, 0개 오류 발생
+2025-03-25 05:12:43,513 - INFO - 데이터베이스 연결 종료
+2025-03-25 05:12:43,513 - INFO - 약품 데이터 전송 프로세스 완료

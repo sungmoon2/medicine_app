@@ -853,3 +853,19 @@
 2025-03-25 04:01:55,444 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:01:55] "POST /api/ai-search HTTP/1.1" 200 -
 2025-03-25 04:02:08,425 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:02:08] "POST /api/ai-search HTTP/1.1" 200 -
 2025-03-25 04:02:23,918 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:02:23] "POST /api/ai-search HTTP/1.1" 200 -
+2025-03-25 04:09:51,122 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 04:09:51,122 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 04:09:51,123 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 04:09:52,706 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 04:09:52,709 - werkzeug - INFO -  * Debugger PIN: 141-752-462
+2025-03-25 04:09:52,725 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:09:52] "GET /advanced/ HTTP/1.1" 200 -
+2025-03-25 04:09:52,749 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:09:52] "[36mGET /static/css/advanced_search.css HTTP/1.1[0m" 304 -
+2025-03-25 04:09:52,749 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:09:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-25 04:09:53,059 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 04:09:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-03-25 04:09:55,736 - werkzeug - INFO -  * Detected change in 'c:\\Users\\qkrtj\\medicine_app\\medicine_app\\ai_search.py', reloading
+2025-03-25 04:09:57,838 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 04:11:20,038 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 04:13:06,996 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 04:15:06,244 - werkzeug - INFO -  * Restarting with stat
+2025-03-25 05:02:06,012 - werkzeug - INFO -  * Restarting with stat

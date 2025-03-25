@@ -1,0 +1,17 @@
+{
+  "total_records": 32227,
+  "max_possible_score": 140,
+  "thresholds": {
+    "excellent": 126,
+    "good": 105,
+    "average": 84,
+    "minimum": 64
+  },
+  "quality_distribution": {
+    "minimum": 9289,
+    "average": 17179,
+    "good": 315,
+    "poor": 5444
+  },
+  "timestamp": "2025-03-25 05:23:53"
+}
