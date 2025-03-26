@@ -1,0 +1,13 @@
+# 데이터베이스 파일 제외
+*.db
+*.sqlite
+*.sqlite3
+
+# 로그 파일 제외
+*.log
+
+# 기타 큰 파일이나 캐시 파일 제외
+medicine_crawler.log
+medicine.db
+*.csv
+.env
