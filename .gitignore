@@ -10,4 +10,8 @@
 medicine_crawler.log
 medicine.db
 *.csv
+
+# 환경 변수 파일
 .env
+.env.local
+.env.*
